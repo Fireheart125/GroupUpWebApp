@@ -10,7 +10,7 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var main = require('./routes/main');
-var class_cse170 = require('./routes/class_cse170');
+var myclass = require('./routes/myclass');
 var create_inperson = require('./routes/create_inperson');
 var create_online = require('./routes/create_online');
 var group_inperson = require('./routes/group_inperson');
@@ -47,12 +47,13 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/main',main.view);
 app.get('/create_inperson',create_inperson.view);
-app.get('/class_cse170',class_cse170.view);
+app.get('/myclass/:name',myclass.view);
 app.get('/create_online',create_online.view);
 app.get('/group_inperson',group_inperson.view);
 app.get('/help',help.view);
 app.get('/setting',setting.view);
 app.get('/signup',signup.view);
+// app.get('/myclass/:name', myclass.viewClass);
 
 // Example route
 // app.get('/users', user.list);

@@ -108,6 +108,7 @@ h2.group-name {
   background-color: white;
 }
 
+/* Button color in Group page */
 #online.btn {
   background-color: #ffed4a;
   border-color: #ffed4a;
@@ -119,13 +120,33 @@ h2.group-name {
 }
 
 #in-person.btn {
-  background-color: #ff6c4a;
-  border-color: #ff6c4a;
+  background-color: #a8e0ff;
+  border-color: #F0F8FF;
+  color: #3e517a;
+}
+
+#online.btn {
+  background-color: #8ee3f5;
+  border-color: #F0F8FF;
+  color: #3e517a;
+}
+
+#group_detail.btn {
+  background-color: #FFFAF0;
+  border-color: #FFF0F5;
+  color: #3e517a;
 }
 
 #in-person.btn:hover {
-  background-color: #ff6c4a;
-  border-color: #ff6c4a;
+  background-color: #3e517a;;
+  border-color: #3e517a;;
+  color: #FFF0F5;
+}
+
+#online.btn:hover {
+  background-color: #3e517a;
+  border-color: #3e517a;
+  color: #FFF0F5;
 }
 
 
