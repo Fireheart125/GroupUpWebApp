@@ -87,7 +87,7 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4 indent">
+        <div class="col-md-4 indent" align="center">
           <h3 align="center" style="color:#5bc0de">Choose Another Group!</h3>
           <p class="indent">
             <div class="dropdown"> <!-- Drop Down menu start here -->
@@ -95,12 +95,11 @@
                 Choose another group!
                 <span class="caret"></span>
               </button>
-              <ul class="dropdown-menu col-xs-12" aria-labelledby="dropdownMenu1">
-                <li><a href="#">CSE 100</a></li>
-                <li><a href="#">CSE 101</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+              <ul class="col-xs-12 dropdown-menu">
+                <li><a href="#">Choose Another Class</a></li>
+                {{#each classlist}}
+                <li><a href="/{{class}}">{{class}}</a></li>
+                {{/each}}
               </ul>
             </div>  <!-- Drop Down menu Ends here -->
 
@@ -115,7 +114,7 @@
             Location : <br>
             Time : <br>
             Maximum number of people : <br>
-            Now, the number of people is .
+            Now, the number of people is . <br>
             Description : <br><br>
 
           </p>
