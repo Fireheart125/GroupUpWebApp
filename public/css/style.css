@@ -22,15 +22,16 @@
 }
 
 body {
-  background: #BBADFF;
+  background: #8A8A8A;
   color: #606468;
   font: 87.5%/1.5em 'Open Sans', sans-serif;
   margin: 0;
 }
 
 a {
-  color: #D90368;
+  color:#3e517a;
   text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
@@ -83,7 +84,7 @@ p {
 }
 
 #login form span {
-  background-color: #767175;
+  background-color: #C5C5C5;
   border-radius: 3px 0px 0px 3px;
   color: #3F292B;
   display: block;
@@ -99,7 +100,7 @@ p {
 }
 
 #login form input[type="text"], input[type="password"] {
-  background-color: #3F292B;
+  background-color: #eee;
   border-radius: 0px 3px 3px 0px;
   color: #606468;
   margin-bottom: 1em;
@@ -111,8 +112,8 @@ p {
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  background-color: #D90368;
-  color: #eee;
+  background-color: #70cad1;
+  color: #3e517a;
   font-weight: bold;
   margin-bottom: 2em;
   text-transform: uppercase;
@@ -120,7 +121,7 @@ p {
 }
 
 #login form input[type="submit"]:hover {
-  background-color: #d44179;
+  background-color: #8ee3f5;
 }
 
 #login > p {
