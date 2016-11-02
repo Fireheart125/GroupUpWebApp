@@ -1,0 +1,148 @@
+/* applies to anything of class "example-class-selector" */
+
+
+
+#top {
+     padding-top: 0px;
+     margin-top: 0px;
+     background-color: #00BFFF;
+}
+
+.class_descrip {
+     background-color: #eeeeee;
+}
+.project {
+     margin-left: 20px;
+     background-color: #eeeeee;
+     padding: 20px;
+     width: 525px;
+}
+
+.description_page {
+     background-color: #eeeeee;
+}
+.example-class-selector {
+	margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
+	color: #CC00AA;
+}
+
+/* this style exists to make it obvious that you've successfully linked
+   the CSS to the page. feel free to remove it once the link is working. */
+body {
+     /*
+     border: 1px dotted gray; 
+     margin: 0 !important;
+     padding: 0 !important;
+     background-color: #eeeeee;
+     */
+}
+
+.jumbotron {
+	position: relative;
+	background: none;
+}
+
+.project p {
+     font-variant: small-caps;
+}
+
+.jumbotron:after {
+     content:"";
+     background: url("http://lorempixel.com/1140/283");
+     opacity: 0.2;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;	
+}
+
+/*********************************/
+/* THIS IS WHERE MAIN.CSS STARTS */
+/*********************************/
+#groupListheader {
+     position: relative;
+     left: 66%;
+}
+
+.input-group {
+     width: 500px;
+}
+
+#mypagebody {
+     background-color: white;
+}
+
+.col-md-4 {
+     font-family: Tahoma;
+     font-size: 150%;
+}
+
+.dropdown {
+     text-align: center;
+     float:right;
+     right:30px;
+     top:10px;
+}
+
+.dropdown-menu {
+     position: relative; 
+}
+
+#dLabel {
+     width:400px;    
+}
+
+.col-xs-12 {
+     border: none;
+     background-color: #b08ea2;
+}
+
+
+p.class_descrip {
+     text-align: left;
+     padding-left: 70px;
+     padding-right: 70px;
+     padding-top: 30px;
+}
+
+.panel-body h2 {
+     font-family: Helvetica;
+     font-weight: bold;
+     font-stretch: semi-condensed;
+     text-transform: uppercase;
+     font-size: 48px;
+     color: white;
+     padding-left: 30px;
+     padding-right: 30px;
+     padding-bottom: 20px;
+}
+
+.panel-body p {
+     padding-left: 35px;
+     padding-right: 30px;
+     padding-bottom: 30px;
+     color: white;
+}
+
+.panel-body:hover {
+     background-color: #dcadc8;
+}
+
+.sharp {
+     border-radius: 0;
+     background-color: #70cad1;
+}
+
+.btn-primary {
+     box-shadow: none;
+}
+
+
+

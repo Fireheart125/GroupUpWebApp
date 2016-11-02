@@ -1,0 +1,132 @@
+body {
+  /* min-height: 2000px; */
+}
+
+#mypagebody {
+	  background-color: #eee;
+    border-radius: 50px; 
+    -moz-border-radius: 50px; 
+    -webkit-border-radius: 50px; 
+    /*padding:10px;*/
+    border: 0px solid #800000;
+}
+
+.container {
+   margin-top: 0px;
+    padding-top: 0px;
+	/*height: 70px;*/
+}
+
+.container p {
+    margin: 2px;
+    padding: 3px;
+}
+
+.elem_list {
+    line-height: 300%;
+}
+
+.group_descrpt {
+    background-color: #eee;
+    border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border: 0px solid #800000;
+}
+
+
+
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.indent {
+  text-indent: 30px;
+}
+
+.form {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.fillin {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.groupJoin {
+  width: 200px;
+}
+
+#bottom {
+  margin-bottom: 2rem;
+}
+
+h2.group-name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#icons img{
+  overflow: hidden;
+  display: inline;
+}
+
+#descr {
+  text-transform: uppercase;
+}
+
+.btn.outline {
+  background: none;
+  padding: 12px 22px;
+}
+
+.btn-primary.outline {
+  border: 2px solid #0099cc;
+  color: #0099cc;
+}
+
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+  color: #33a6cc;
+  border-color: #33a6cc;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+  border-color: #007299;
+  color: #007299;
+  box-shadow: none;
+}
+
+.panel {
+  background-color: white;
+}
+
+.panel:hover {
+  background-color:;
+}
+
+.panel-body {
+  background-color: white;
+}
+
+#online.btn {
+  background-color: #ffed4a;
+  border-color: #ffed4a;
+}
+
+#online.btn:hover {
+  background-color: #ffed4a;
+  border-color: #ffed4a;
+}
+
+#in-person.btn {
+  background-color: #ff6c4a;
+  border-color: #ff6c4a;
+}
+
+#in-person.btn:hover {
+  background-color: #ff6c4a;
+  border-color: #ff6c4a;
+}
+
+
+
