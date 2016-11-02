@@ -34,10 +34,7 @@
   <body>
     <!--                        Start Body                            -->
 
-    <!-- ...........................................................................
-        ............................................................................
-        This is Header & Naviagation bar & Drop Down menu!
-    -->
+
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -61,13 +58,15 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <!-- ........................................................................... -->
+    <!-- End navbar -->
 
 
-    <!-- ...........................................................................
-        ............................................................................
-        Second part : logo, page menu logo
+
+    <!-- 
+      ++ This is First part "Title"
     -->
+
+    <!-- +++++ Container Start +++++ -->
     <div class="container">
       <div align="center" class="top_logo">
         <h1>Groups for CSE 170/COGS 120</h1>
@@ -75,19 +74,26 @@
           This is a page for CSE 170/COGS 120
         </p>
       </div>
-    </div> <!-- /container -->
-    <!-- ........................................................................... -->
+    </div>
+    <!-- +++++ Container End +++++ -->
 
 
 
-    <!-- ...........................................................................
-        ............................................................................
-        Main part : Contents
+    <!-- 
+      ++ This is second row "Group List"
     -->
+
+
+    <!-- +++++ Container Start +++++ -->
     <div class="container">
+
+      <!-- +++++ Single Row Start +++++ -->
       <div class="row">
+
+        <!-- +++++ Left side of page Start +++++ -->
         <div class="col-md-4" align="center">
             <h3>Choose Another Class</h3>
+
             <!-- Single button -->
             <div class="col-xs-12 btn-group">
               <button type="button" class="col-xs-12 btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -95,53 +101,98 @@
               </button>
               <ul class="col-xs-12 dropdown-menu">
                 <li><a href="#">Choose Another Class</a></li>
-                <li><a href="#">CSE 120</a></li>
-                <li><a href="#">CSE 131</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                {{#each classlist}}
+                <li><a href="/{{class}}">{{class}}</a></li>
+                {{/each}}
               </ul>
-            </div> <!-- End of button -->
+            </div> 
+            <!-- End of button -->
+
             <br><br>
         </div>
+        <!-- +++++ Left side of page End +++++ -->
+
+        <!-- +++++ Right side of page start +++++ -->
         <div class="col-md-8">
-            <p class="elem_list" align="center">
+            <p class="elem_list" align="center">  
+
+                <!-- +++++ Each group space start! +++++ -->
                 <div class="class_elem">
-              
                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo1">
-                    <h4 class="text-uppercase"><button id="online" type="button" class="btn btn-info">Online</button> 
-                    Study For Midterm! Midterm #2</h4>
-                    <div id="icons">
-                      <img class="col-xs-1" src="images/people_40.png"/> <p>Max: 5 people</p>
-                      <img class="col-xs-1" src="images/location_40.png" align="center"/><p>Facebook</p>
-                      <img class="col-xs-1" src="images/time_40.png"/><p>2 - 4 PM</p>
-                    </div>
-                  </button>
-                  <div id="demo1" class="collapse">
-                    <p class="panel-body class_descrip"> <br>
-                      <h4 id="descr">Description</h4><p>Hey guys! This is group for midterm!</p><br><a href="group_online"><br><button type="button" class="btn btn-info">Join Group!</button></a><br></p>
-                  </p></div>
-                  </div>
-                </div>
+                  <h4 class="text-uppercase">
+                    <button id="online" type="button" class="btn btn-info">Online</button>
+                      Study For Midterm! Midterm #2</h4>
+                      <div id="icons"><hr>
+                        <img src="images/people_40.png"/><br><p>Max: 5 people</p>
+                        <img src="images/location_40.png"><br><p>Facebook</p>
+                        <img src="images/time_40.png"/><br><p>2 - 4 PM</p>
+                      </div> <!-- id=icons -->
+                    </button> <!-- button finished -->
 
-                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo2">
-                    <h4 class="text-uppercase"><button id="in-person" type="button" class="btn btn-info">In-Person</button> Group Study Session for Midterm!</h4>
-                    <div id="icons">
-                     <img class="col-xs-1" src="images/people_40.png"/><p>Max: 10 people</p>
-                     <img class="col-xs-1" src="images/location_40.png"/><p>Geisel, 2nd Floor East</p>
-                     <img class="col-xs-1" src="images/time_40.png"/> <p>9-12 AM</p>
-                    </div>
-                  </button>
-                  <div id="demo2" class="collapse">
-                    <p class="panel body class_descrip"> <br>
-                      <h4 id="descr">Description</h4><p>Hey guys! This is group for midterm!</p><br><a href="group_inPerson"><br><button type="button" class="btn btn-info">Join Group!</button></a><br></p>
-                  </p></div>
+                    <div id="demo1" class="collapse">
+                      <p class="panel-body class_descrip"><br>
+                        <h4 id="descr"><hr>Description</h4><p>Hey guys! This is group for midterm!</p><br><a href="group_online"><br><button type="button" class="btn btn-info">Join Group!</button></a><br></p>
+                      </p>
+                    </div> <!-- id="demo" -->
+                  </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
+                </div> <!-- class_elem -->
+                <!-- +++++ Each group space End! +++++ -->
 
-                </div>
-            </p>
+                <!-- +++++ Each group space start! +++++ -->
+                <div class="class_elem">
+                  <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo2">
+                  <h4 class="text-uppercase">
+                    <button id="in-person" type="button" class="btn btn-info">In-Person</button> Group Study Session for Midterm!</h4>
+                      <div id="icons">
+                         <img class="col-xs-1" src="images/people_40.png"/><p>Max: 10 people</p>
+                         <img class="col-xs-1" src="images/location_40.png"/><p>Geisel, 2nd Floor East</p>
+                         <img class="col-xs-1" src="images/time_40.png"/> <p>9-12 AM</p>
+                      </div> <!-- id=icons -->
+                    </button>
+                    <div id="demo2" class="collapse">
+                      <p class="panel body class_descrip"> <br>
+                        <h4 id="descr">Description</h4><p>Hey guys! This is group for midterm!</p><br><a href="group_inPerson"><br><button type="button" class="btn btn-info">Join Group!</button></a><br></p>
+                      </p>
+                    </div> <!-- id="demo2" -->
+                  </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
+                </p>
 
-        </div>        
+                </div> <!-- class_elem --> 
+                <!-- +++++ Each group space End! +++++ -->  
+
+                <!-- +++++ Each group space start! +++++ -->
+                {{#each class}}
+                <div class="class_elem">
+                  <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo2">
+                  <h4 class="text-uppercase">
+                    <button id="in-person" type="button" class="btn btn-info">In-Person</button>{{name}}</h4>
+                      <div id="icons">
+                         <p>Current People: {{number}}</p>
+                         <img class="col-xs-1" src="images/people_40.png"/><p>Max: {{max}}</p>
+                         <img class="col-xs-1" src="images/location_40.png"/><p>{{place}}</p>
+                         <img class="col-xs-1" src="images/time_40.png"/> <p>{{time}}</p>
+                      </div> <!-- id=icons -->
+                    </button>
+                    <div id="demo2" class="collapse">
+                      <p class="panel body class_descrip"> <br>
+                        <h4 id="descr">Description</h4><p>{{description}}</p><br><a href="group_inPerson"><br><button type="button" class="btn btn-info">Join Group!</button></a><br></p>
+                      </p>
+                    </div> <!-- id="demo2" -->
+                  </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
+                </p>
+
+                </div> <!-- class_elem --> 
+                {{/each}}
+                <!-- +++++ Each group space End! +++++ -->  
+
+        </div> 
+        <!-- +++++ Right side of page End +++++ -->
+
       </div>
+      <!-- +++++ Single Row End +++++ -->
+
     </div>
+    <!-- +++++ Container End +++++ -->
 
 
 
