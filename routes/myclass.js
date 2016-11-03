@@ -1,41 +1,33 @@
 // Get all of our friend data
-var data = require('../data.json');
-
-exports.viewClass = function(req, res){
-
-
-
-/*
-   var selectedData = [];
-   //Data 안에있는 정보 중에 가져오고싶은걸 여기서 Sorting 해야하고
-   for ( var value in data ) {
-      //이름이 같으면 가져오기를 해야해요 여기서 그렇게 Data sorting을 다 여기서 해야해요
-      if ( value.substr(0, value.indexOf('_')) == req.params.name ){
-         selectedData.push( value );
-      }
-   }
-
-   console.log (selectedData);
-
-
-   //가져온걸 여기서 합쳐서 보내면 되요
-   var resultData  = { 
-      className: req.params.name,
-      classData: selectedData
-   };
-
-
-   var resultData = {
-      className: req.params.name,
-      data: data
-   };;
-   */
-   console.log (resultData);
-
-   res.render('myclass', data);
-};
+var cse170data = require('../cse170data.json');
+var cse130data = require('../cse130data.json');
+var cse120data = require('../cse120data.json');
+var cogs187adata = require('../cogs187adata.json');
 
 exports.view = function(req, res){
-   res.render('myclass',data);
-};
+   var data;
 
+   switch (req.params.name) {
+    case "cse170":
+        data = cse170data;
+        break;
+    case "cse130":
+        data = cse130data;
+        break;
+    case "cse120":
+         data = cse120data;
+         break;
+    case "cogs187a":
+         data = cogs187adata;
+         break;
+    default: 
+   }
+
+   console.log ( data );
+   var resultData = {
+      className: req.params.name,
+      data
+   };
+   
+   res.render('myclass', resultData);
+};

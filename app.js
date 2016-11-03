@@ -46,15 +46,20 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/main',main.view);
+<<<<<<< HEAD
 //app.get('/create_inperson',create_inperson.view);
 app.get('/create_inperson', create_inperson.addGroup);
 app.get('/myclass',myclass.view);
+=======
+app.get('/create_inperson',create_inperson.view);
+// app.get('/myclass',myclass.view);
+>>>>>>> ce30e0706e6bc32e4beeae708eae99133874eedc
 app.get('/create_online',create_online.view);
 app.get('/group_inperson',group_inperson.view);
 app.get('/help',help.view);
 app.get('/setting',setting.view);
 app.get('/signup',signup.view);
-//app.get('/myclass/:name', myclass.viewClass);
+app.get('/myclass/:name', myclass.view);
 
 // Example route
 // app.get('/users', user.list);

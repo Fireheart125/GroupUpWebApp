@@ -1,0 +1,61 @@
+{
+
+	"classlist": [
+		{
+			"id": "cse170",
+			"class": "CSE 170/COGS 120"	
+		},
+		{
+			"id": "cse130",
+			"class": "CSE 130"	
+		},
+		{
+			"id": "cse120",
+			"class": "CSE 120"	
+		},
+		{
+			"id": "cogs187a",
+			"class": "COGS 187A"	
+		}
+
+	],
+
+
+	"group_person": [
+		{
+			"id": "a1",
+			"name": "Study for Midterm #2",
+			"number": "3",
+			"max": "15",
+			"place": "Geisel Library Study room 215",
+			"time": "2-4pm",
+			"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"		
+		},
+		{
+			"id": "a2",
+			"name": "Code tutorial group for Node.js/Javascript",
+			"number": "5",
+			"max": "30",
+			"place": "CSE Basement B240",
+			"time": "5pm",
+			"description": "Our TA Alok will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
+		}
+	],
+
+	"group_online": [
+		{
+			"id": "b1",			
+			"name": "Study for Midterm!! Online group!",
+			"address": "http://www.piazza.com",
+			"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"		
+		},
+		{
+			"id": "b2",
+			"name": "Tutor online for Front-end!",
+			"address": "http://www.facebook.com",
+			"description": "Our TA Alok will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
+		}
+	]
+
+
+}
