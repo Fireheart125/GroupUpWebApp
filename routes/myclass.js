@@ -26,7 +26,7 @@ exports.view = function(req, res){
    console.log ( data );
    var resultData = {
       className: req.params.name,
-      data
+      data : data
    };
    
    res.render('myclass', resultData);
