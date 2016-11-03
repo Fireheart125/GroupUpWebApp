@@ -47,13 +47,13 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/main',main.view);
 app.get('/create_inperson',create_inperson.view);
-app.get('/myclass',myclass.view);
+// app.get('/myclass',myclass.view);
 app.get('/create_online',create_online.view);
 app.get('/group_inperson',group_inperson.view);
 app.get('/help',help.view);
 app.get('/setting',setting.view);
 app.get('/signup',signup.view);
-//app.get('/myclass/:name', myclass.viewClass);
+app.get('/myclass/:name', myclass.view);
 
 // Example route
 // app.get('/users', user.list);

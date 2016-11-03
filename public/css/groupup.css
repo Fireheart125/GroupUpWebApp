@@ -154,4 +154,10 @@ h2.group-name {
 }
 
 
+.class-name {
+  text-transform: lowercase;
+}
 
+.class-name:first-letter {
+  text-transform: uppercase;
+};
