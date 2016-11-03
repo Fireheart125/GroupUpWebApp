@@ -1,8 +1,8 @@
-var data = require("../data.json");
+var data = require("../cse170data.json");
 
    exports.addGroup = function(req, res){
-   var id = a3;
    var name = req.query.name;
+   var id = name;
    var number = req.query.number;
    var max = req.query.max;
    var place = req.query.place;
