@@ -131,6 +131,10 @@ h2.group-name {
   color: #3e517a;
 }
 
+#create_fromClass.btn {
+  color: #3e517a;
+}
+
 #group_detail.btn {
   background-color: #FFFAF0;
   border-color: #FFF0F5;
