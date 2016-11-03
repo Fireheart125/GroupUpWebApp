@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var data = require("../cse170data.json");
 
    exports.addGroup = function(req, res){
@@ -10,7 +9,7 @@ var data = require("../cse170data.json");
    var time = req.query.time;
    var description = req.query.description;
    var newGroup = {
-   	"id": id,
+   	'id': id,
    	'name': name,
    	'number': number,
    	'max': max,
@@ -18,11 +17,10 @@ var data = require("../cse170data.json");
    	'time': time,
    	'description': description,
    }
-   data.cse170_group_person.push(newGroup);
-      console.log(newGroup);
-   res.render('cse170_group_person', data);
+   console.log(newGroup);
+   data.group_person.push(newGroup);
+   res.render('class_cse170', data);
    };
-=======
 // Get all of our friend data
 var cse170data = require('../cse170data.json');
 var cse130data = require('../cse130data.json');
@@ -34,4 +32,3 @@ exports.view = function(req, res){
    console.log (name);
    res.render('create_inperson', {name:name} );
 };
->>>>>>> b5d9c332009720c07e1162b6c1830907a6c19ed2
