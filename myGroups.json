@@ -1,5 +1,5 @@
 {
-	"myCourses": [
+	"classlist": [
 		{
 			"id": "cse170",
 			"class": "CSE 170/COGS 120"	
@@ -19,7 +19,7 @@
 
 	],
 
-	"myGroups_person": [
+	"group_person": [
 		{
 			"id": "g1",
 			"name": "Study at Geisel Library!!",
@@ -40,7 +40,7 @@
 		}
 	],
 
-	"myGroups_online": [
+	"group_online": [
 		{
 			"id": "h1",			
 			"name": "Study for Midterm 2",
