@@ -92,14 +92,24 @@
             <button type="button" class="btn btn-info active">IN PERSON</button>
             <button type="button" class="btn btn-info"><a href="create_online">ONLINE</a></button>
           </div>
-          <form id="addClassForm" role="form" method="get" action="/add" align="left"> 
-            Group Name: <input type="text" class="form-control" id="name" placeholder="Name" name="name"> <br>  
-            Location: <input type="text" class="form-control" id="location" placeholder="Location" name="location"> <br>
-            Time: <input type="text" class="form-control" id="time" placeholder="Time" name="time"> <br>
-            Maximum Number of People: <input type="text" class="form-control" id="number" placeholder="Number" name="number" min="2" max="100">
-            Description: <input type="text" class="form-control" id="description" placeholder="Description" name="description"> <br>
+          <form action="/myclass/cse170" id="addClassForm" role="form" method="get" align="left"> 
+            Group Name: 
+            <input type="text" required class="form-control" id="name" placeholder="Name" name="name"> <br>
+            Location: 
+            <input type="text" required class="form-control" id="place" placeholder="Location" name="place"> <br>
+            Time: 
+            <input type="text" required class="form-control" id="time" placeholder="Time" name="time"> <br>
+            Maximum Number of People: 
+            <input type="text" requied class="form-control" id="numer" placeholder="Number" name="max" min="2" max="100">
+            Description: 
+            <input type="text" required class="form-control" id="description" placeholder="Description" name="description"> <br>
             <div id="bottom" align="center">
-            <button type="button" class="btn btn-info"><a href="../../main">Create Group!</a></button>
+<!--
+            <button type="button" class="btn btn-info"><a href="/myclass/cse170">Create Group!</a></button>
+-->
+            <button type="submit" formaction="/myclass/cse170" class="btn btn-info" >Create Group! </button>
+
+
             </div>
           </form>
         </div>

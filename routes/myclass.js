@@ -7,6 +7,7 @@ var cogs187adata = require('../cogs187adata.json');
 exports.view = function(req, res){
    var data;
 
+
    switch (req.params.name) {
     case "cse170":
         data = cse170data;
@@ -23,10 +24,38 @@ exports.view = function(req, res){
     default: 
    }
 
-   console.log ( data );
+   var name = req.query.name;
+   var id = name;
+   var number = req.query.number;
+   var max = req.query.max;
+   var place = req.query.place;
+   var time = req.query.time;
+   var description = req.query.description;
+   var newGroup = {
+    'id': id,
+    'name': name,
+    'number': number,
+    'max': max,
+    'place': place,
+    'time': time,
+    'description': description,
+   }
+
+if(newGroup.id == undefined) {
+console.log("DEBUG: TRUE");
+console.log(newGroup);
+}
+
+else {
+  data.group_person.push(newGroup);
+  console.log("DEBUG: FALSE");
+  console.log(newGroup);
+}
+   //data.group_person.push(newGroup);
+
    var resultData = {
       className: req.params.name,
-      data
+      data : data
    };
    
    res.render('myclass', resultData);
