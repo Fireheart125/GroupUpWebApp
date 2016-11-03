@@ -1,5 +1,5 @@
 // Global data
-var data = require('../data.json');
+var data = require('../cse120data.json');
 
 // For other classes list on the left side
 exports.view = function(req, res){
