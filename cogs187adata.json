@@ -23,34 +23,34 @@
 	"group_person": [
 		{
 			"id": "a1",
-			"name": "130 Study for Midterm #2",
-			"number": "3",
-			"max": "15",
-			"place": "Geisel Library Study room 215",
-			"time": "2-4pm",
-			"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"		
+			"name": "187A Study for Midterm #2",
+			"number": "5",
+			"max": "20",
+			"place": "Geisel Library Study room 250",
+			"time": "2-5pm",
+			"description": "We will study for midterm 2 for COGS 187A, Please join for collaboration!"		
 		},
 		{
 			"id": "a2",
-			"name": "130 Code tutorial group for Node.js/Javascript",
-			"number": "5",
-			"max": "30",
+			"name": "187A Code tutorial group for Node.js/Javascript",
+			"number": "3",
+			"max": "10",
 			"place": "CSE Basement B240",
 			"time": "5pm",
-			"description": "Our TA Alok will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
+			"description": "Our TA Rob will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
 		}
 	],
 
 	"group_online": [
 		{
 			"id": "b1",			
-			"name": "130 Study for Midterm!! Online group!",
+			"name": "187A Study for Midterm!! Online group!",
 			"address": "http://www.piazza.com",
-			"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"		
+			"description": "We will study for midterm 2 for COGS 187A, Please join for collaboration!"		
 		},
 		{
 			"id": "b2",
-			"name": "130 Tutor online for Front-end!",
+			"name": "187A Tutor online for Front-end!",
 			"address": "http://www.facebook.com",
 			"description": "Our TA Alok will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
 		}
