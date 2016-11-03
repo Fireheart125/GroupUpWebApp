@@ -22,7 +22,7 @@
 
 	"group_person": [
 		{
-			"id": "a1",
+			"id": "c1",
 			"name": "120 Study for Midterm #2",
 			"number": "34",
 			"max": "30",
@@ -31,7 +31,7 @@
 			"description": "Study for midterm 2 for CSE 120, Please join for collaboration!"
 		},
 		{
-			"id": "a2",
+			"id": "c2",
 			"name": "120 Code group for Java",
 			"number": "6",
 			"max": "25",
@@ -43,13 +43,13 @@
 
 	"group_online": [
 		{
-			"id": "b1",			
+			"id": "d1",			
 			"name": "120 Study for Midterm!! Online group!",
 			"address": "http://www.piazza.com",
 			"description": "We will study for midterm 2 for CSE 120, Please join for collaboration!"		
 		},
 		{
-			"id": "b2",
+			"id": "d2",
 			"name": "120 Tutor online for Front-end!",
 			"address": "http://www.facebook.com",
 			"description": "Our TA Caleb will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	

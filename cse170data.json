@@ -23,8 +23,8 @@
 
 	"group_person": [
 		{
-			"id": "a1",
-			"name": "Study for Midterm #1",
+			"id": "g1",
+			"name": "Study at Geisel Library!!",
 			"number": "5",
 			"max": "20",
 			"place": "Geisel Library Study room 235",
@@ -32,7 +32,7 @@
 			"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"		
 		},
 		{
-			"id": "a2",
+			"id": "g2",
 			"name": "Code tutorial group for Node.js/Javascript",
 			"number": "5",
 			"max": "30",
@@ -44,13 +44,13 @@
 
 	"group_online": [
 		{
-			"id": "b1",			
-			"name": "Study for Midterm!! Online group!",
+			"id": "h1",			
+			"name": "Study for Midterm 2",
 			"address": "http://www.piazza.com",
-			"description": "We will study for midterm 1 for CSE 170, Please join for collaboration!"		
+			"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"		
 		},
 		{
-			"id": "b2",
+			"id": "h2",
 			"name": "Tutor online for Front-end!",
 			"address": "http://www.facebook.com",
 			"description": "Our TA Rob will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
