@@ -47,7 +47,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/main',main.view);
 //app.get('/create_inperson',create_inperson.view);
-app.get('/myclass/cse170/main', create_inperson.addGroup);
+app.get('/myclass/cse170', create_inperson.addGroup);
 app.get('/myclass',myclass.view);
 app.get('/create_inperson',create_inperson.view);
 app.get('/myclass/:name/create_inperson',create_inperson.view);

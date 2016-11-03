@@ -17,7 +17,7 @@ var data = require("../cse170data.json");
    	'time': time,
    	'description': description,
    }
-   console.log(newGroup);
+   
    data.group_person.push(newGroup);
    res.render('class_cse170', data);
    };
