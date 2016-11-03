@@ -1,5 +1,6 @@
 body {
   /* min-height: 2000px; */
+  background-color: #eeeeee;
 }
 
 #mypagebody {
@@ -144,6 +145,11 @@ h2.group-name {
   border-color: #FFF0F5;
   color: #3e517a;
 }
+
+#allclass.btn {
+  color: #F0FFFF;
+}
+
 
 #in-person.btn:hover {
   background-color: #3e517a;;

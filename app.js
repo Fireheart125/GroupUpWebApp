@@ -46,6 +46,10 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/main',main.view);
+//app.get('/create_inperson',create_inperson.view);
+//app.get('/myclass/cse170', create_inperson.addGroup);
+app.get('/myclass',myclass.view);
+app.get('/create_inperson',create_inperson.view);
 app.get('/myclass/:name/create_inperson',create_inperson.view);
 // app.get('/myclass',myclass.view);
 app.get('/myclass/:name/create_online',create_online.view);
