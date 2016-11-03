@@ -53,12 +53,7 @@ app.get('/group_inperson',group_inperson.view);
 app.get('/help',help.view);
 app.get('/setting',setting.view);
 app.get('/signup',signup.view);
-<<<<<<< HEAD
 //app.get('/myclass/:name', myclass.viewClass);
-=======
-// app.get('/myclass/:name', myclass.viewClass);
-//app.get('/group_inperson', group_inperson.viewProject);
->>>>>>> cf0d876cd72c5db468d52d4722087140fef93996
 
 // Example route
 // app.get('/users', user.list);
