@@ -95,48 +95,36 @@
             {{/each}}
           </p>
           <h2>Select a Course</h2>
-          
-
-            <!-- Search bar -->
-            <div class="input-group" align="center">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Add</button>
-              </span>
-            </div><!-- /input-group -->
-
-        </div>      <!-- --> <!-- --> <!-- --> <!--    First column End    -->
-
                                                                    
         <!-- +++++ Right side (1. Group inPerson) page start +++++ -->
         <div class="col-md-4" align="center">
-            <img src="images/in-person.png" style="width:200px">
-            <p class="elem_list" align="center"> 
+          <img src="images/in-person.png" style="width:200px">
+          <p class="elem_list" align="center"> 
 
-                <!-- +++++ Each group space start! +++++ -->
-                {{#each group_person}}
-                <div class="class_elem">
-                  <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
-                  <h4 class="text-uppercase">
-                    <button id="in-person" type="button" class="btn btn-info">In-Person</button>  {{name}}</h4>
-                      <div id="icons" align="center">
-                         <div class="col-xs-3"><img src="../images/people_40.png"/><p>Max: {{max}}</p></div>
-                         <div class="col-xs-6"><img src="../images/location_40.png"/><p>{{place}}</p></div>
-                         <div class="col-xs-3"><img src="../images/time_40.png"/> <p>{{time}}</p></div>
-                      
-                         <button id="group_detail" type="button" class="col-xs-12 btn btn-info">Please click to get more information!</button><br>
-                      </div><br> <!-- id=icons -->
-                    </button>
-                    <div id="demo{{id}}" class="collapse">
-                      <p class="panel body class_descrip"><br>
-                        <h4 id="descr">Description</h4><p>{{description}}</p><br><br></p>
-                      </p>
-                    </div> <!-- id="demo2" -->
-                  </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-                </p>
+            <!-- +++++ Each group space start! +++++ -->
+            {{#each group_person}}
+            <div class="class_elem">
+              <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
+              <h4 class="text-uppercase">
+                <button id="in-person" type="button" class="btn btn-info">In-Person</button>  {{name}}</h4>
+                  <div id="icons" align="center">
+                     <div class="col-xs-3"><img src="../images/people_40.png"/><p>Max: {{max}}</p></div>
+                     <div class="col-xs-6"><img src="../images/location_40.png"/><p>{{place}}</p></div>
+                     <div class="col-xs-3"><img src="../images/time_40.png"/> <p>{{time}}</p></div>
+                  
+                     <button id="group_detail" type="button" class="col-xs-12 btn btn-info">Please click to get more information!
+                     </button><br>
+                  </div><br> <!-- id=icons -->
+                <div id="demo{{id}}" class="collapse">
+                  <p class="panel body class_descrip"><br>
+                    <h4 id="descr">Description</h4><p>{{description}}</p><br><br></p>
+                  </p>
+                </div> <!-- id="demo2" -->
+              </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
+            </p>
 
-                </div> <!-- class_elem --> 
-                {{/each}}
+            </div> <!-- class_elem --> 
+            {{/each}}
                 <!-- +++++ Each group space End! +++++ -->  
 
         </div> 
