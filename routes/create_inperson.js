@@ -1,7 +1,9 @@
 var data = require("../cse170data.json");
 
 exports.addGroup = function(req, res){
+/*
    console.log("in create_inperson")
+   console.log(req.query.name);
    var name = req.query.name;
    var id = name;
    var number = req.query.number;
@@ -19,9 +21,11 @@ exports.addGroup = function(req, res){
    	'description': description,
    }
    console.log(newGroup);
-   data.group_person.push(newGroup);
+   if ( newGroup.name = "undefined" ) {}
+     else { data.group_person.push(newGroup);}
+
    console.log("new Data!");
-   console.log(data);
+   console.log(data);*/
    res.render('create_inperson', data);
    };
 // Get all of our friend data
