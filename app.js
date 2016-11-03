@@ -54,6 +54,7 @@ app.get('/help',help.view);
 app.get('/setting',setting.view);
 app.get('/signup',signup.view);
 // app.get('/myclass/:name', myclass.viewClass);
+//app.get('/group_inperson', group_inperson.viewProject);
 
 // Example route
 // app.get('/users', user.list);
