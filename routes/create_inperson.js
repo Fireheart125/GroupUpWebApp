@@ -19,7 +19,7 @@ var data = require("../cse170data.json");
    }
    
    data.group_person.push(newGroup);
-   res.render('class_cse170', data);
+   res.render('myclass/cse170', data);
    };
 // Get all of our friend data
 var cse170data = require('../cse170data.json');
