@@ -1,6 +1,7 @@
 var data = require("../cse170data.json");
 
-   exports.addGroup = function(req, res){
+exports.addGroup = function(req, res){
+   console.log("in create_inperson")
    var name = req.query.name;
    var id = name;
    var number = req.query.number;
@@ -17,9 +18,11 @@ var data = require("../cse170data.json");
    	'time': time,
    	'description': description,
    }
-   
+   console.log(newGroup);
    data.group_person.push(newGroup);
-   res.render('class_cse170', data);
+   console.log("new Data!");
+   console.log(data);
+   res.render('create_inperson', data);
    };
 // Get all of our friend data
 var cse170data = require('../cse170data.json');
@@ -28,7 +31,8 @@ var cse120data = require('../cse120data.json');
 var cogs187adata = require('../cogs187adata.json');
 
 exports.view = function(req, res){
-   var name = req.params.name;  
-   console.log (name);
-   res.render('create_inperson', {name:name} );
+   /*
+   var name = req.params.name;
+   console.log (name);*/
+   res.render('create_inperson');
 };
