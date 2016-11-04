@@ -59,9 +59,8 @@ app.get('/setting',setting.view);
 app.get('/signup',signup.view);
 app.get('/myclass/:name', myclass.view);
 
-//app.get('/myclass/:name/create_inperson',create_inperson.view);
-//app.get('/myclass/cse170/create_inperson',create_inperson.view);
-app.get('/myclass/cse170/create_inperson',create_inperson.addGroup);
+
+app.get('/myclass/:className/create_inperson',create_inperson.view);
 
 // Example route
 // app.get('/users', user.list);

@@ -70,7 +70,7 @@
     -->
     <div class="container">
       <div align="center" class="top_logo">
-        <h1 style="color:#5bc0de">Create Group</h1>
+        <h1 style="color:#5bc0de">Create Group</h1> 
       </div>
     </div> <!-- /container -->
     <!-- ........................................................................... -->
@@ -87,12 +87,16 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-6" id="mypagebody" >
-          <h2>Class: {{name}}</h2>
+          <h2>Class: {{className}}</h2>
           <div class="row" align="center">
             <button type="button" class="btn btn-info active">IN PERSON</button>
             <button type="button" class="btn btn-info"><a href="create_online">ONLINE</a></button>
           </div>
-          <form action="/myclass/cse170" id="addClassForm" role="form" method="get" align="left"> 
+          <form id="addClassForm" role="form" method="get" align="left"> 
+            Class: 
+            <input required readonly value="{{className}}" class="form-control" id="className" placeholder="Classname" name="className"><br>
+            Group Type: 
+            <input required readonly value="person" class="form-control" id="grouptype" placeholder="GroupType" name="grouptype"><br>
             Group Name: 
             <input type="text" required class="form-control" id="name" placeholder="Name" name="name"> <br>
             Location: 
@@ -100,14 +104,14 @@
             Time: 
             <input type="text" required class="form-control" id="time" placeholder="Time" name="time"> <br>
             Maximum Number of People: 
-            <input type="text" requied class="form-control" id="numer" placeholder="Number" name="max" min="2" max="100">
+            <input type="text" requied class="form-control" id="number" placeholder="Number" name="max" min="2" max="100">
             Description: 
             <input type="text" required class="form-control" id="description" placeholder="Description" name="description"> <br>
             <div id="bottom" align="center">
 <!--
             <button type="button" class="btn btn-info"><a href="/myclass/cse170">Create Group!</a></button>
 -->
-            <button type="submit" formaction="/myclass/cse170" class="btn btn-info" >Create Group! </button>
+            <button type="submit" formaction="../" class="btn btn-info" >Create Group! </button>
 
 
             </div>

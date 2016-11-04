@@ -5,10 +5,18 @@ var cse120data = require('../cse120data.json');
 var cogs187adata = require('../cogs187adata.json');
 
 exports.view = function(req, res){
-   var data;
+   var whichClass;
+console.log("DEBUG: ***************************");
+if (req.params.name == undefined) {
+  whichClass = req.query.className;
+}
+else {
+  whichClass = req.params.name;
+}
+console.log(whichClass);
+console.log(req.params.name);
 
-
-   switch (req.params.name) {
+   switch (whichClass) {
     case "cse170":
         data = cse170data;
         break;
@@ -54,7 +62,7 @@ else {
    //data.group_person.push(newGroup);
 
    var resultData = {
-      className: req.params.name,
+      className: whichClass,
       data : data
    };
    
