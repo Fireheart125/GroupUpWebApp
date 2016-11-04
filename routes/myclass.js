@@ -1,13 +1,14 @@
 // Get all of our friend data
-var cse120data = require('../myGroups.json');
+var cse120data = require('../cse120data.json');
 var cse170data = require('../cse170data.json');
 var cse130data = require('../cse130data.json');
-var cse120data = require('../cse120data.json');
-var mydata = require('../cogs187adata.json');
+var cogs187adata = require('../cogs187adata.json');
+var mydata = require('../myGroups.json');
 
 exports.view = function(req, res){
   var whichClass;
-  var whichGroup = req.params.grouptype;
+  var whichGroup = req.query.grouptype;
+
   console.log("DEBUG: ***************************");
   if (req.params.name == undefined) {
     whichClass = req.query.className;
@@ -16,7 +17,11 @@ exports.view = function(req, res){
     whichClass = req.params.name;
   }
 
+  console.log("DEBUG ------ whichClass");
   console.log(whichClass);
+  console.log("DEBUG ------ whichGroup");
+  console.log(whichGroup);
+  console.log("DEBUG ------ req.params.name");
   console.log(req.params.name);
 
   switch (whichClass) {
@@ -34,9 +39,12 @@ exports.view = function(req, res){
          break;
     default: 
   }
+  console.log("DEBUG ------ Show the data!");
+  console.log(data);
 
   if(whichGroup != undefined) {
     if(whichGroup == "person") {
+      console.log("DEBUG ------ now person group! ");
       var name = req.query.name;
       var id = name;
       var number = req.query.number;
@@ -53,9 +61,13 @@ exports.view = function(req, res){
         'time': time,
         'description': description,
       }
+
+      data.group_person.push(newGroup);
+      mydata.group_person.push(newGroup);
     }
 
     else if(whichGroup == "online") {
+      console.log("DEBUG ------ now online group! ");
       var name = req.query.name;
       var id = name;
       var forum = req.query.forum;
@@ -66,14 +78,22 @@ exports.view = function(req, res){
         'forum': forum,
         'description': description,
       }
+
+      data.group_online.push(newGroup);
+      mydata.group_online.push(newGroup);
     }
 
     else {
       console.log("There is no type of group!");
     }
+    console.log("DEBUG ------ before I pushed ");
 
-    data.group_person.push(newGroup);
-    mydata.group_person.push(newGroup);
+    
+    console.log("DEBUG ------ after I pushed ");
+    console.log("DEBUG ------ data? ");
+    console.log(data);
+    console.log("DEBUG ------ my data? ");
+    console.log(mydata);
   }
 
   var resultData = {
@@ -81,6 +101,7 @@ exports.view = function(req, res){
     data : data
   };
 
+  console.log("DEBUG ------ before rendering, in main ");
   res.render('myclass', resultData);
 
 /*

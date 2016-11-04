@@ -2,7 +2,7 @@
 var data = require('../myGroups.json');
 
 exports.view = function(req, res){
-   console.log("MyGROUP NOW!!");
+   console.log("DEBUG ------ This is the main.js");
    console.log(data);
    res.render('main',data);
 };

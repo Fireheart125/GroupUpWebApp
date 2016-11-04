@@ -8,5 +8,5 @@ exports.view = function(req, res){
    var name = req.params.className;
    console.log ("DEBUG::: here is create_online");
    console.log (name);
-   res.render('create_inperson', {'className': name});
+   res.render('create_online', {'className': name});
 };
