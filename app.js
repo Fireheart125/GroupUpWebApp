@@ -52,16 +52,15 @@ app.get('/myclass',myclass.view);
 //app.get('/create_inperson',create_inperson.view);
 // app.get('/myclass/:name/create_inperson',create_inperson.addGroup);
 // app.get('/myclass',myclass.view);
-app.get('/myclass/:name/create_online',create_online.view);
-app.get('/group_inperson/:name/:groupID',group_inperson.view);
+
+// app.get('/group_inperson/:name/:groupID',group_inperson.view);
 app.get('/help',help.view);
 app.get('/setting',setting.view);
 app.get('/signup',signup.view);
 app.get('/myclass/:name', myclass.view);
 
-//app.get('/myclass/:name/create_inperson',create_inperson.view);
-//app.get('/myclass/cse170/create_inperson',create_inperson.view);
-app.get('/myclass/cse170/create_inperson',create_inperson.addGroup);
+app.get('/myclass/:className/create_online',create_online.view);
+app.get('/myclass/:className/create_inperson',create_inperson.view);
 
 // Example route
 // app.get('/users', user.list);

@@ -87,25 +87,29 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-6" id="mypagebody" >
-          <h2>Class: {{className}}</h2>
+          <h2>Class: {{className}} ONLINE</h2>
           <div class="row" align="center">
             <button type="button" class="btn btn-info"><a href="create_inperson">IN PERSON</a></button>
             <button type="button" class="btn btn-info active">ONLINE</button>
           </div>
-          <form align="left"> 
-            Name: <input class="form" type="text" name="name"> <br>  
-            Forum: <br> 
-                   <input type="radio" name="option" value="Facebook" chekced> Facebook
+          <form id="addClassForm" role="form" method="get" align="left">
+            Class: 
+            <input required readonly value="{{className}}" class="form-control" id="className" placeholder="Classname" name="className"><br>
+            Group Type: 
+            <input required readonly value="online" class="form-control" id="grouptype" placeholder="GroupType" name="grouptype"><br>
+            Name: <input type="text" required class="form-control" id="name" placeholder="Name" name="name"> <br>  
+            Forum: <input type="text" required class="form-control" id="forum" placeholder="Forum Link" name="forum"> <br>
+                   <!--<input type="radio" required class="form-control" name="option" value="Facebook" checked> Facebook
                    <input class="groupJoin" type="text" name="site" value="www.facebook.com/"> <br>
                    <input type="radio" name="option" value="Google"> Google Drive
                    <input class="groupJoin" type="text" name="site" value="drive.google.com/"> <br>
                    <input type="radio" name="option" value="Piazza"> Piazza 
                    <input class="groupJoin" type="text" name="site" value="piazza.com/class/"> <br>
                    <input type="radio" name="option" value="Facebook"> Others 
-                   <input class="groupJoin" type="text" name="site" value="URL"> <br>
-            Description: <textarea class="fillin" rows="5" cols="50"></textarea> <br>
+                   <input class="groupJoin" type="text" name="site" value="URL"> <br> -->
+            Description: <textarea class="fillin form-control" type="text" required id="description" placeholder="Description" name="description" rows="5" cols="50"></textarea> <br> 
             <div id="bottom" align="center">
-            <button type="button" class="btn btn-info"><a href="../../main">Create Group!</a></button>
+            <button type="submit" formaction="../" class="btn btn-info" >Create Group! </button>
             </div>
           </form>
         </div>

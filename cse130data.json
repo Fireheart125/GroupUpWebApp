@@ -21,7 +21,9 @@
 	],
 
 	"group_person": [
-		{
+		{	
+			"className": "cse130",
+			"grouptype": "person",
 			"id": "e1",
 			"name": "130 Study for Midterm #2",
 			"number": "3",
@@ -31,6 +33,8 @@
 			"description": "We will study for midterm 2 for CSE 130, Please join for collaboration!"		
 		},
 		{
+			"className": "cse130",
+			"grouptype": "person",
 			"id": "e2",
 			"name": "130 Code tutorial group for Node.js/Javascript",
 			"number": "5",
@@ -43,12 +47,16 @@
 
 	"group_online": [
 		{
+			"className": "cse130",
+			"grouptype": "online",
 			"id": "f1",			
 			"name": "130 Study for Midterm!! Online group!",
 			"address": "http://www.piazza.com",
 			"description": "We will study for midterm 2 for CSE 130, Please join for collaboration!"		
 		},
 		{
+			"className": "cse130",
+			"grouptype": "online",
 			"id": "f2",
 			"name": "130 Tutor online for Front-end!",
 			"address": "http://www.facebook.com",

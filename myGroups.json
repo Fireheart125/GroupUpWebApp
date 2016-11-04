@@ -21,6 +21,8 @@
 
 	"group_person": [
 		{
+			"className": "cse170",
+			"grouptype": "person",
 			"id": "g1",
 			"name": "Study at Geisel Library!!",
 			"number": "5",
@@ -30,6 +32,8 @@
 			"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"
 		},
 		{
+			"className": "cse130",
+			"grouptype": "person",
 			"id": "e2",
 			"name": "130 Code tutorial group for Node.js/Javascript",
 			"number": "5",
@@ -42,12 +46,16 @@
 
 	"group_online": [
 		{
+			"className": "cse170",
+			"grouptype": "online",
 			"id": "h1",			
 			"name": "Study for Midterm 2",
 			"address": "http://www.piazza.com",
 			"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"
 		},
 		{
+			"className": "cogs187a",
+			"grouptype": "online",
 			"id": "b1",			
 			"name": "187A Study for Midterm!! Online group!",
 			"address": "http://www.piazza.com",
