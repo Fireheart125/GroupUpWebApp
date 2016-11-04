@@ -20,13 +20,23 @@ exports.addGroup = function(req, res){
    	'time': time,
    	'description': description,
    }
+<<<<<<< HEAD
+   
+   data.group_person.push(newGroup);
+   res.render('myclass/cse170', data);
+=======
    console.log(newGroup);
    if ( newGroup.name = "undefined" ) {}
      else { data.group_person.push(newGroup);}
 
    console.log("new Data!");
    console.log(data);*/
+<<<<<<< HEAD
    res.render('create_inperson');
+=======
+   res.render('create_inperson', data);
+>>>>>>> 3c4a0e8e4a13a98049200d8908f95ed804341165
+>>>>>>> c4a35a8664125f4f5db7cf2e3e72d13b67f3551e
    };
 // Get all of our friend data
 var cse170data = require('../cse170data.json');
