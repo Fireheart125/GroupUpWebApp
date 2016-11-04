@@ -87,12 +87,16 @@
         <div class="col-md-3">
         </div>
         <div class="col-md-6" id="mypagebody" >
-          <h2>Class: {{className}}</h2>
+          <h2>Class: {{className}} ONLINE</h2>
           <div class="row" align="center">
             <button type="button" class="btn btn-info"><a href="create_inperson">IN PERSON</a></button>
             <button type="button" class="btn btn-info active">ONLINE</button>
           </div>
-          <form action="/myclass/cse170" id="addClassForm" role="form" method="get" align="left">
+          <form id="addClassForm" role="form" method="get" align="left">
+            Class: 
+            <input required readonly value="{{className}}" class="form-control" id="className" placeholder="Classname" name="className"><br>
+            Group Type: 
+            <input required readonly value="online" class="form-control" id="grouptype" placeholder="GroupType" name="grouptype"><br>
             Name: <input type="text" required class="form-control" id="name" placeholder="Name" name="name"> <br>  
             Forum: <input type="text" required class="form-control" id="forum" placeholder="Forum Link" name="forum"> <br>
                    <!--<input type="radio" required class="form-control" name="option" value="Facebook" checked> Facebook
@@ -105,7 +109,7 @@
                    <input class="groupJoin" type="text" name="site" value="URL"> <br> -->
             Description: <textarea class="fillin form-control" type="text" required id="description" placeholder="Description" name="description" rows="5" cols="50"></textarea> <br> 
             <div id="bottom" align="center">
-            <button type="submit" formaction="/myclass/cse170" class="btn btn-info" >Create Group! </button>
+            <button type="submit" formaction="../" class="btn btn-info" >Create Group! </button>
             </div>
           </form>
         </div>
