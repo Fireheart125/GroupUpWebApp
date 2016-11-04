@@ -1,8 +1,9 @@
 // Get all of our friend data
+var cse120data = require('../myGroups.json');
 var cse170data = require('../cse170data.json');
 var cse130data = require('../cse130data.json');
 var cse120data = require('../cse120data.json');
-var cogs187adata = require('../cogs187adata.json');
+var mydata = require('../cogs187adata.json');
 
 exports.view = function(req, res){
    var whichClass;
@@ -56,8 +57,11 @@ console.log(newGroup);
 
 else {
   data.group_person.push(newGroup);
-  console.log("DEBUG: FALSE");
+  mydata.group_person.push(newGroup);
+  console.log("DEBUG: ----newGroup-----FALSE");
   console.log(newGroup);
+  console.log("DEBUG: ----mydata-----FALSE");
+  console.log(mydata);
 }
    //data.group_person.push(newGroup);
 
