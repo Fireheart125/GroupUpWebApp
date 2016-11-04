@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var main = require('./routes/main');
 var myclass = require('./routes/myclass');
 var create_inperson = require('./routes/create_inperson');
+var join_inperson = require('./routes/join_inperson');
 var create_online = require('./routes/create_online');
 var group_inperson = require('./routes/group_inperson');
 var help = require('./routes/help');
@@ -61,6 +62,7 @@ app.get('/myclass/:name', myclass.view);
 
 app.get('/myclass/:className/create_online',create_online.view);
 app.get('/myclass/:className/create_inperson',create_inperson.view);
+app.get('/myclass/:className/:groupID/:grouptype',join_inperson.view);
 
 // Example route
 // app.get('/users', user.list);

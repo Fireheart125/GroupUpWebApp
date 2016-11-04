@@ -75,7 +75,7 @@ exports.view = function(req, res){
       var newGroup = {
         'id': id,
         'name': name,
-        'forum': forum,
+        'address': forum,
         'description': description,
       }
 
