@@ -119,11 +119,6 @@ h2.group-name {
   border-color: #ffed4a;
 }
 
-#online.btn:hover {
-  background-color: #ffed4a;
-  border-color: #ffed4a;
-}
-
 #in-person.btn {
   background-color: #a8e0ff;
   border-color: #F0F8FF;
@@ -147,10 +142,19 @@ h2.group-name {
 }
 
 #allclass.btn {
-  color: #F0FFFF;
+  background-color: #3e517a;
+  border-color: #F0FFFF;
 }
 
+#allclass.btn:hover {
+  background-color: #819592;
+}
 
+#allclass a {
+  color:#eee;
+}
+
+/*
 #in-person.btn:hover {
   background-color: #3e517a;;
   border-color: #3e517a;;
@@ -162,7 +166,18 @@ h2.group-name {
   border-color: #3e517a;
   color: #FFF0F5;
 }
+*/
+#forumLink {
+  background-color: #529399;
+}
 
+#forumLink a {
+  color: #eee;
+}
+
+#forumLink:hover {
+  background-color: #3e517a;
+}
 
 .class-name {
   text-transform: lowercase;
