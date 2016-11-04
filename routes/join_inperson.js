@@ -110,5 +110,5 @@ exports.view = function(req, res){
      console.log ("DEBUG::: data?");
      console.log (mydata);
 
-     res.render('join_inperson', {'groupName': req.params.className});
+     res.render('join_inperson', {'groupName': name});
 };
