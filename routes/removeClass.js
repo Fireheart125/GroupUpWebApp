@@ -31,8 +31,47 @@ exports.view = function(req, res){
      } // end of for loop
 
      /* Search group_person with className */
-     for(var i=0; i<mydata.group_person.length; i++) {
+      console.log("what is length of group_person?");
+      console.log(mydata.group_person.length);
+      //var count = mydata.group_person.length;
+      var i = 0;
+      while (i<mydata.group_person.length) {
+        if(req.params.className == mydata.group_person[i].className) {
+          console.log("DEBUG REMOVING FOUND!!! ----- groupID?");
+          console.log(mydata.group_person[i].className);
+          console.log(mydata.group_person[i].id);
+          mydata.group_person.splice(i, 1);
+          console.log("DEBUG ----- popped!");
+        }
+        else {
+          i++;
+        }
+     }
+
+     var i = 0;
+      while (i<mydata.group_online.length) {
+        if(req.params.className == mydata.group_online[i].className) {
+          console.log("DEBUG REMOVING FOUND!!! ----- groupID?");
+          console.log(mydata.group_online[i].className);
+          console.log(mydata.group_online[i].id);
+          mydata.group_online.splice(i, 1);
+          console.log("DEBUG ----- popped!");
+        }
+        else {
+          i++;
+        }
+     }
+
+
+
+/*
+     for(var i=0; i<count; i++) {
+      console.log("WHAT IS i???????");
+      console.log(i);
       console.log("DEBUG ----- inside For group_person");
+      console.log("check equivalent!");
+      console.log(mydata.group_person[i].id);
+      console.log(req.params.className == mydata.group_person[i].className);
         if(req.params.className == mydata.group_person[i].className) {
           console.log("DEBUG REMOVING FOUND!!! ----- groupID?");
           console.log(mydata.group_person[i].className);
@@ -42,17 +81,19 @@ exports.view = function(req, res){
         }
      } // end of for loop
 
-     /* Search group_person with className */
+     count = mydata.group_online.length;
+
      for(var i=0; i<mydata.group_online.length; i++) {
       console.log("DEBUG ----- inside For group_online");
         if(req.params.className == mydata.group_online[i].className) {
           console.log("DEBUG REMOVING FOUND!!! ----- groupID?");
           console.log(mydata.group_online[i].className);
+          console.log(mydata.group_person[i].id);
           mydata.group_online.splice(i, 1);
           console.log("DEBUG ----- popped!");
         }
      } // end of for loop
-
+*/
      console.log("DEBUG ------ Show the data! after");
      console.log (mydata);
 
