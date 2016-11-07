@@ -58,6 +58,8 @@ exports.view = function(req, res){
                var time = data.group_person[i].time;
                var description = data.group_person[i].description;
                var newGroup = {
+                 'className': req.params.className,
+                 'grouptype': "person",
                  'id': id,
                  'name': name,
                  'number': number,
@@ -93,6 +95,8 @@ exports.view = function(req, res){
                var forum = data.group_online[i].forum;
                var description = data.group_online[i].description;
                var newGroup = {
+                 'className': req.params.className,
+                 'grouptype': "online",
                  'id': id,
                  'name': name,
                  'address': forum,
