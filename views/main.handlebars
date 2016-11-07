@@ -71,7 +71,7 @@
     <div class="container">
       <div align="center" class="top_logo">
         <img src="images/logo_main1.png"><br>
-        <h2>Hi, Alok!</h2>
+        <h2>Hi, {{mydata.name}}</h2>
       </div>
     </div> <!-- /container -->
     <!-- ........................................................................... -->
@@ -89,10 +89,27 @@
         <div class="col-md-4">                            
           <h2>My Courses</h2>
           <p class="elem_list"> 
-            {{#each classlist}}
+            {{#each mydata.classlist}}
               <button id="allclass" type="button" class="btn btn-info"><a href="myclass/{{id}}">{{class}}</a></button>
             {{/each}}
           </p>
+
+            <h3>Add another class!</h3>
+            <!-- Single button -->
+            <div class="col-xs-12 btn-group">
+              <button type="button" class="col-xs-12 btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Current Classes <span class="caret"></span>
+              </button>
+              <ul class="col-xs-12 dropdown-menu">
+                <li><a href="#">Add another Class</a></li>
+                {{#each classes.allClasses}}
+                <li><a href="/myclass/{{id}}">{{class}}</a></li>
+                {{/each}}
+              </ul>
+            </div> 
+            <!-- End of button -->
+
+
         </div>      <!-- --> <!-- --> <!-- --> <!--    First column End    -->
         
         <!--    First column End    -->
@@ -103,7 +120,7 @@
             <p class="elem_list" align="center"><br> 
 
                 <!-- +++++ Each group space start! +++++ -->
-                {{#each group_person}}
+                {{#each mydata.group_person}}
                 <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
                   <h4 class="text-uppercase">
@@ -137,7 +154,7 @@
             <p class="elem_list" align="center"><br>
 
                 <!-- +++++ Each group space start! +++++ -->
-                {{#each group_online}}
+                {{#each mydata.group_online}}
                 <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
                   <h4 class="text-uppercase">

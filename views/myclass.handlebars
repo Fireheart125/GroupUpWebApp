@@ -69,9 +69,9 @@
     <!-- +++++ Container Start +++++ -->
     <div class="container">
       <div align="center" class="top_logo">
-        <h1>Groups for <span class="class-name">{{className}}</span></h1>
+        <h1>Groups for <span style="text-transform: uppercase">{{printName}}</span></h1>
         <p>
-          This is a page for {{className}}
+          This is a page for {{printName}}
         </p>
       </div>
     </div>
@@ -101,7 +101,7 @@
               </button>
               <ul class="col-xs-12 dropdown-menu">
                 <li><a href="#">Choose Another Class</a></li>
-                {{#each data.classlist}}
+                {{#each mydata.classlist}}
                 <li><a href="/myclass/{{id}}">{{class}}</a></li>
                 {{/each}}
               </ul>

@@ -7,6 +7,7 @@ var mydata = require('../myGroups.json');
 
 exports.view = function(req, res){
   var whichClass;
+  var printName;
   var whichGroup = req.query.grouptype;
 
   console.log("DEBUG: ***************************");
@@ -27,15 +28,19 @@ exports.view = function(req, res){
   switch (whichClass) {
     case "cse170":
         data = cse170data;
+        printName = "CSE 170/COGS 120";
         break;
     case "cse130":
         data = cse130data;
+        printName = "CSE 130";
         break;
     case "cse120":
          data = cse120data;
+         printName = "CSE 120";
          break;
     case "cogs187a":
          data = cogs187adata;
+         printName = "COGS 187A";
          break;
     default: 
   }
@@ -98,7 +103,9 @@ exports.view = function(req, res){
 
   var resultData = {
     className: whichClass,
-    data : data
+    printName : printName,
+    data : data,
+    mydata : mydata
   };
 
   console.log("DEBUG ------ before rendering, in main ");
