@@ -17,6 +17,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/style.css" media="screen" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="../../../index.js"></script>
 
 </head>
 
@@ -44,13 +45,13 @@
     </div> <br>
       <div id="login">
 
-        <form action="main" method="get">
+        <form name="signin">
 
           <fieldset class="clearfix">
 
-            <p><span class="fa fa-user"></span><input type="text" value="Name" onBlur="if(this.value == '') this.value = 'Name'" onFocus="if(this.value == 'Name') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-            <p><span class="fa fa-lock"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-            <p><input type="submit" value="Sign In"></p>
+            <p><span class="fa fa-user"></span><input type="text" value="Name" name="name" onBlur="if(this.value == '') this.value = 'Name'" onFocus="if(this.value == 'Name') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+            <p><span class="fa fa-lock"></span><input type="password"  value="Password" name="password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+            <p><input type="submit" onclick="check(this.form)" value="Sign In"></p>
 
           </fieldset>
 
