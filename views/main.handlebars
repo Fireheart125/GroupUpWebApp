@@ -91,7 +91,8 @@
           <p class="elem_list"> 
             {{#each mydata.classlist}}
               <button id="allclass" type="button" class="btn btn-info">
-              <a href="myclass/{{id}}">{{class}}<a href="/myclass/{{id}}/removeClass"> <span class="glyphicon glyphicon-remove"></span></a></a>
+              <a href="myclass/{{id}}">{{class}}</a>
+              <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="/myclass/{{id}}/removeClass"><span class="glyphicon glyphicon-remove"></span></a></div>
               </button>
             {{/each}}
           </p>
@@ -126,7 +127,7 @@
                 <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
                   <h4 class="text-uppercase">
-                    <a href="myclass/{{id}}">{{class}}<a href="/myclass/{{id}}/removeClass"> <span class="glyphicon glyphicon-remove"></span></a></a>
+                    <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="/myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
                     <button id="in-person" type="button" class="btn btn-info">In-Person</button>  {{name}}</h4>
                       <div id="icons" align="center">
                          <div class="col-xs-3"><img src="../images/people_40.png"/><p>Max: {{max}}</p></div>
@@ -161,7 +162,7 @@
                 <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
                   <h4 class="text-uppercase">
-                    <a href="myclass/{{id}}">{{class}}<a href="/myclass/{{id}}/removeClass"> <span class="glyphicon glyphicon-remove"></span></a></a>
+                    <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="/myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
                     <button id="online" type="button" class="btn btn-info">Online</button>  {{name}}</h4>
                       <div id="icons">
                          <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="{{address}}" align="center">Link to Forum:</button></a> {{address}} 
