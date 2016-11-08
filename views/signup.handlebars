@@ -43,15 +43,15 @@
 
       <div id="login">
 
-        <form action="main" method="get">
+        <form action="/signupAction" method="post">
 
           <fieldset class="clearfix">
 
-            <p><span class="fa fa-user"></span><input type="text" value="Name" onBlur="if(this.value == '') this.value = 'Name'" onFocus="if(this.value == 'Name') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-            <p><span class="fa fa-envelope"></span><input type="text" value="Email" onBlur="if(this.value == '') this.value = 'Email'" onFocus="if(this.value == 'Email') this.value = ''" required></p> 
+            <p><span class="fa fa-user"></span><input id="name" name="name" type="text" onBlur="if(this.value == '') this.value = 'Name'" onFocus="if(this.value == 'Name') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+            <p><span class="fa fa-envelope"></span><input id="email" name="email" type="text" onBlur="if(this.value == '') this.value = 'Email'" onFocus="if(this.value == 'Email') this.value = ''" required></p> 
             <br>
-            <p><span class="fa fa-unlock-alt"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-            <p><span class="fa fa-lock"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p>
+            <p><span class="fa fa-unlock-alt"></span><input id="password" name="password" type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+            <p><span class="fa fa-lock"></span><input type="password" name="confirm-password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p>
             <p><input type="submit" value="Sign Up"></p>
 
           </fieldset>

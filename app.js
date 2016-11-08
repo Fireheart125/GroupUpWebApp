@@ -64,6 +64,7 @@ app.get('/myclass',myclass.view);
 app.get('/help',help.view);
 app.get('/setting',setting.view);
 app.get('/signup',signup.view);
+app.post('/signupAction', signup.signupAction);
 app.get('/myclass/:name', myclass.view);
 
 app.get('/myclass/:className/create_online',create_online.view);

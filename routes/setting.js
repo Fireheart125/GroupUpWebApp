@@ -28,7 +28,6 @@ exports.view = function(req, res){
       mydata.password.push(password);
    }
 
-
    console.log ("DEBUG::: data? after");
    console.log (mydata);
 
