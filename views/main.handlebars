@@ -91,9 +91,8 @@
           <p class="elem_list"> 
             {{#each mydata.classlist}}
               <button id="allclass" type="button" class="btn btn-info">
-              <a href="myclass/{{id}}">{{class}}</a>
+              <a href="myclass/{{id}}">{{class}}<a href="/myclass/{{id}}/removeClass"> <span class="glyphicon glyphicon-remove"></span></a></a>
               </button>
-              <a href="/myclass/{{id}}/removeClass">Remove</a>
             {{/each}}
           </p>
 
