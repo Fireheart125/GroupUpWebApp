@@ -34,7 +34,31 @@ exports.view = function(req, res){
      console.log("DEBUG ------ Show the data!");
      console.log (data);
 
-     if(req.params.grouptype == "person") {
+     console.log("DEBUG ------ Show my data");
+     for(var k=0; k<mydata.group_person.length; k++) {
+      console.log(mydata.group_person[k].className);
+      console.log(mydata.group_person[k].id);
+     }
+     console.log("DEBUG ------ Show class data");
+     for(var p=0; p<data.group_person.length; p++) {
+      console.log(mydata.group_person[p].className);
+      console.log(mydata.group_person[p].id);
+     }
+     console.log("-------------------");
+
+      if(req.params.grouptype == "person") {
+        console.log("Inside person");
+        for(var q=0; q<mydata.group_person.length; q++) {
+          if(req.params.groupID == mydata.group_person[q].id) {
+            console.log("DEBUG ----- trying to join the same group twice!");
+            console.log(mydata.group_person[q].name);
+            var first = mydata.group_person[q].name;
+            var second = " twice!"
+            res.render('join_inperson', {'groupName':  first.concat(second)});
+            return;
+          }
+        }
+      
       console.log("DEBUG ----- join for person?");
       console.log("DEBUG ----- from the group?");
       console.log(req.params.groupID);
@@ -75,6 +99,19 @@ exports.view = function(req, res){
      } // if statement ends
 
      else if(req.params.grouptype == "online") {
+
+      console.log("Inside online");
+        for(var q=0; q<mydata.group_online.length; q++) {
+          if(req.params.groupID == mydata.group_online[q].id) {
+            console.log("DEBUG ----- trying to join the same group online twice!");
+            console.log(mydata.group_online[q].name);
+            var first = mydata.group_online[q].name;
+            var second = " twice!"
+            res.render('join_inperson', {'groupName':  first.concat(second)});
+            return;
+          }
+        }
+
       console.log("DEBUG ----- join for person?");
       console.log("DEBUG ----- from the online?");
       console.log(req.params.groupID);

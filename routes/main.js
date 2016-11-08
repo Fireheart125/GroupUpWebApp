@@ -4,7 +4,7 @@ var classes = require('../allClasses.json');
 
 exports.view = function(req, res){
    console.log("DEBUG ------ This is the main.js");
-   console.log(data);
+   //console.log(data);
 
    var resultData = {
      classes : classes,

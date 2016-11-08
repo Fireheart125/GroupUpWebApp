@@ -45,7 +45,7 @@ exports.view = function(req, res){
     default: 
   }
   console.log("DEBUG ------ Show the data!");
-  console.log(data);
+  //console.log(data);
 
   if(whichGroup != undefined) {
     if(whichGroup == "person") {
@@ -57,6 +57,7 @@ exports.view = function(req, res){
       var place = req.query.place;
       var time = req.query.time;
       var description = req.query.description;
+
       var newGroup = {
         'id': id,
         'name': name,
