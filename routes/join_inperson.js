@@ -36,13 +36,13 @@ exports.view = function(req, res){
 
      console.log("DEBUG ------ Show my data");
      for(var k=0; k<mydata.group_person.length; k++) {
-      console.log(mydata.group_person[k].className);
-      console.log(mydata.group_person[k].id);
+      //console.log(mydata.group_person[k].className);
+      //console.log(mydata.group_person[k].id);
      }
      console.log("DEBUG ------ Show class data");
      for(var p=0; p<data.group_person.length; p++) {
-      console.log(mydata.group_person[p].className);
-      console.log(mydata.group_person[p].id);
+      //console.log(mydata.group_person[p].className);
+      //console.log(mydata.group_person[p].id);
      }
      console.log("-------------------");
 
@@ -64,8 +64,8 @@ exports.view = function(req, res){
       console.log(req.params.groupID);
       console.log(req.params.groupID);
       console.log("DEBUG ----- Values?");
-      console.log(data.group_person[0].id);
-      console.log(data.group_person[1].id);
+      //console.log(data.group_person[0].id);
+      //console.log(data.group_person[1].id);
       console.log(data.group_person.length);
 
       console.log(req.params.groupID == data.group_person[1].id);
@@ -117,8 +117,8 @@ exports.view = function(req, res){
       console.log(req.params.groupID);
       console.log(req.params.groupID);
       console.log("DEBUG ----- Values?");
-      console.log(data.group_person[0].id);
-      console.log(data.group_person[1].id);
+      //console.log(data.group_person[0].id);
+      //console.log(data.group_person[1].id);
       console.log(data.group_person.length);
 
       console.log(req.params.groupID == data.group_online[1].id);
