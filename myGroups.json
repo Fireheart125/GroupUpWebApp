@@ -1,7 +1,7 @@
 {
-	"name": "Alok",
-	"e-mail": "alok@ucsd.edu",
-	"password": "abc",
+	"name": [ "Alok" ],
+	"email": [ "alok@ucsd.edu" ],
+	"password": [ "abc" ],
 	
 	"classlist": [
 		{
