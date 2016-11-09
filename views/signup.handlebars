@@ -8,6 +8,7 @@
    <!-- this is a comment in HTML -->
     <link rel="stylesheet" href="css/style.css" media="screen" type="text/css"/>
 
+
 </head>
 
 <body>
@@ -59,26 +60,40 @@
   <script type="text/javascript">
     //checking password validation before post action
     function validateForm (  ) {
-      var id = $("id").val();
+      
+      var id = $("#id").val();
       var password = $("#password").val();
       var confPass = $("#confirm_password").val();
+      console.log(id);
       console.log(password);
       console.log(confPass);
+
       if ( password != confPass ){
         alert( "Your password is not matched");
         return false;
       }
-
+      /*
+      console.log(data);
       //checking id duplications
-      var data = $.getJSON('../JSON/myGroups.json');
+      $.getJSON("myGroups.json", function(data) {
+        console.log(data);ß
+        alert("OMG");
+        return false;
+      });
+
+      return false;
+
+      console.log(data[0].id);
+      console.log(data[2].id);
       for(var i=0; i <data.length; i++) {
+
         console.log(data[i].id);
         if(id == data[i].id) {
           console.log("ID duplicate");
           alert( "Try differnt ID");
           return false;
         }
-      }
+      }*/
       return true;
     }
   </script>
