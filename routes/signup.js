@@ -1,5 +1,7 @@
-var mydata = require('../myGroups.json');
-var classes = require('../allClasses.json');
+var mydata = require('../JSON/myGroups.json');
+var classes = require('../JSON/allClasses.json');
+//var mydata = require('../myGroups.json');
+//var classes = require('../allClasses.json');
 
 exports.view = function(req, res){
 
@@ -20,9 +22,15 @@ exports.signupAction = function(req, res){
 
   console.log(req.body);
   console.log(req.body.name);
+  console.log(req.body.id);
   console.log(req.body.email);
   console.log(req.body.password);
+  console.log(req.body.confirm-password);
 
+  if(password != confirm-password) {
+    console.log("password is not matched with confirm password");
+
+  }
   if(req.body.name != undefined && req.body.name != "") {
       console.log("Inside the if statement");
       mydata.name.splice(0, 1);
