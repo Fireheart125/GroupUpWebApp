@@ -6,9 +6,6 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- this is a comment in HTML -->
-
-    
-    {{>commonCSS}}
     <link rel="stylesheet" href="css/style.css" media="screen" type="text/css"/>
 
 </head>
@@ -40,19 +37,18 @@
         <form action="/signupAction" method="post" onsubmit="return validateForm()">
 
           <fieldset class="clearfix">
-            <h3> If the submit does not work, please check your passwords </h3>
             <p><span class="fa fa-user"></span><input id="name" name="name" type="text" onBlur="if(this.value == '') this.value = 'Name'" onFocus="if(this.value == 'Name') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
             <p><span class="fa fa-user"></span><input id="id" name="id" type="text" onBlur="if(this.value == '') this.value = 'ID'" onFocus="if(this.value == 'ID') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
             <p><span class="fa fa-envelope"></span><input id="email" name="email" type="text" onBlur="if(this.value == '') this.value = 'Email'" onFocus="if(this.value == 'Email') this.value = ''" required></p> 
             <br>
             <p><span class="fa fa-unlock-alt"></span><input id="password" name="password" type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-            <p><span class="fa fa-lock"></span><input  id="confirm-password" type="password" name="confirm-password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p>
+            <p><span class="fa fa-lock"></span><input  id="confirm_password" type="password" name="confirm_password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p>
             <p><input type="submit" value="Sign Up"></p>
 
           </fieldset>
         </form>
 
-        <p>Already a member? <a href="\">Sign in!</a><span class="fontawesome-arrow-right"></span></p>
+        <p>Already a member? <a href="/">Sign in!</a><span class="fontawesome-arrow-right"></span></p>
 
       </div> <!-- end login -->
 
@@ -63,11 +59,24 @@
   <script type="text/javascript">
     //checking password validation before post action
     function validateForm (  ) {
+      var id = $("id").val();
       var password = $("#password").val();
-      var confPass = $("#confirm-password").val();
+      var confPass = $("#confirm_password").val();
+      console.log(password);
+      console.log(confPass);
       if ( password != confPass ){
         alert( "Your password is not matched");
         return false;
+      }
+
+      //checking id duplications
+      var data = $.getJSON('../JSON/myGroups.json');
+      for(var i=0; i <data.length; i++) {
+        if(id == data[i].id) {
+          console.log("ID duplicate");
+          alert( "Try differnt ID");
+          return false;
+        }
       }
       return true;
     }

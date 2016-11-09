@@ -25,12 +25,8 @@ exports.signupAction = function(req, res){
   console.log(req.body.id);
   console.log(req.body.email);
   console.log(req.body.password);
-  console.log(req.body.confirm-password);
+  console.log(req.body.confirm_password);
 
-  if(password != confirm-password) {
-    console.log("password is not matched with confirm password");
-
-  }
   if(req.body.name != undefined && req.body.name != "") {
       console.log("Inside the if statement");
       mydata.name.splice(0, 1);

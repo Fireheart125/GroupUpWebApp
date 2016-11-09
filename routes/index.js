@@ -24,9 +24,11 @@ exports.view = function(req, res){
 
     /* If the user is registered */
     if(mydata[i].id == id) {
+      console.log("id check passed");
       if(mydata[i].password == password) {
         console.log("Check passed!");
         res.redirect('main');
+        //res.render('main', mydata[i].name);
         return;
       }
     }
