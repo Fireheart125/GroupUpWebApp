@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -9,21 +8,20 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
-var main = require('./routes/main');
-var myclass = require('./routes/myclass');
-var create_inperson = require('./routes/create_inperson');
-
-var addclass = require('./routes/addclass');
-var join_inperson = require('./routes/join_inperson');
-
-var removeGroup = require('./routes/removeGroup');
-var removeClass = require('./routes/removeClass');
-
-var create_online = require('./routes/create_online');
-var group_inperson = require('./routes/group_inperson');
 var help = require('./routes/help');
 var setting = require('./routes/setting');
 var signup = require('./routes/signup');
+
+var main = require('./routes/main');
+var myclass = require('./routes/myclass');
+
+var create_online = require('./routes/create_online');
+var create_inperson = require('./routes/create_inperson');
+var addclass = require('./routes/addclass');
+var join = require('./routes/join');
+
+var removeGroup = require('./routes/removeGroup');
+var removeClass = require('./routes/removeClass');
 
 // Example route
 // var user = require('./routes/user');
@@ -52,28 +50,23 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/main',main.view);
-//app.get('/create_inperson',create_inperson.view);
-//app.get('/myclass/cse170', create_inperson.addGroup);
-app.get('/myclass',myclass.view);
-//app.get('/create_inperson',create_inperson.view);
-// app.get('/myclass/:name/create_inperson',create_inperson.addGroup);
-// app.get('/myclass',myclass.view);
+app.get('/:userID/main',main.view);
 
-// app.get('/group_inperson/:name/:groupID',group_inperson.view);
 app.get('/help',help.view);
-app.get('/setting',setting.view);
 app.get('/signup',signup.view);
-app.get('/myclass/:name', myclass.view);
+app.get('/:userID/setting',setting.view);
 
-app.get('/myclass/:className/create_online',create_online.view);
-app.get('/myclass/:className/create_inperson',create_inperson.view);
-app.get('/myclass/:className/:groupID/:grouptype',join_inperson.view);
+app.get('/:userID/myclass',myclass.view);
+app.get('/:userID/myclass/:name', myclass.view);
 
-app.get('/myclass/:className/addclass',addclass.view);
+app.get('/:userID/myclass/:className/create_online',create_online.view);
+app.get('/:userID/myclass/:className/create_inperson',create_inperson.view);
+app.get('/:userID/myclass/:className/:groupID/:grouptype',join.view);
 
-app.get('/myclass/:groupID/removeGroup',removeGroup.view);
-app.get('/myclass/:className/removeClass',removeClass.view);
+app.get('/:userID/myclass/:className/addclass',addclass.view);
+
+app.get('/:userID/myclass/:groupID/removeGroup',removeGroup.view);
+app.get('/:userID/myclass/:className/removeClass',removeClass.view);
 
 // Example route
 // app.get('/users', user.list);

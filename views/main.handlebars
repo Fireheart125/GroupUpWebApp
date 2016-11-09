@@ -12,13 +12,13 @@
     <title>GroupUp!</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/groupup.css" rel="stylesheet">
+    <link href="../css/groupup.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -48,14 +48,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="images/logo_top_30.png"></a>
+          <a class="navbar-brand" href="#"><img src="../images/logo_top_30.png"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="main">My page</a></li>
+            <li><a href="./main">My page</a></li>
             <li><a href="setting">Setting<span class="sr-only">(current)</span></a></li>
-            <li><a href="help">Help</a></li>
+            <li><a href="/help">Help</a></li>
             <li><a href="/">Sign Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -70,8 +70,9 @@
     -->
     <div class="container">
       <div align="center" class="top_logo">
-        <img src="images/logo_main1.png"><br>
+        <img src="../images/logo_main1.png"><br>
         <h2>Hi, {{mydata.name}}</h2>
+        You've created {{groupNum}} groups! Manage in setting page!
       </div>
     </div> <!-- /container -->
     <!-- ........................................................................... -->
@@ -91,8 +92,8 @@
           <p class="elem_list"> 
             {{#each mydata.classlist}}
               <button id="allclass" type="button" class="btn btn-info">
-              <a href="myclass/{{id}}">{{class}}</a>
-              <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="/myclass/{{id}}/removeClass"><span class="glyphicon glyphicon-remove"></span></a></div>
+              <a href="./myclass/{{id}}">{{class}}</a>
+              <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="{{mydata.name}}/myclass/{{id}}/removeClass"><span class="glyphicon glyphicon-remove"></span></a></div>
               </button>
             {{/each}}
           </p>
@@ -106,7 +107,7 @@
               <ul class="col-xs-12 dropdown-menu">
                 <li><a href="#">Add another Class</a></li>
                 {{#each classes.allClasses}}
-                <li><a href="/myclass/{{id}}/addclass">{{class}}</a></li>
+                <li><a href="myclass/{{id}}/addclass">{{class}}</a></li>
                 {{/each}}
               </ul>
             </div> 
@@ -119,7 +120,7 @@
 
         <!-- +++++ Right side (1. Group inPerson) page start +++++ -->
         <div class="col-md-4" align="center">
-            <img src="../images/in-person.png" class="col-xs-12">
+            <img src="../../images/in-person.png" class="col-xs-12">
             <p class="elem_list" align="center"><br> 
 
                 <!-- +++++ Each group space start! +++++ -->
@@ -127,12 +128,12 @@
                 <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
                   <h4 class="text-uppercase">
-                    <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="/myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
+                    <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
                     <button id="in-person" type="button" class="btn btn-info">In-Person</button>  {{name}}</h4>
                       <div id="icons" align="center">
-                         <div class="col-xs-3"><img src="../images/people_40.png"/><p>Max: {{max}}</p></div>
-                         <div class="col-xs-6"><img src="../images/location_40.png"/><p>{{place}}</p></div>
-                         <div class="col-xs-3"><img src="../images/time_40.png"/> <p>{{time}}</p></div>
+                         <div class="col-xs-3"><img src="../../images/people_40.png"/><p>Max: {{max}}</p></div>
+                         <div class="col-xs-6"><img src="../../images/location_40.png"/><p>{{place}}</p></div>
+                         <div class="col-xs-3"><img src="../../images/time_40.png"/> <p>{{time}}</p></div>
                       
                          <button id="group_detail" type="button" class="col-xs-12 btn btn-info">Please click to get more information!</button><br>
                       </div><br> <!-- id=icons -->
@@ -154,7 +155,7 @@
 
         <!-- +++++ Right side (2. Group Online) page start +++++ -->
         <div class="col-md-4">
-            <img src="../images/online.png" class="col-xs-12">
+            <img src="../../images/online.png" class="col-xs-12">
             <p class="elem_list" align="center"><br>
 
                 <!-- +++++ Each group space start! +++++ -->
@@ -162,7 +163,7 @@
                 <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
                   <h4 class="text-uppercase">
-                    <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="/myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
+                    <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
                     <button id="online" type="button" class="btn btn-info">Online</button>  {{name}}</h4>
                       <div id="icons">
                          <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="{{address}}" align="center">Link to Forum:</button></a> {{address}} 
@@ -184,7 +185,6 @@
         <!-- +++++ Right side of page End +++++ -->
                                                                    
 
-
       </div> 
       <!-- End of row -->
 
@@ -197,10 +197,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
 
     <!--                        End Body                            -->
   </body>

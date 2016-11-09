@@ -1,30 +1,9 @@
 {
-
-	"classlist": [
-		{
-			"id": "cse170",
-			"class": "CSE 170/COGS 120"	
-		},
-		{
-			"id": "cse130",
-			"class": "CSE 130"	
-		},
-		{
-			"id": "cse120",
-			"class": "CSE 120"	
-		},
-		{
-			"id": "cogs187a",
-			"class": "COGS 187A"	
-		}
-
-	],
-
-
 	"group_person": [
 		{
 			"className": "cse170",
 			"grouptype": "person",
+			"owner": false,
 			"id": "g1",
 			"name": "Study at Geisel Library!!",
 			"number": "5",
@@ -36,6 +15,7 @@
 		{
 			"className": "cse170",
 			"grouptype": "person",
+			"owner": false,
 			"id": "g2",
 			"name": "Code tutorial group for Node.js/Javascript",
 			"number": "5",
@@ -50,6 +30,7 @@
 		{
 			"className": "cse170",
 			"grouptype": "online",
+			"owner": false,
 			"id": "h1",			
 			"name": "Study for Midterm 2",
 			"address": "http://www.piazza.com",
@@ -58,6 +39,7 @@
 		{
 			"className": "cse170",
 			"grouptype": "online",
+			"owner": false,
 			"id": "h2",
 			"name": "Tutor online for Front-end!",
 			"address": "http://www.facebook.com",

@@ -1,29 +1,9 @@
 {
-
-	"classlist": [
-		{
-			"id": "cse170",
-			"class": "CSE 170/COGS 120"	
-		},
-		{
-			"id": "cse130",
-			"class": "CSE 130"	
-		},
-		{
-			"id": "cse120",
-			"class": "CSE 120"	
-		},
-		{
-			"id": "cogs187a",
-			"class": "COGS 187A"	
-		}
-
-	],
-
 	"group_person": [
 		{
 			"className": "cse120",
 			"grouptype": "person",
+			"owner": false,
 			"id": "c1",
 			"name": "120 Study for Midterm #2",
 			"number": "34",
@@ -35,6 +15,7 @@
 		{
 			"className": "cse120",
 			"grouptype": "person",
+			"owner": false,
 			"id": "c2",
 			"name": "120 Code group for Java",
 			"number": "6",
@@ -49,6 +30,7 @@
 		{
 			"className": "cse120",
 			"grouptype": "online",
+			"owner": false,
 			"id": "d1",			
 			"name": "120 Study for Midterm!! Online group!",
 			"address": "http://www.piazza.com",
@@ -57,6 +39,7 @@
 		{
 			"className": "cse120",
 			"grouptype": "online",
+			"owner": false,
 			"id": "d2",
 			"name": "120 Tutor online for Front-end!",
 			"address": "http://www.facebook.com",
