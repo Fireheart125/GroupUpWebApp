@@ -3,14 +3,39 @@ var cse120data = require('../cse120data.json');
 var cse170data = require('../cse170data.json');
 var cse130data = require('../cse130data.json');
 var cogs187adata = require('../cogs187adata.json');
-var mydata = require('../myGroups.json');
+var userdata = require('../myGroups.json');
 
 exports.view = function(req, res){
+  console.log("--------------- You are in my class!!!! ");
+  // app.get('/:userID/myclass/:name', myclass.view);
   var whichClass;
   var printName;
   var whichGroup = req.query.grouptype;
+  var user;
+  var data;
+  var mydata;
+  var addr;
+
+  if (req.params.userID == undefined) {
+    user = req.query.username;
+  }
+  else {
+    user = req.params.userID;
+  }
+
+  // Looking for the user in for loop
+  for(var i=0; i<userdata.length; i++) {
+    console.log("what is the name?");
+    console.log(userdata[i].id);
+    if(userdata[i].id == user)
+      mydata = userdata[i];
+      addr = i;
+  }
 
   console.log("DEBUG: ***************************");
+  console.log("what is user now?");
+  console.log(mydata.name);
+
   if (req.params.name == undefined) {
     whichClass = req.query.className;
   }
@@ -45,11 +70,12 @@ exports.view = function(req, res){
     default: 
   }
   console.log("DEBUG ------ Show the data!");
-  //console.log(data);
 
+  // Create Group!
   if(whichGroup != undefined) {
     if(whichGroup == "person") {
       console.log("DEBUG ------ now person group! ");
+      var className = req.query.className;
       var name = req.query.name;
       var id = name;
       var number = req.query.number;
@@ -59,8 +85,11 @@ exports.view = function(req, res){
       var description = req.query.description;
 
       var newGroup = {
+        'className': className,
         'id': id,
         'name': name,
+        'grouptype': "person",
+        'owner': true,
         'number': number,
         'max': max,
         'place': place,
@@ -69,7 +98,7 @@ exports.view = function(req, res){
       }
 
       data.group_person.push(newGroup);
-      mydata.group_person.push(newGroup);
+      userdata[addr].group_person.push(newGroup);
     }
 
     else if(whichGroup == "online") {
@@ -79,6 +108,9 @@ exports.view = function(req, res){
       var forum = req.query.forum;
       var description = req.query.description;
       var newGroup = {
+        'className': className,
+        'grouptype': "online",
+        'owner': true,
         'id': id,
         'name': name,
         'address': forum,
@@ -86,7 +118,7 @@ exports.view = function(req, res){
       }
 
       data.group_online.push(newGroup);
-      mydata.group_online.push(newGroup);
+      userdata[addr].group_online.push(newGroup);
     }
 
     else {
@@ -105,6 +137,7 @@ exports.view = function(req, res){
   var resultData = {
     className: whichClass,
     printName : printName,
+    user : user,
     data : data,
     mydata : mydata
   };
@@ -112,46 +145,4 @@ exports.view = function(req, res){
   console.log("DEBUG ------ before rendering, in main ");
   res.render('myclass', resultData);
 
-/*
-  var name = req.query.name;
-  var id = name;
-  var number = req.query.number;
-  var max = req.query.max;
-  var place = req.query.place;
-  var time = req.query.time;
-  var description = req.query.description;
-  var newGroup = {
-    'id': id,
-    'name': name,
-    'number': number,
-    'max': max,
-    'place': place,
-    'time': time,
-    'description': description,
-  }
-
-  if(newGroup.id == undefined) {
-    console.log("DEBUG: TRUE");
-    console.log(newGroup);
-  }
-
-  else {
-    data.group_person.push(newGroup);
-    mydata.group_person.push(newGroup);
-    console.log("DEBUG: ----newGroup-----FALSE");
-    console.log(newGroup);
-    console.log("DEBUG: ----mydata-----FALSE");
-    console.log(mydata);
-  }
-
-   //data.group_person.push(newGroup);
-
-  var resultData = {
-    className: whichClass,
-    data : data
-  };
-   
-  res.render('myclass', resultData);
-
-  */
 };

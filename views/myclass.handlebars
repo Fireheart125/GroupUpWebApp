@@ -15,13 +15,13 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/groupup.css" rel="stylesheet">
+
   </head>
 
   <body>
     <!--                        Start Body                            -->
     <!-- Static Nav Bar Partial is in /views/partials/staticNacBar.handlebars -->
     {{> staticNavBar }}
-
     <!-- 
       ++ This is First part "Title"
     -->
@@ -62,14 +62,14 @@
               <ul class="col-xs-12 dropdown-menu">
                 <li><a href="#">Choose Another Class</a></li>
                 {{#each mydata.classlist}}
-                <li><a href="/myclass/{{id}}">{{class}}</a></li>
+                <li><a href="./{{id}}">{{class}}</a></li>
                 {{/each}}
               </ul>
             </div> 
             <!-- End of button -->
             <br><br>
             <a href="./{{className}}/create_inperson"><button id="create_fromClass" type="button" class="col-xs-12 btn btn-info"><h4>Create a group!</h4></button></a>
-            <img src="../images/figures/myclass.png" class="col-xs-12">
+            <img src="../../images/figures/myclass.png" class="col-xs-12">
             
         </div><br><br>
         <!-- +++++ Left side of page End +++++ -->
@@ -91,7 +91,7 @@
                     </button>
                     <div id="demo{{id}}" class="collapse">
                       <p class="panel body class_descrip"><br>
-                        <h4 id="descr">Description</h4><p>{{description}}</p><br><a href="/myclass/{{className}}/{{id}}/{{grouptype}}"><br><button type="button" class="btn btn-info">Join Group!</button></a><br></p>
+                        <h4 id="descr">Description</h4><p>{{description}}</p><br><a href="./{{className}}/{{id}}/{{grouptype}}"><br><button type="button" class="btn btn-info">Join Group!</button></a><br></p>
                       </p>
                     </div> <!-- id="demo2" -->
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
@@ -121,7 +121,7 @@
                     </button>
                     <div id="demo{{id}}" class="collapse">
                       <p class="panel body class_descrip"> <br>
-                        <h4 id="descr">Description</h4><p>{{description}}</p><br><a href="/myclass/{{className}}/{{id}}/{{grouptype}}"><br><button type="button" class="btn btn-info">Join Group!</button></a><br></p>
+                        <h4 id="descr">Description</h4><p>{{description}}</p><br><a href="./{{className}}/{{id}}/{{grouptype}}"><br><button type="button" class="btn btn-info">Join Group!</button></a><br></p>
                       </p>
                     </div> <!-- id="demo2" -->
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
@@ -150,6 +150,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {{> commonJS }}
+
     <!--                        End Body                            -->
   </body>
 </html>

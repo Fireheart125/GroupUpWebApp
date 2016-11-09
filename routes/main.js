@@ -1,17 +1,26 @@
-// Get all of our friend data
-var data = require('../myGroups.json');
+var userdata = require('../myGroups.json');
 var classes = require('../allClasses.json');
 
 exports.view = function(req, res){
-   console.log("DEBUG ------ This is the main.js");
-   //console.log(data);
+   // From : app.get('/:userID/main',main.view);
+   console.log("------- Function : Now in main.js");
+
+   user = req.params.userID;
+   var mydata;
+
+   // Looking for the user in for loop
+   for(var i=0; i<userdata.length; i++) {
+      if(userdata[i].id == req.params.userID) {
+        mydata = userdata[i];
+      }
+   }
 
    var resultData = {
      classes : classes,
-     mydata : data
+     mydata : mydata,
+     groupNum : mydata.group_own.length,
   };
 
-  console.log("DEBUG ------ before rendering, in main ");
-
+   console.log("------- Finish function : Now in main.js");
    res.render('main',resultData);
 };
