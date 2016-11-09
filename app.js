@@ -54,10 +54,15 @@ app.get('/:userID/main',main.view);
 
 app.get('/help',help.view);
 app.get('/signup',signup.view);
+
 app.get('/:userID/setting',setting.view);
 
 app.get('/:userID/myclass',myclass.view);
 app.get('/:userID/myclass/:name', myclass.view);
+
+app.post('/signupAction', signup.signupAction);
+app.get('/myclass/:name', myclass.view);
+
 
 app.get('/:userID/myclass/:className/create_online',create_online.view);
 app.get('/:userID/myclass/:className/create_inperson',create_inperson.view);

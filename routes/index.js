@@ -22,7 +22,7 @@ exports.view = function(req, res){
     console.log("Inside the if statement")
     if(mydata.password[0] == password) {
       console.log("Check passed!");
-      res.render('main');
+      res.redirect('main');
       return;
     }
   }
