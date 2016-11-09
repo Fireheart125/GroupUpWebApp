@@ -1,6 +1,5 @@
-//var mydata = require('../myGroups.json');
-var mydata = require('../JSON/myGroups.json');
-var classes = require('../JSON/allClasses.json');
+var mydata = require('../myGroups.json');
+var classes = require('../allClasses.json');
 
 exports.view = function(req, res){
 

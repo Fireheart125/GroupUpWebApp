@@ -72,6 +72,7 @@
       //checking id duplications
       var data = $.getJSON('../JSON/myGroups.json');
       for(var i=0; i <data.length; i++) {
+        console.log(data[i].id);
         if(id == data[i].id) {
           console.log("ID duplicate");
           alert( "Try differnt ID");
