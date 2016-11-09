@@ -57,11 +57,11 @@
     -->
     <div class="container">
       <div align="center" class="top_logo">
-        <img src="../images/logo_main1.png"><br>
-        <h2>Hi, {{mydata.name}}</h2>
-        You've created {{groupNum}} groups! Manage in setting page! {{> helpModal }}
+        <img src="../images/mygroupup.png"><br>
+        <h2>Hello, "{{mydata.name}}"!</h2>
+        You've created {{groupNum}} groups! You can remove this groups in setting page!
       </div>
-    </div> <!-- /container -->
+    </div> <!-- /container --><br>
     <!-- ........................................................................... -->
 
 
@@ -75,7 +75,7 @@
 
         <!--    First column Start    -->
         <div class="col-md-4">   
-          <h2>Need help? {{> helpModal }}</h2>                         
+          <h4>Need help? {{> helpModal }}</h4>                         
           <h2>My Courses</h2>
           <p class="elem_list"> 
             {{#each mydata.classlist}}
@@ -107,22 +107,22 @@
         <!--    First column End    -->
 
         <!-- +++++ Right side (1. Group inPerson) page start +++++ -->
-        <div class="col-md-4" align="center">
-            <img src="../../images/in-person.png" class="col-xs-12">
+        <div class="col-md-4">
+            <img src="../../images/menu_main_person.png" class="col-xs-12">
 
                 <!-- +++++ Each group space start! +++++ -->
                 {{#each mydata.group_person}}
-                <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
                   <h4 class="text-uppercase">
                     <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
                     <button id="in-person" type="button" class="btn btn-info">In-Person</button>  {{name}}</h4>
-                      <div id="icons" align="center">
-                         <div class="col-xs-3"><img src="../../images/people_40.png"/><p>Max: {{max}}</p></div>
-                         <div class="col-xs-6"><img src="../../images/location_40.png"/><p>{{place}}</p></div>
-                         <div class="col-xs-3"><img src="../../images/time_40.png"/> <p>{{time}}</p></div>
-                      
-                         <button id="group_detail" type="button" class="col-xs-12 btn btn-info">Please click to get more information!</button><br>
+                      <div id="icons"><hr>
+                         This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
+                         <span class="glyphicon glyphicon-user"></span>  <b>Max:</b> {{max}}<br><br>
+                         <span class="glyphicon glyphicon-map-marker"></span>  <b>Place:</b> {{place}}<br><br>
+                         <span class="glyphicon glyphicon-time"></span>  <b>Time:</b> {{time}}<br><br>
+                         <button id="group_detail" type="button" class="col-xs-12 btn btn-info">
+                         <span class="glyphicon glyphicon-arrow-down"></span> Please click to see description!</button><br>
                       </div><br> <!-- id=icons -->
                     </button>
                     <div id="demo{{id}}" class="collapse">
@@ -133,7 +133,6 @@
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
                 </p>
 
-                </div> <!-- class_elem --> 
                 {{/each}}
                 <!-- +++++ Each group space End! +++++ -->  
 
@@ -142,7 +141,7 @@
 
         <!-- +++++ Right side (2. Group Online) page start +++++ -->
         <div class="col-md-4">
-            <img src="../../images/online.png" class="col-xs-12">
+            <img src="../../images/menu_main_online.png" class="col-xs-12">
             <p class="elem_list" align="center"><br>
 
                 <!-- +++++ Each group space start! +++++ -->
