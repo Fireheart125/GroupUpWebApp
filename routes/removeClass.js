@@ -3,10 +3,11 @@ var cse120data = require('../cse120data.json');
 var cse170data = require('../cse170data.json');
 var cse130data = require('../cse130data.json');
 var cogs187adata = require('../cogs187adata.json');
-var mydata = require('../myGroups.json');
+var userdata = require('../myGroups.json');
 
 exports.view = function(req, res){
 
+// app.get('/:userID/myclass/:className/removeClass',removeClass.view);
 
      console.log (req.params);
      console.log("DEBUG ------ Show the classname!");
@@ -16,8 +17,21 @@ exports.view = function(req, res){
      console.log (mydata);
 
      var name = req.params.className;
-// app.get('/myclass/:className/removeClass',removeClass.view);
-// need to remove classlist.id and group_person.className!!
+     var mydata;
+     var user = req.params.userID;
+
+    for(var i=0; i<userdata.length; i++) {
+      console.log("what is the name?");
+      console.log(userdata[i].id);
+      if(userdata[i].id == user) {
+        console.log("---- We found users!");
+        console.log(userdata[i].id);
+        mydata = userdata[i];
+        addr = i;
+      }
+    }
+
+    // need to remove classlist.id and group_person.className!!
 
      /* Search class with className */
      for(var i=0; i<mydata.classlist.length; i++) {
@@ -25,7 +39,7 @@ exports.view = function(req, res){
         if(req.params.className == mydata.classlist[i].id) {
           console.log("DEBUG ----- class?");
           console.log(mydata.classlist[i].id);
-          mydata.classlist.splice(i, 1);
+          userdata[addr].classlist.splice(i, 1);
           console.log("DEBUG ----- popped!");
         }
      } // end of for loop
@@ -40,7 +54,7 @@ exports.view = function(req, res){
           console.log("DEBUG REMOVING FOUND!!! ----- groupID?");
           console.log(mydata.group_person[i].className);
           console.log(mydata.group_person[i].id);
-          mydata.group_person.splice(i, 1);
+          userdata[addr].group_person.splice(i, 1);
           console.log("DEBUG ----- popped!");
         }
         else {
@@ -54,7 +68,7 @@ exports.view = function(req, res){
           console.log("DEBUG REMOVING FOUND!!! ----- groupID?");
           console.log(mydata.group_online[i].className);
           console.log(mydata.group_online[i].id);
-          mydata.group_online.splice(i, 1);
+          userdata[addr].group_online.splice(i, 1);
           console.log("DEBUG ----- popped!");
         }
         else {
@@ -63,37 +77,6 @@ exports.view = function(req, res){
      }
 
 
-
-/*
-     for(var i=0; i<count; i++) {
-      console.log("WHAT IS i???????");
-      console.log(i);
-      console.log("DEBUG ----- inside For group_person");
-      console.log("check equivalent!");
-      console.log(mydata.group_person[i].id);
-      console.log(req.params.className == mydata.group_person[i].className);
-        if(req.params.className == mydata.group_person[i].className) {
-          console.log("DEBUG REMOVING FOUND!!! ----- groupID?");
-          console.log(mydata.group_person[i].className);
-          console.log(mydata.group_person[i].id);
-          mydata.group_person.splice(i, 1);
-          console.log("DEBUG ----- popped!");
-        }
-     } // end of for loop
-
-     count = mydata.group_online.length;
-
-     for(var i=0; i<mydata.group_online.length; i++) {
-      console.log("DEBUG ----- inside For group_online");
-        if(req.params.className == mydata.group_online[i].className) {
-          console.log("DEBUG REMOVING FOUND!!! ----- groupID?");
-          console.log(mydata.group_online[i].className);
-          console.log(mydata.group_person[i].id);
-          mydata.group_online.splice(i, 1);
-          console.log("DEBUG ----- popped!");
-        }
-     } // end of for loop
-*/
      console.log("DEBUG ------ Show the data! after");
      console.log (mydata);
 

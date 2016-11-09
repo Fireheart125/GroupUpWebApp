@@ -3,7 +3,7 @@ var cse120data = require('../cse120data.json');
 var cse170data = require('../cse170data.json');
 var cse130data = require('../cse130data.json');
 var cogs187adata = require('../cogs187adata.json');
-var mydata = require('../myGroups.json');
+var userdata = require('../myGroups.json');
 
 exports.view = function(req, res){
 // from app.js 
@@ -12,6 +12,20 @@ exports.view = function(req, res){
 
      console.log("DEBUG ------ Show the groupid!");
      console.log( req.params.groupID);
+
+     var mydata;
+     var user = req.params.userID;
+
+    for(var i=0; i<userdata.length; i++) {
+      console.log("what is the name?");
+      console.log(userdata[i].id);
+      if(userdata[i].id == user) {
+        console.log("---- We found users!");
+        console.log(userdata[i].id);
+        mydata = userdata[i];
+        addr = i;
+      }
+    }
 
 // group_person.id
 // group_online.id
@@ -25,7 +39,7 @@ exports.view = function(req, res){
           console.log("DEBUG ----- groupID?");
           console.log(mydata.group_person[i].id);
           var name = mydata.group_person[i].name;
-          mydata.group_person.splice(i, 1);
+          userdata[addr].group_person.splice(i, 1);
           console.log("DEBUG ----- popped!");
         }
      } // end of for loop
@@ -37,14 +51,13 @@ exports.view = function(req, res){
           console.log("DEBUG ----- groupID?");
           console.log(mydata.group_online[i].id);
           var name = mydata.group_online[i].name;
-          mydata.group_online.splice(i, 1);
+          userdata[addr].group_online.splice(i, 1);
           console.log("DEBUG ----- popped!");
         }
      } // end of for loop
 
      console.log("DEBUG ------ Show the data! after pop!");
      console.log (mydata);
-
 
      console.log("DEBUG ------ before rendering, somewhere ");
 
