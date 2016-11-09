@@ -22,6 +22,7 @@ var join = require('./routes/join');
 
 var removeGroup = require('./routes/removeGroup');
 var removeClass = require('./routes/removeClass');
+var removeForever = require('./routes/removeForever');
 
 // Example route
 // var user = require('./routes/user');
@@ -63,7 +64,6 @@ app.get('/:userID/myclass/:name', myclass.view);
 app.post('/signupAction', signup.signupAction);
 app.get('/myclass/:name', myclass.view);
 
-
 app.get('/:userID/myclass/:className/create_online',create_online.view);
 app.get('/:userID/myclass/:className/create_inperson',create_inperson.view);
 app.get('/:userID/myclass/:className/:groupID/:grouptype',join.view);
@@ -72,6 +72,7 @@ app.get('/:userID/myclass/:className/addclass',addclass.view);
 
 app.get('/:userID/myclass/:groupID/removeGroup',removeGroup.view);
 app.get('/:userID/myclass/:className/removeClass',removeClass.view);
+app.get('/:userID/myclass/:classID/:groupID/setting/remove',removeForever.view);
 
 // Example route
 // app.get('/users', user.list);

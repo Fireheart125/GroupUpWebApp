@@ -1,9 +1,9 @@
 [
 	{
-		"name": "Alok",
-		"id": "alok",
-		"email": "alok@ucsd.edu",
-		"password": "abc",
+		"name": [ "Alok" ],
+		"id": [ "alok" ],
+		"email": [ "alok@ucsd.edu" ],
+		"password": [ "abc" ],
 		
 		"classlist": [
 			{
@@ -89,10 +89,10 @@
 	},
 
 	{
-		"name": "Yun",
-		"id": "withyuns",
-		"email": "alok@ucsd.edu",
-		"password": "abc",
+		"name": [ "Yun" ],
+		"id": [ "withyuns" ],
+		"email": [ "alok@ucsd.edu" ],
+		"password": ["abc" ],
 		
 		"classlist": [
 			{

@@ -100,6 +100,7 @@ exports.view = function(req, res){
 
       data.group_person.push(newGroup);
       userdata[addr].group_person.push(newGroup);
+      userdata[addr].group_own.push(newGroup);
     }
 
     else if(whichGroup == "online") {
@@ -120,6 +121,7 @@ exports.view = function(req, res){
 
       data.group_online.push(newGroup);
       userdata[addr].group_online.push(newGroup);
+      userdata[addr].group_own.push(newGroup);
     }
 
     else {
