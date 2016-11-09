@@ -86,6 +86,31 @@ exports.view = function(req, res){
       }
     } // end of for loop
 
+    // 5. Delete group from all members! - Need to search all users!
+    for(var i=0; i<userdata.length; i++) {
+      console.log("what is the name?");
+      console.log(userdata[i].id);
+
+      // 5.1. Find group_person
+      for(var j=0; j<userdata[i].group_person.length; j++) {
+        console.log("DEBUG ----- inside For class group_person");
+        if(group == userdata[i].group_person[j].id) {
+          userdata[i].group_person.splice(j, 1);
+          console.log("DEBUG ----- removed!");
+        }
+      } // end of for loop
+
+      // 5.2. Find group_online
+      for(var j=0; j<userdata[i].group_online.length; j++) {
+        console.log("DEBUG ----- inside For class group_person");
+        if(group == userdata[i].group_online[j].id) {
+          userdata[i].group_online.splice(j, 1);
+          console.log("DEBUG ----- removed!");
+        }
+      } // end of for loop
+
+    }
+
 
      console.log("DEBUG ------ Show the data! after pop!");
      console.log (mydata);

@@ -43,8 +43,7 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">My page</a></li>
-            <li><a href="./setting">Setting<span class="sr-only">(current)</span></a></li>
-            <li><a href="/help">Help</a></li>
+            <li><a href="./setting">Setting</a></li>
             <li><a href="/">Sign Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -60,7 +59,7 @@
       <div align="center" class="top_logo">
         <img src="../images/logo_main1.png"><br>
         <h2>Hi, {{mydata.name}}</h2>
-        You've created {{groupNum}} groups! Manage in setting page!
+        You've created {{groupNum}} groups! Manage in setting page! {{> helpModal }}
       </div>
     </div> <!-- /container -->
     <!-- ........................................................................... -->
@@ -75,7 +74,8 @@
       <div class="row">
 
         <!--    First column Start    -->
-        <div class="col-md-4">                            
+        <div class="col-md-4">   
+          <h2>Need help? {{> helpModal }}</h2>                         
           <h2>My Courses</h2>
           <p class="elem_list"> 
             {{#each mydata.classlist}}
@@ -89,11 +89,11 @@
             <h3>Add another class!</h3>
             <!-- Single button -->
             <div class="col-xs-12 btn-group">
-              <button type="button" class="col-xs-12 btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Current Classes <span class="caret"></span>
+              <button type="button" id="class-add-btn" class="col-xs-12 btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Click a class you want to add <span class="caret"></span>
               </button>
               <ul class="col-xs-12 dropdown-menu">
-                <li><a href="#">Add another Class</a></li>
+                <li><a href="#">List of classes :</a></li>
                 {{#each classes.allClasses}}
                 <li><a href="myclass/{{id}}/addclass">{{class}}</a></li>
                 {{/each}}
@@ -109,7 +109,6 @@
         <!-- +++++ Right side (1. Group inPerson) page start +++++ -->
         <div class="col-md-4" align="center">
             <img src="../../images/in-person.png" class="col-xs-12">
-            <p class="elem_list" align="center"><br> 
 
                 <!-- +++++ Each group space start! +++++ -->
                 {{#each mydata.group_person}}
@@ -179,6 +178,7 @@
     </div> <!-- End of container -->
     <!-- ........................................................................... -->
 
+    {{> helpModal }}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

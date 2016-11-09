@@ -1,7 +1,26 @@
 var mydata = require('../myGroups.json');
 var classes = require('../allClasses.json');
 
+
+exports.signInAction = function(req, res){
+   
+  /*
+    ID & Pass Check
+  */
+
+  // res.json( req.body )
+
+
+  var url = req.body.id + "/main";
+
+  res.redirect( url );
+};
+
+
 exports.view = function(req, res){
+
+  console.log ( req.body );
+
 
   console.log("Log in view");
   var id = req.query.id;
@@ -35,7 +54,6 @@ exports.view = function(req, res){
             mydata : resultdata,
             groupNum : resultdata.group_own.length,
         };
-
         res.render('main', resultdata2);
         return;
       }
