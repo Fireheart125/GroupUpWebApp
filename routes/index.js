@@ -1,5 +1,6 @@
 //var mydata = require('../myGroups.json');
 var mydata = require('../JSON/myGroups.json');
+var classes = require('../JSON/allClasses.json');
 
 exports.view = function(req, res){
 
@@ -27,8 +28,16 @@ exports.view = function(req, res){
       console.log("id check passed");
       if(mydata[i].password == password) {
         console.log("Check passed!");
-        res.redirect('main');
-        //res.render('main', mydata[i].name);
+
+        var resultdata = mydata[i];
+
+        var resultdata2 = {
+            classes : classes,
+            mydata : resultdata,
+            groupNum : resultdata.group_own.length,
+        };
+
+        res.render('main', resultdata2);
         return;
       }
     }
