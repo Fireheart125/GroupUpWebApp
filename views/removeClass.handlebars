@@ -11,24 +11,9 @@
 
     <title>GroupUp!</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
+    {{> commonCSS }}
     <!-- Custom styles for this template -->
-    <link href="../../../../css/groupup.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../../assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="/css/groupup.css" rel="stylesheet">
 
     <!-- Auto redirect to main -->
     <meta http-equiv="refresh" content="2;url=../../../main">
@@ -41,36 +26,14 @@
         ............................................................................
         This is Header & Naviagation bar & Drop Down menu!
     -->
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="../../../main"><img src="../../../../images/logo_top_30.png"></a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
+   <!-- Static Nav Bar Partial is in /views/partials/staticNacBar.handlebars -->
+    {{> staticNavBar }}
 
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../../../main">My page</a></li>
-            <li><a href="../../../setting">Setting<span class="sr-only">(current)</span></a></li>
-            <li><a href="../../../help">Help</a></li>
-            <li><a href="../../../\">Sign Out</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-    <!-- ........................................................................... -->
 
     <!-- /container -->
-    <!-- ........................................................................... -->
     <div class="container" id="message" align="center">
       <h1>You have removed class of "{{groupName}}"</h1>
-      <img src="../../../../images/loading_200.gif">
+      <img src="/images/loading_200.gif">
     </div>
 
     <!-- ...........................................................................
@@ -80,11 +43,7 @@
      Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-    <script src="../../../../js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../../../js/ie10-viewport-bug-workaround.js"></script>
+    {{> commonJS }}
 
 
     <!--                        End Body                            -->
