@@ -27,9 +27,10 @@ exports.view = function(req, res){
   for(var i=0; i<userdata.length; i++) {
     console.log("what is the name?");
     console.log(userdata[i].id);
-    if(userdata[i].id == user)
+    if(userdata[i].id == user) {
       mydata = userdata[i];
       addr = i;
+    }
   }
 
   console.log("DEBUG: ***************************");

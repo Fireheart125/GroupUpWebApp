@@ -1,12 +1,11 @@
-// Get all of our friend data
 var cse120data = require('../cse120data.json');
 var cse170data = require('../cse170data.json');
 var cse130data = require('../cse130data.json');
 var cogs187adata = require('../cogs187adata.json');
-var mydata = require('../myGroups.json');
+var userdata = require('../myGroups.json');
 
 exports.view = function(req, res){
-
+// app.get('/:userID/myclass/:className/:groupID/:grouptype',join.view);
      console.log (req.params);
      console.log("DEBUG ------ Show the classname!");
      console.log( req.params.className);
@@ -14,6 +13,19 @@ exports.view = function(req, res){
      console.log( req.params.groupID);
      console.log("DEBUG ------ Show the grouptype!");
      console.log( req.params.grouptype);
+     var mydata;
+     var user = req.params.userID;
+
+    for(var i=0; i<userdata.length; i++) {
+      console.log("what is the name?");
+      console.log(userdata[i].id);
+      if(userdata[i].id == user) {
+        console.log("---- We found users!");
+        console.log(userdata[i].id);
+        mydata = userdata[i];
+        addr = i;
+      }
+    }
 
      switch (req.params.className) {
        case "cse170":
@@ -54,21 +66,21 @@ exports.view = function(req, res){
             console.log(mydata.group_person[q].name);
             var first = mydata.group_person[q].name;
             var second = " twice!"
-            res.render('join_inperson', {'groupName':  first.concat(second)});
+            res.render('join', {'groupName':  first.concat(second)});
             return;
           }
         }
       
-      console.log("DEBUG ----- join for person?");
-      console.log("DEBUG ----- from the group?");
-      console.log(req.params.groupID);
-      console.log(req.params.groupID);
-      console.log("DEBUG ----- Values?");
-      //console.log(data.group_person[0].id);
-      //console.log(data.group_person[1].id);
-      console.log(data.group_person.length);
+        console.log("DEBUG ----- join for person?");
+        console.log("DEBUG ----- from the group?");
+        console.log(req.params.groupID);
+        console.log(req.params.groupID);
+        console.log("DEBUG ----- Values?");
+        //console.log(data.group_person[0].id);
+        //console.log(data.group_person[1].id);
+        console.log(data.group_person.length);
 
-      console.log(req.params.groupID == data.group_person[1].id);
+        console.log(req.params.groupID == data.group_person[1].id);
         for(var i=0; i<data.group_person.length; i++) {
          console.log("DEBUG ----- inside For");
             if(req.params.groupID == data.group_person[i].id) {
@@ -84,6 +96,7 @@ exports.view = function(req, res){
                var newGroup = {
                  'className': req.params.className,
                  'grouptype': "person",
+                 'owner' : false,
                  'id': id,
                  'name': name,
                  'number': number,
@@ -92,11 +105,11 @@ exports.view = function(req, res){
                  'time': time,
                  'description': description,
                }
-               mydata.group_person.push(newGroup);
+               userdata[addr].group_person.push(newGroup);
                console.log("DEBUG ----- pushed!");
             }
          }
-     } // if statement ends
+     } // if person statement ends
 
      else if(req.params.grouptype == "online") {
 
@@ -107,7 +120,7 @@ exports.view = function(req, res){
             console.log(mydata.group_online[q].name);
             var first = mydata.group_online[q].name;
             var second = " twice!"
-            res.render('join_inperson', {'groupName':  first.concat(second)});
+            res.render('join', {'groupName':  first.concat(second)});
             return;
           }
         }
@@ -128,18 +141,19 @@ exports.view = function(req, res){
                console.log("DEBUG ----- groupID?");
                console.log(data.group_person[i].id);
                var name = data.group_online[i].name;
-               var id = name;
+               var id = data.group_online[i].id;
                var forum = data.group_online[i].forum;
                var description = data.group_online[i].description;
                var newGroup = {
                  'className': req.params.className,
                  'grouptype': "online",
+                 'owner': false,
                  'id': id,
                  'name': name,
                  'address': forum,
                  'description': description,
                }
-               mydata.group_online.push(newGroup);
+               userdata[addr].group_online.push(newGroup);
                console.log("DEBUG ----- pushed!");
             }
          }
@@ -151,5 +165,10 @@ exports.view = function(req, res){
      console.log ("DEBUG::: data?");
      console.log (mydata);
 
-     res.render('join_inperson', {'groupName': name});
+     res.render('join', 
+        {
+           'groupName': name,
+           'username' : req.params.userID
+        }
+      );
 };
