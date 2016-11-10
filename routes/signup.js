@@ -64,10 +64,10 @@ exports.signupAction = function(req, res){
       console.log("After pushing");
       console.log(mydata);
 
-      var url = name + "/main";
+      var url = newID + "/main";
       res.redirect(url);
       return;
       }
     }
-  }
+  } // end of big if
 };
