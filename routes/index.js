@@ -47,17 +47,6 @@ exports.signInAction = function(req, res){
     res.render('LogInError');
   return;
 
-
-  /*
-    ID & Pass Check
-  */
-
-  // res.json( req.body )
-
-
-  var url = req.body.id + "/main";
-
-  res.redirect( url );
 };
 
 /* No longer using this function */
