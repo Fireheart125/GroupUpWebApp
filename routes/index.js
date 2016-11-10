@@ -44,7 +44,7 @@ exports.signInAction = function(req, res){
 
   /* If the user input is wrong */
   console.log("The user input is wrong!");
-    res.render('LogInError');
+    res.render('logInError');
   return;
 
 };
