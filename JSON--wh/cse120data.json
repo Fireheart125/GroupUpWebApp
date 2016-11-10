@@ -1,0 +1,51 @@
+{
+	"group_person": [
+		{
+			"className": "cse120",
+			"grouptype": "person",
+			"owner": false,
+			"id": "c1",
+			"name": "120 Study for Midterm #2",
+			"number": "34",
+			"max": "30",
+			"place": "Geisel Library Study room 200",
+			"time": "3-6pm",
+			"description": "Study for midterm 2 for CSE 120, Please join for collaboration!"
+		},
+		{
+			"className": "cse120",
+			"grouptype": "person",
+			"owner": false,
+			"id": "c2",
+			"name": "120 Code group for Java",
+			"number": "6",
+			"max": "25",
+			"place": "CSE Basement B240",
+			"time": "5-8pm",
+			"description": "Our TA Rob will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
+		}
+	],
+
+	"group_online": [
+		{
+			"className": "cse120",
+			"grouptype": "online",
+			"owner": false,
+			"id": "d1",			
+			"name": "120 Study for Midterm!! Online group!",
+			"address": "http://www.piazza.com",
+			"description": "We will study for midterm 2 for CSE 120, Please join for collaboration!"		
+		},
+		{
+			"className": "cse120",
+			"grouptype": "online",
+			"owner": false,
+			"id": "d2",
+			"name": "120 Tutor online for Front-end!",
+			"address": "http://www.facebook.com",
+			"description": "Our TA Caleb will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
+		}
+	]
+
+
+}

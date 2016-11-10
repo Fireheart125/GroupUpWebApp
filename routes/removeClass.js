@@ -1,9 +1,4 @@
-// Get all of our friend data
-var cse120data = require('../cse120data.json');
-var cse170data = require('../cse170data.json');
-var cse130data = require('../cse130data.json');
-var cogs187adata = require('../cogs187adata.json');
-var userdata = require('../myGroups.json');
+var userdata = require('../json/myGroups.json');
 
 exports.view = function(req, res){
 
