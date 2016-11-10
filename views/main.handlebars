@@ -58,7 +58,7 @@
     <div class="container">
       <div align="center" class="top_logo">
         <img src="../images/mygroupup.png"><br>
-        <h2>Hello, "{{mydata.name}}"!</h2>
+        <h2>Hello, "{{mydata.name}}"! <a href="./setting"><button id="in-person" type="button" class="btn btn-info">Change</button></a></h2>
         You've created {{groupNum}} groups! You can remove this groups in setting page!
       </div>
     </div> <!-- /container --><br>
@@ -74,8 +74,8 @@
       <div class="row">
 
         <!--    First column Start    -->
-        <div class="col-md-4">   
-          <h4>Need help? {{> helpModal }}</h4>                         
+        <div class="col-md-4">
+          {{> helpModal }}                 
           <h2>My Courses</h2>
           <p class="elem_list"> 
             {{#each mydata.classlist}}
@@ -146,24 +146,26 @@
 
                 <!-- +++++ Each group space start! +++++ -->
                 {{#each mydata.group_online}}
-                <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
                   <h4 class="text-uppercase">
                     <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
-                    <button id="online" type="button" class="btn btn-info">Online</button>  {{name}}</h4>
-                      <div id="icons">
-                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="{{address}}" align="center">Link to Forum:</button></a> {{address}} 
-                         <button id="group_detail" type="button" class="col-xs-12 btn btn-info">Please click to get more information!</button><br>
+                    <button id="online" type="button" class="btn btn-info">Online</button> {{name}}</h4>
+                      <div id="icons"><hr>
+                         This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
+                         <span class="glyphicon glyphicon-home"></span>  <b>Forum:</b> {{address}}<br><br>
+                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="{{address}}" target="_blank" align="center">Link to Forum</button></a><br><br>
+                         <button id="group_detail" type="button" class="col-xs-12 btn btn-info">
+                         <span class="glyphicon glyphicon-arrow-down"></span> Please click to see description!</button><br>
                       </div><br> <!-- id=icons -->
                     </button>
                     <div id="demo{{id}}" class="collapse">
-                      <p class="panel body class_descrip"> <br>
+                      <p class="panel body class_descrip"><br>
                         <h4 id="descr">Description</h4><p>{{description}}</p><br>
+                      </p>
                     </div> <!-- id="demo2" -->
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
                 </p>
 
-                </div> <!-- class_elem --> 
                 {{/each}}
                 <!-- +++++ Each group space End! +++++ -->  
 
@@ -176,8 +178,6 @@
 
     </div> <!-- End of container -->
     <!-- ........................................................................... -->
-
-    {{> helpModal }}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
