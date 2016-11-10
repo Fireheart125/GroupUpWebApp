@@ -105,26 +105,18 @@
         <!-- +++++ Right side (1. Group inPerson) page start +++++ -->
         <div class="col-md-4">
             <button id="in-person" type="button" class="col-xs-12 btn btn-info no-click">Group in Person</button> 
-            <p class="elem_list" align="center"><br> 
 
                 <!-- +++++ Each group space start! +++++ -->
                 {{#each data.group_person}}
                 <div class="class_elem">
-                  <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
+                  <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
-                    <button id="in-person" type="button" class="btn btn-info no-click">In-Person</button>  {{name}}</h4>
-                      <div id="icons" align="center">                      
-                         <button id="group_detail" type="button" class="col-xs-12 btn btn-info">Please click to get more information!</button><br>
-                      </div><br> <!-- id=icons -->
-                    </button>
-                    <div id="demo{{id}}" class="collapse">
-                      <p class="panel body class_descrip"><br>
-                        <h4 id="descr">Description</h4><p>{{description}}</p><br><a href="./{{className}}/{{id}}/{{grouptype}}"><br><button type="button" class="btn btn-info">Join Group!</button></a><br></p>
-                      </p>
-                    </div> <!-- id="demo2" -->
+                    <button id="in-person" type="button" class="btn btn-info no-click">In-Person</button>  {{name}}</h4><hr>
+                    <h4 id="descr">Description</h4>{{description}}<br><hr>
+                    If you are intereted in this group, please join it!<br>
+                    <a href="./{{className}}/{{id}}/{{grouptype}}">
+                    <button type="button" class="col-xs-12 btn btn-info">Join Group!</button></a><br><br><br>
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-                </p>
-
                 </div> <!-- class_elem --> 
                 {{/each}}
                 <!-- +++++ Each group space End! +++++ -->  
@@ -135,29 +127,22 @@
         <!-- +++++ Right side (2. Group Online) page start +++++ -->
         <div class="col-md-4">
             <button id="online" type="button" class="col-xs-12 btn btn-info no-click">Group Online</button>
-            <p class="elem_list" align="center"><br>
+            <p class="elem_list" align="center">
 
                 <!-- +++++ Each group space start! +++++ -->
                 {{#each data.group_online}}
                 <div class="class_elem">
-                  <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
+                  <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
-                    <button id="online" type="button" class="btn btn-info no-click">Online</button>  {{name}}</h4>
-                      <div id="icons">
-                         <button id="group_detail" type="button" class="col-xs-12 btn btn-info">Please click to get more information!</button><br>
-                      </div><br> <!-- id=icons -->
-                    </button>
-                    <div id="demo{{id}}" class="collapse">
-                      <p class="panel body class_descrip"> <br>
-                        <h4 id="descr">Description</h4><p>{{description}}</p><br><a href="./{{className}}/{{id}}/{{grouptype}}"><br><button type="button" class="btn btn-info">Join Group!</button></a><br></p>
-                      </p>
-                    </div> <!-- id="demo2" -->
+                    <button id="online" type="button" class="btn btn-info no-click">Online</button>  {{name}}</h4><hr>
+                    <h4 id="descr">Description</h4>{{description}}<br><hr>
+                    If you are intereted in this group, please join it!<br>
+                    <a href="./{{className}}/{{id}}/{{grouptype}}">
+                    <button type="button" class="col-xs-12 btn btn-info">Join Group!</button></a><br><br><br>
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-                </p>
-
                 </div> <!-- class_elem --> 
                 {{/each}}
-                <!-- +++++ Each group space End! +++++ -->  
+                <!-- +++++ Each group space End! +++++ --> 
 
         </div> 
         <!-- +++++ Right side of page End +++++ -->
