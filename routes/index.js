@@ -1,7 +1,7 @@
 var mydata = require('../data/myGroups.json');
 var classes = require('../data/allClasses.json');
 
-
+/* WTF */
 exports.signInAction = function(req, res){
    
   console.log("singinIn Action");
