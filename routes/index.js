@@ -63,8 +63,10 @@ exports.signInAction = function(req, res){
 /* No longer using this function */
 exports.view = function(req, res){
 
+
   var id = req.body.id;
   var password = req.body.password;
+
 
   if(id == undefined && password == undefined) {
     res.render('index');

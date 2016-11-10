@@ -112,22 +112,18 @@
 
                 <!-- +++++ Each group space start! +++++ -->
                 {{#each mydata.group_person}}
-                  <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
+                  <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
-                    <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
+                    <div class="btn-group btn-group-xs" role="group"><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
                     <button id="in-person" type="button" class="btn btn-info">In-Person</button>  {{name}}</h4>
                       <div id="icons"><hr>
                          This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
                          <div id="group_info"><span class="glyphicon glyphicon-user"></span>  <b>Max:</b> {{max}}</div>
                          <div id="group_info"><span class="glyphicon glyphicon-map-marker"></span>  <b>Place:</b> {{place}}</div>
-                         <div id="group_info"><span class="glyphicon glyphicon-time"></span>  <b>Time:</b> {{time}}</div><br>
-                         <button id="group_detail" type="button" class="col-xs-12 btn btn-info">
-                         <span class="glyphicon glyphicon-arrow-down"></span> Please click to see description!</button><br>
-                      </div><br> <!-- id=icons -->
-                    </button>
-                    <div id="demo{{id}}" class="collapse">
-                      <p class="panel body class_descrip"><br>
-                        <h4 id="descr">Description</h4><p>{{description}}</p><br>
+                         <div id="group_info"><span class="glyphicon glyphicon-time"></span>  <b>Time:</b> {{time}}</div>
+
+                      <p class="panel body class_descrip">
+                        <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
                       </p>
                     </div> <!-- id="demo2" -->
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
@@ -146,21 +142,17 @@
 
                 <!-- +++++ Each group space start! +++++ -->
                 {{#each mydata.group_online}}
-                  <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
+                  <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
-                    <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
+                    <div class="btn-group btn-group-xs" role="group"><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
                     <button id="online" type="button" class="btn btn-info">Online</button> {{name}}</h4>
                       <div id="icons"><hr>
                          This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
                          <span class="glyphicon glyphicon-home"></span>  <b>Forum:</b> {{address}}<br><br>
-                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="{{address}}" target="_blank" align="center">Link to Forum</button></a><br><br>
-                         <button id="group_detail" type="button" class="col-xs-12 btn btn-info">
-                         <span class="glyphicon glyphicon-arrow-down"></span> Please click to see description!</button><br>
-                      </div><br> <!-- id=icons -->
-                    </button>
-                    <div id="demo{{id}}" class="collapse">
-                      <p class="panel body class_descrip"><br>
-                        <h4 id="descr">Description</h4><p>{{description}}</p><br>
+                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="{{address}}" target="_blank" align="center">Link to Forum</button></a><br>
+
+                      <p class="panel body class_descrip">
+                        <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
                       </p>
                     </div> <!-- id="demo2" -->
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
