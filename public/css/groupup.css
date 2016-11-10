@@ -82,6 +82,10 @@ h2.group-name {
   display: inline;
 }
 
+#group_info {
+  line-hight: .5;
+}
+
 #descr {
   text-transform: uppercase;
 }
