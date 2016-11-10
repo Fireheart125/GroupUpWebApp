@@ -67,7 +67,6 @@
       console.log(id);
       console.log(password);
       console.log(confPass);
-
       if ( password != confPass ){
         alert( "Your password is not matched");
         return false;
@@ -80,13 +79,10 @@
         alert("OMG");
         return false;
       });
-
       return false;
-
       console.log(data[0].id);
       console.log(data[2].id);
       for(var i=0; i <data.length; i++) {
-
         console.log(data[i].id);
         if(id == data[i].id) {
           console.log("ID duplicate");
@@ -101,4 +97,3 @@
   </body>
 
 </html>
-

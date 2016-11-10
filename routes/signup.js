@@ -71,4 +71,3 @@ exports.signupAction = function(req, res){
     }
   }
 };
-
