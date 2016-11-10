@@ -53,7 +53,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.post('/signInAction', index.signInAction);
 app.get('/:userID/main',main.view);
-app.get('/LogInError');
+app.get('/LogInError', index.view);
 
 app.get('/help',help.view);
 app.get('/signup',signup.view);
