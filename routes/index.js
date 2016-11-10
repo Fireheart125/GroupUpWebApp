@@ -53,11 +53,6 @@ exports.signInAction = function(req, res){
   */
 
   // res.json( req.body )
-
-
-  var url = req.body.id + "/main";
-
-  res.redirect( url );
 };
 
 /* No longer using this function */
