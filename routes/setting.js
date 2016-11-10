@@ -1,4 +1,4 @@
-var userdata = require('../myGroups.json');
+var userdata = require('../json/myGroups.json');
 
 exports.view = function(req, res){
    // app.get('/:userID/setting',setting.view);

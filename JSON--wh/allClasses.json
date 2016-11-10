@@ -1,0 +1,20 @@
+{
+	"allClasses": [
+		{
+			"id": "cse170",
+			"class": "CSE 170/COGS 120"	
+		},
+		{
+			"id": "cse130",
+			"class": "CSE 130"	
+		},
+		{
+			"id": "cse120",
+			"class": "CSE 120"	
+		},
+		{
+			"id": "cogs187a",
+			"class": "COGS 187A"	
+		}
+	]
+}

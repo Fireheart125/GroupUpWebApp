@@ -42,7 +42,6 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../main">My page</a></li>
             <li><a href="../setting">Setting<span class="sr-only">(current)</span></a></li>
-            <li><a href="/help">Help</a></li>
             <li><a href="/">Sign Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -79,15 +78,16 @@
 
         <!-- +++++ Left side of page Start +++++ -->
         <div class="col-md-4" align="center">
+            {{> helpModal }}
             <h3>Choose Another Class</h3>
 
             <!-- Single button -->
             <div class="col-xs-12 btn-group">
               <button type="button" class="col-xs-12 btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Current Classes <span class="caret"></span>
+                My Classes <span class="caret"></span>
               </button>
               <ul class="col-xs-12 dropdown-menu">
-                <li><a href="#">Choose Another Class</a></li>
+                <li><a href="#">Choose Another Class :</a></li>
                 {{#each mydata.classlist}}
                 <li><a href="./{{id}}">{{class}}</a></li>
                 {{/each}}
@@ -103,7 +103,7 @@
 
         <!-- +++++ Right side (1. Group inPerson) page start +++++ -->
         <div class="col-md-4">
-            <button id="in-person" type="button" class="col-xs-12 btn btn-info">Group in Person</button> 
+            <button id="in-person" type="button" class="col-xs-12 btn btn-info no-click">Group in Person</button> 
             <p class="elem_list" align="center"><br> 
 
                 <!-- +++++ Each group space start! +++++ -->
@@ -111,7 +111,7 @@
                 <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
                   <h4 class="text-uppercase">
-                    <button id="in-person" type="button" class="btn btn-info">In-Person</button>  {{name}}</h4>
+                    <button id="in-person" type="button" class="btn btn-info no-click">In-Person</button>  {{name}}</h4>
                       <div id="icons" align="center">                      
                          <button id="group_detail" type="button" class="col-xs-12 btn btn-info">Please click to get more information!</button><br>
                       </div><br> <!-- id=icons -->
@@ -133,7 +133,7 @@
 
         <!-- +++++ Right side (2. Group Online) page start +++++ -->
         <div class="col-md-4">
-            <button id="online" type="button" class="col-xs-12 btn btn-info">Group Online</button>
+            <button id="online" type="button" class="col-xs-12 btn btn-info no-click">Group Online</button>
             <p class="elem_list" align="center"><br>
 
                 <!-- +++++ Each group space start! +++++ -->
@@ -141,7 +141,7 @@
                 <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default" data-toggle="collapse" data-target="#demo{{id}}">
                   <h4 class="text-uppercase">
-                    <button id="online" type="button" class="btn btn-info">Online</button>  {{name}}</h4>
+                    <button id="online" type="button" class="btn btn-info no-click">Online</button>  {{name}}</h4>
                       <div id="icons">
                          <button id="group_detail" type="button" class="col-xs-12 btn btn-info">Please click to get more information!</button><br>
                       </div><br> <!-- id=icons -->
