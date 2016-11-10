@@ -1,5 +1,5 @@
-var mydata = require('../json/myGroups.json');
-var classes = require('../json/allClasses.json');
+var mydata = require('../data/myGroups.json');
+var classes = require('../data/allClasses.json');
 
 
 exports.signInAction = function(req, res){
