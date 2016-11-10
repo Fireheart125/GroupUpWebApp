@@ -60,46 +60,6 @@ exports.signInAction = function(req, res){
 /* No longer using this function */
 exports.view = function(req, res){
 
-  console.log ( req.body );
-
-
-  console.log("Log in view");
-  var id = req.query.id;
-  var password = req.query.password;
-
-  console.log("id and password");
-  console.log(id);
-  console.log(password);
-
-  console.log("my id and password");
-  for(var i=0; i < mydata.length; i++) {
-    console.log(mydata[i].id);
-    console.log(mydata[i].password);
-  }
-
-  console.log("Starting chekcing for loop");
-  for(i=0; i < mydata.length; i++) {
-    console.log(mydata[i].id);
-    console.log(mydata[i].password);
-
-    /* If the user is registered */
-    if(mydata[i].id == id) {
-      console.log("id check passed");
-      if(mydata[i].password == password) {
-        console.log("Check passed!");
-
-        var resultdata = mydata[i];
-
-        var resultdata2 = {
-            classes : classes,
-            mydata : resultdata,
-            groupNum : resultdata.group_own.length,
-        };
-        res.render('main', resultdata2);
-        return;
-      }
-    }
-  }
 
   if(id == undefined && password == undefined) {
     res.render('index');

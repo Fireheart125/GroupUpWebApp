@@ -50,7 +50,7 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
+// app.get('/', index.view);
 app.post('/signInAction', index.signInAction);
 app.get('/:userID/main',main.view);
 app.get('/signInAction/LogInError');
