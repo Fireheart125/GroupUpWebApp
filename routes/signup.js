@@ -25,21 +25,16 @@ exports.signupAction = function(req, res){
   console.log(req.body.password);
   console.log(req.body.confirm_password);
 
+
   if(req.body.name != undefined && req.body.name != "") {
+    if(req.body.email != undefined && req.body.email != "") {
+      if(req.body.password != undefined && req.body.password != "") {
+
       console.log("Inside the if statement");
-      //mydata.name.splice(0, 1);
-      //mydata.name.push(req.body.name);
-   }
-
-   if(req.body.email != undefined && req.body.email != "") {
-      //mydata.email.splice(0, 1);
-      //mydata.email.push(req.body.email);
-   }
-
-   if(req.body.password != undefined && req.body.password != "") {
-      //mydata.password.splice(0, 1);
-      //mydata.password.push(req.body.password);
-   }
+      
+      }
+    }
+  }
 
   data = {
     mydata: {

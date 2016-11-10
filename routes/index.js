@@ -57,7 +57,7 @@ exports.signInAction = function(req, res){
   res.redirect( url );
 };
 
-
+/* No longer using this function */
 exports.view = function(req, res){
 
   console.log ( req.body );
@@ -101,9 +101,13 @@ exports.view = function(req, res){
     }
   }
 
+  if(id == undefined && password == undefined) {
+    res.render('index');
+  }
+
   /* If the user input is wrong */
   console.log("The user input is wrong!");
-  res.render('index');
+  res.render('logInError');
   return;
   
 
