@@ -1,4 +1,4 @@
-var userdata = require('../json/myGroups.json');
+var userdata = require('../data/myGroups.json');
 
 exports.view = function(req, res){
 

@@ -1,8 +1,8 @@
-var cse120data = require('../json/cse120data.json');
-var cse170data = require('../json/cse170data.json');
-var cse130data = require('../json/cse130data.json');
-var cogs187adata = require('../json/cogs187adata.json');
-var userdata = require('../json/myGroups.json');
+var cse120data = require('../data/cse120data.json');
+var cse170data = require('../data/cse170data.json');
+var cse130data = require('../data/cse130data.json');
+var cogs187adata = require('../data/cogs187adata.json');
+var userdata = require('../data/myGroups.json');
 
 exports.view = function(req, res){
 // app.get('/:userID/myclass/:className/:groupID/:grouptype',join.view);

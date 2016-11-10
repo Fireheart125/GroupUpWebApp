@@ -1,5 +1,5 @@
-var userdata = require('../json/myGroups.json');
-var classes = require('../json/allClasses.json');
+var userdata = require('../data/myGroups.json');
+var classes = require('../data/allClasses.json');
 
 exports.view = function(req, res){
 // app.get('/:userID/myclass/:className/addclass',addclass.view);
