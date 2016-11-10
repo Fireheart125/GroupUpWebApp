@@ -4,7 +4,7 @@ var classes = require('../data/allClasses.json');
 /* WTF */
 exports.signInAction = function(req, res){
    
-  console.log("singinIn Action");
+  console.log("sign in Action");
   console.log(res.body);
 
   console.log("Log in view");
@@ -39,6 +39,9 @@ exports.signInAction = function(req, res){
     }
   }
 
+  if(id == undefined && password == undefined)
+    return;
+
   /* If the user input is wrong */
   console.log("The user input is wrong!");
   res.render('LogInError');
@@ -60,30 +63,15 @@ exports.signInAction = function(req, res){
 /* No longer using this function */
 exports.view = function(req, res){
 
+<<<<<<< HEAD
+=======
+  var id = req.body.id;
+  var password = req.body.password;
+>>>>>>> 3261566bcf5cb654442810f88f2b3212d371bd36
 
   if(id == undefined && password == undefined) {
     res.render('index');
   }
 
-  /* If the user input is wrong */
-  console.log("The user input is wrong!");
-  res.render('logInError');
-  return;
-  
-
-  /*
-  console.log(mydata.name[0] == name);
-  console.log(mydata.password[0] == password);
-  if(mydata.name[0] == name) {
-    console.log("Inside the if statement")
-    if(mydata.password[0] == password) {
-      console.log("Check passed!");
-      res.redirect('main');
-      return;
-    }
-  }
-  else {
-    res.render('index');
-    return;
-  }*/
+ 
 };
