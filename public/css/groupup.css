@@ -114,6 +114,11 @@ h2.group-name {
 }
 
 /* Button color in Group page */
+
+.no-click {
+  pointer-events: none;
+}
+
 #online.btn {
   background-color: #ffed4a;
   border-color: #ffed4a;
