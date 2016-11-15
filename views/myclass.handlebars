@@ -9,6 +9,9 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
     <title>GroupUp!</title>
 
     {{> commonCSS }}
@@ -111,7 +114,7 @@
                 <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
-                    <button id="in-person" type="button" class="btn btn-info no-click">In-Person</button>  {{name}}</h4><hr>
+                    <!--<button id="in-person" type="button" class="btn btn-info no-click">In-Person</button>--><span class="fa fa-users"></span> {{name}}</h4><hr>
                     <h4 id="descr">Description</h4>{{description}}<br><hr>
                     If you are intereted in this group, please join it!<br>
                     <a href="./{{className}}/{{id}}/{{grouptype}}">
@@ -134,7 +137,7 @@
                 <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
-                    <button id="online" type="button" class="btn btn-info no-click">Online</button>  {{name}}</h4><hr>
+                    <!--<button id="online" type="button" class="btn btn-info no-click">Online</button>--><span class="fa fa-laptop"></span> {{name}}</h4><hr>
                     <h4 id="descr">Description</h4>{{description}}<br><hr>
                     If you are intereted in this group, please join it!<br>
                     <a href="./{{className}}/{{id}}/{{grouptype}}">

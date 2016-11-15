@@ -16,6 +16,9 @@
     <!-- Custom styles for this template -->
     <link href="/css/groupup.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
   </head>
 
   <body>
@@ -115,7 +118,7 @@
                   <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
                     <div class="btn-group btn-group-xs" role="group"><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
-                    <button id="in-person" type="button" class="btn btn-info">In-Person</button>  {{name}}</h4>
+                    <!--<button id="in-person" type="button" class="btn btn-info">In-Person</button>-->  <span class="fa fa-users"></span> {{name}}</h4>
                       <div id="icons"><hr>
                          This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
                          <div id="group_info"><span class="glyphicon glyphicon-user"></span>  <b>Max:</b> {{max}}</div>
@@ -145,7 +148,7 @@
                   <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
                     <div class="btn-group btn-group-xs" role="group"><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
-                    <button id="online" type="button" class="btn btn-info">Online</button> {{name}}</h4>
+                    <!--<button id="online" type="button" class="btn btn-info">Online</button>--><span class="fa fa-laptop"></span> {{name}}</h4>
                       <div id="icons"><hr>
                          This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
                          <span class="glyphicon glyphicon-home"></span>  <b>Forum:</b> {{address}}<br><br>
