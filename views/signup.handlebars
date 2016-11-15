@@ -38,12 +38,14 @@
         <form action="/signupAction" method="post" onsubmit="return validateForm()">
 
           <fieldset class="clearfix">
-            <p><span class="fa fa-user"></span><input id="name" name="name" type="text" onBlur="if(this.value == '') this.value = 'Name'" onFocus="if(this.value == 'Name') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-            <p><span class="fa fa-user"></span><input id="id" name="id" type="text" onBlur="if(this.value == '') this.value = 'ID'" onFocus="if(this.value == 'ID') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-            <p><span class="fa fa-envelope"></span><input id="email" name="email" type="text" onBlur="if(this.value == '') this.value = 'Email'" onFocus="if(this.value == 'Email') this.value = ''" required></p> 
+            <p><span class="fa fa-user"></span><input id="name" name="name" type="text" placeholder="NAME" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+            <p><span class="fa fa-user"></span><input id="id" name="id" type="text" placeholder="ID" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+            <p><span class="fa fa-envelope"></span><input id="email" name="email" type="text" placeholder="EMAIL" required></p> 
             <br>
-            <p><span class="fa fa-unlock-alt"></span><input id="password" name="password" type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-            <p><span class="fa fa-lock"></span><input  id="confirm_password" type="password" name="confirm_password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p>
+            <p><span class="fa fa-unlock-alt"></span><input id="password" name="password" type="password"  
+                     placeholder="PASSWORD" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+            <p><span class="fa fa-lock"></span><input  id="confirm_password" type="password" name="confirm_password"  
+                     placeholder="CONFIRM PASSWORD" required></p>
             <p><input type="submit" value="Sign Up"></p>
 
           </fieldset>
