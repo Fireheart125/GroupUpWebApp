@@ -105,6 +105,7 @@ exports.view = function(req, res){
 
     else if(whichGroup == "online") {
       console.log("DEBUG ------ now online group! ");
+      var className = req.query.className;
       var name = req.query.name;
       var id = name;
       var forum = req.query.forum;
