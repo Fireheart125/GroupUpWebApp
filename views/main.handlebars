@@ -8,6 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
     <title>GroupUp!</title>
 
@@ -61,7 +64,7 @@
     <div class="container">
       <div align="center" class="top_logo">
         <img src="../images/mygroupup.png"><br>
-        <h2>Hello, "{{mydata.name}}"! <a href="./setting"><button id="in-person" type="button" class="btn btn-info">Change</button></a></h2>
+        <h2>Hello, "{{mydata.name}}"! </h2><h4><a href="./setting"><button id="in-person" type="button" class="btn btn-info">Change</button></a></h4>
         <h4>You've <b>created {{groupNum}}</b> groups! You can remove this groups <a href="./setting"><span class="glyphicon glyphicon-remove-sign"></span> here!</a></h4>
       </div>
     </div> <!-- /container --><br>
@@ -79,7 +82,7 @@
         <!--    First column Start    -->
         <div class="col-md-4">
           {{> helpModal }}  <hr>               
-          <h2>My Courses</h2>
+          <h3>My Courses</h3>
           <h4>Click a class you added</h4>
           <p class="elem_list"> 
             {{#each mydata.classlist}}

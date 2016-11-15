@@ -1,8 +1,16 @@
 body {
   /* min-height: 2000px; */
   background-color: #eeeeee;
+  font-family: 'Open Sans', sans-serif;
 }
 
+h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+}
 #body_left {
   background:white; opacity:0.6; float:left; margin-top:20px;
   position: fixed; border-radius: 5px; text-align: center; margin-right: 0px;
