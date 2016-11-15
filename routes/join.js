@@ -142,7 +142,7 @@ exports.view = function(req, res){
                console.log(data.group_person[i].id);
                var name = data.group_online[i].name;
                var id = data.group_online[i].id;
-               var forum = data.group_online[i].forum;
+               var address = data.group_online[i].address;
                var description = data.group_online[i].description;
                var newGroup = {
                  'className': req.params.className,
@@ -150,7 +150,7 @@ exports.view = function(req, res){
                  'owner': false,
                  'id': id,
                  'name': name,
-                 'address': forum,
+                 'address': address,
                  'description': description,
                }
                userdata[addr].group_online.push(newGroup);

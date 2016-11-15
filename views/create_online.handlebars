@@ -90,6 +90,7 @@
         <div class="col-md-6" id="mypagebody" >
           <h2>Class: <span style="text-transform: uppercase">{{className}}</span></h2>
           <div class="row" align="center">
+            <span class="glyphicon glyphicon-arrow-down"></span><b>Choose a group type first!<br><br></b>
             <button type="button" class="btn btn-info"><a href="create_inperson">IN PERSON</a></button>
             <button type="button" class="btn btn-info active">ONLINE</button>
           </div>
@@ -101,7 +102,7 @@
             Group Type: 
             <input required readonly value="online" class="form-control" id="grouptype" placeholder="GroupType" name="grouptype"><br>
             Name: <input type="text" required class="form-control" id="name" placeholder="Name" name="name"> <br>  
-            Forum: <input type="text" required class="form-control" id="forum" placeholder="Forum Link" name="forum"> <br>
+            Forum: (Please do not include "http://")<input type="text" required class="form-control" id="forum" placeholder="Forum Link" name="forum"> <br>
                    <!--<input type="radio" required class="form-control" name="option" value="Facebook" checked> Facebook
                    <input class="groupJoin" type="text" name="site" value="www.facebook.com/"> <br>
                    <input type="radio" name="option" value="Google"> Google Drive
