@@ -1,17 +1,19 @@
 var mydata = require('../data/myGroups.json');
 var classes = require('../data/allClasses.json');
+var check = require('../data/check.json');
 
 exports.view = function(req, res){
 
   var name = req.query.name;
   var email = req.query.email; 
+  var child = check.child;
   var password = req.query.password;
   console.log("IN THE SINGUP");
   console.log(name);
   console.log(email);
   console.log(password);
 
- res.render('signup');
+  res.render('signup', child);
 };
 
 
@@ -29,13 +31,14 @@ exports.signupAction = function(req, res){
   var email = req.body.email;
   var name = req.body.name;
   var password = req.body.password;
+  var child = check.child;
 
 
   /* ID duplicate check */
   for(var i=0; i<mydata.length; i++) {
     if(mydata[i].id == newID) {
       console.log("ID duplicate!");
-      res.render('SignUpError');
+      res.render('SignUpError', child );
       return;
     }
   }

@@ -1,4 +1,5 @@
 var userdata = require('../data/myGroups.json');
+var check = require('../data/check.json');
 
 exports.view = function(req, res){
    // app.get('/:userID/setting',setting.view);
@@ -69,7 +70,8 @@ exports.view = function(req, res){
    res.render('setting', 
       {
          data : mydata,
-         'userID': user
+         'userID': user,
+         child : check.child
       }
    );
 };

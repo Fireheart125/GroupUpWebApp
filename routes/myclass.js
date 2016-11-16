@@ -4,6 +4,7 @@ var cse170data = require('../data/cse170data.json');
 var cse130data = require('../data/cse130data.json');
 var cogs187adata = require('../data/cogs187adata.json');
 var userdata = require('../data/myGroups.json');
+var check = require('../data/check.json');
 
 exports.view = function(req, res){
   console.log("--------------- You are in my class!!!! ");
@@ -143,7 +144,8 @@ exports.view = function(req, res){
     printName : printName,
     user : user,
     data : data,
-    mydata : mydata
+    mydata : mydata,
+    child : check.child
   };
 
   console.log("DEBUG ------ before rendering, in main ");

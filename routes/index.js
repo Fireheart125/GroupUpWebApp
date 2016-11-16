@@ -1,5 +1,6 @@
 var mydata = require('../data/myGroups.json');
 var classes = require('../data/allClasses.json');
+var check = require('../data/check.json');
 
 /* WTF */
 exports.signInAction = function(req, res){
@@ -45,6 +46,7 @@ exports.signInAction = function(req, res){
   /* If the user input is wrong */
   console.log("The user input is wrong!");
     res.render('logInError');
+    //res.render('/');
   return;
 
   /*
@@ -55,16 +57,28 @@ exports.signInAction = function(req, res){
 };
 
 /* No longer using this function */
-exports.view = function(req, res){
-
+exports.viewParent = function(req, res){
 
   var id = req.body.id;
   var password = req.body.password;
 
+  check.child = false;
+  console.log(check.child);
 
   if(id == undefined && password == undefined) {
     res.render('index');
   }
+};
 
- 
+exports.viewChild = function(req, res){
+
+  var id = req.body.id;
+  var password = req.body.password;
+
+  check.child = true;
+  console.log(check.child);
+
+  if(id == undefined && password == undefined) {
+    res.render('index');
+  }
 };

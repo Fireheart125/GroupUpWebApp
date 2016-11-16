@@ -1,3 +1,5 @@
+var check = require('../data/check.json');
+
 exports.view = function(req, res){
    // app.get('/:userID/myclass/:className/create_inperson',create_inperson.view);
    var name = req.params.className;
@@ -6,7 +8,8 @@ exports.view = function(req, res){
    res.render('create_inperson', 
       {
          'className': name,
-         'username' : req.params.userID
+         'username' : req.params.userID,
+         'child' : check.child
       }
    );
 };

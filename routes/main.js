@@ -1,5 +1,6 @@
 var userdata = require('../data/myGroups.json');
 var classes = require('../data/allClasses.json');
+var check = require('../data/check.json');
 
 exports.view = function(req, res){
    // From : app.get('/:userID/main',main.view);
@@ -19,8 +20,10 @@ exports.view = function(req, res){
      classes : classes,
      mydata : mydata,
      groupNum : mydata.group_own.length,
+     child : check.child
   };
 
+   console.log(check.child);
    console.log("------- Finish function : Now in main.js");
    res.render('main',resultData);
 };

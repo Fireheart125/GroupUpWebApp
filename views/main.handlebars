@@ -50,7 +50,13 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">My page</a></li>
             <li><a href="./setting">Setting</a></li>
-            <li><a href="/">Sign Out</a></li>
+            <li>
+              {{#if child}}
+                <a href="/child">Sign Out</a>
+              {{else}}
+                <a href="/">Sign Out</a>
+              {{/if}}
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -66,6 +72,11 @@
         <img src="../images/mygroupup.png"><br>
         <h2>Hello, "{{mydata.name}}"! </h2><h4><a href="./setting"><button id="in-person" type="button" class="btn btn-info">Change</button></a></h4>
         <h4>You've <b>created {{groupNum}}</b> groups! You can remove this groups <a href="./setting"><span class="glyphicon glyphicon-remove-sign"></span> here!</a></h4>
+        {{#if child}}
+          Child
+        {{else}}
+          Parent
+        {{/if}}
       </div>
     </div> <!-- /container --><br>
     <!-- ........................................................................... -->

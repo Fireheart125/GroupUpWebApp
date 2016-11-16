@@ -51,7 +51,14 @@
           </fieldset>
         </form>
 
-        <p>Already a member? <a href="/">Sign in!</a><span class="fontawesome-arrow-right"></span></p>
+        <p>Already a member? 
+          {{#if child}}
+            <a href="/child">Sign in!</a>
+          {{else}}
+            <a href="/">Sign in!</a>
+          {{/if}}
+
+        <span class="fontawesome-arrow-right"></span></p>
 
       </div> <!-- end login -->
 

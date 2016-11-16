@@ -66,7 +66,9 @@ exports.view = function(req, res){
             console.log(mydata.group_person[q].name);
             var first = mydata.group_person[q].name;
             var second = " twice!"
-            res.render('join', {'groupName':  first.concat(second)});
+            res.render('join', 
+              {'groupName':  first.concat(second)
+            });
             return;
           }
         }
@@ -120,7 +122,9 @@ exports.view = function(req, res){
             console.log(mydata.group_online[q].name);
             var first = mydata.group_online[q].name;
             var second = " twice!"
-            res.render('join', {'groupName':  first.concat(second)});
+            res.render('join', {
+              'groupName':  first.concat(second)
+            });
             return;
           }
         }

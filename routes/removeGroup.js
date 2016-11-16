@@ -56,5 +56,7 @@ exports.view = function(req, res){
 
      console.log("DEBUG ------ before rendering, somewhere ");
 
-     res.render('removeGroup', {'groupName': name});
+     res.render('removeGroup', {
+      'groupName': name
+    });
 };
