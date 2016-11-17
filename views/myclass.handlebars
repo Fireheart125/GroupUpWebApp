@@ -45,7 +45,13 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../main">My page</a></li>
             <li><a href="../setting">Setting<span class="sr-only">(current)</span></a></li>
-            <li><a href="/">Sign Out</a></li>
+            <li>
+              {{#if child}}
+                <a href="/child">Sign Out</a>
+              {{else}}
+                <a href="/">Sign Out</a>
+              {{/if}}
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
