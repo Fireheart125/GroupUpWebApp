@@ -25,9 +25,14 @@
   </head>
 
   <body>
+    <!--                        Start Body                            -->
+
 
     <!-- Static Nav Bar Partial is in /views/partials/staticNacBar.handlebars -->
-    <!-- This is Header & Naviagation bar & Drop Down menu! -->
+    <!-- ...........................................................................
+    ............................................................................
+    This is Header & Naviagation bar & Drop Down menu!
+-->
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -54,15 +59,18 @@
             </li>
           </ul>
         </div><!--/.nav-collapse -->
-      </div> <!-- container" -->
+      </div>
     </nav>
-    <!-- End of navbar -->
+    <!-- ........................................................................... -->
 
-    <!-- Container for title part -->
+    <!-- ...........................................................................
+        ............................................................................
+        Second part : logo, page menu logo
+    -->
     <div class="container">
       <div align="center" class="top_logo">
         <img src="../images/mygroupup.png"><br>
-        <h2>Hello, "{{mydata.name}}"! </h2><h4><a href="./setting"><button id="in-person" type="button" class="btn btn-info">Change</button></a></h4>
+        <h2>Hello, "{{mydata.name}}"! </h2>
 
         <h4>You've <b>created {{groupNum}}</b> groups! You can delete the group(s) <a href="./setting"><span class="glyphicon glyphicon-remove-sign"></span> here!</a></h4>
         {{#if child}}
@@ -72,13 +80,14 @@
         {{/if}}
 
       </div>
-    </div> 
-    <!-- /container -->
-
-    <br>
+    </div> <!-- /container --><br>
+    <!-- ........................................................................... -->
 
 
-    <!-- main container start here -->
+    <!-- ...........................................................................
+        ............................................................................
+        Main part : Contents
+    -->
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
@@ -88,14 +97,14 @@
           {{> helpModal }}  <hr>               
           <h3>My Courses</h3>
           <h4>Click a class you added</h4>
-
+          <p class="elem_list"> 
             {{#each mydata.classlist}}
               <button id="allclass" type="button" class="btn btn-info">
               <a href="./myclass/{{id}}">{{class}}</a>
               <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="./myclass/{{id}}/removeClass"><span class="glyphicon glyphicon-remove"></span></a></div>
               </button>
             {{/each}}
-
+          </p>
 
             <hr><h3>Add another class!</h3>
             <!-- Single button -->
@@ -113,7 +122,8 @@
             <!-- End of button -->
 
 
-        </div>
+        </div>      <!-- --> <!-- --> <!-- --> <!--    First column End    -->
+        
         <!--    First column End    -->
 
         <!-- +++++ Right side (1. Group inPerson) page start +++++ -->
@@ -132,12 +142,13 @@
                            <div id="group_info"><span class="glyphicon glyphicon-map-marker"></span>  <b>Place:</b> {{place}}</div>
                            <div id="group_info"><span class="glyphicon glyphicon-time"></span>  <b>Time:</b> {{time}}</div>
 
-                          <hr><h4 id="descr">Description</h4>{{description}}<br><br>
+                        <p class="panel body class_descrip">
+                          <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
                           <button type="button" class="col-xs-12 btn btn-info"><a href="myclass/{{id}}/removeGroup" style="color:white">Leave Group</a></button><br><br>
-                        
-                      </div> <!-- id = "" -->
+                        </p>
+                      </div> <!-- id="demo2" -->
                     </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-
+                  </p>
 
                   {{/each}}
                   <!-- +++++ Each group space End! +++++ --> 
@@ -154,12 +165,12 @@
                            <div id="group_info"><span class="glyphicon glyphicon-map-marker"></span>  <b>Place:</b> {{place}}</div>
                            <div id="group_info"><span class="glyphicon glyphicon-time"></span>  <b>Time:</b> {{time}}</div>
 
-
-                          <hr><h4 id="descr">Description</h4>{{description}}<br><br>
-
+                        <p class="panel body class_descrip">
+                          <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
+                        </p>
                       </div> <!-- id="demo2" -->
                     </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-
+                  </p>
 
                   {{/each}}
                   <!-- +++++ Each group space End! +++++ -->  
@@ -171,7 +182,7 @@
         <!-- +++++ Right side (2. Group Online) page start +++++ -->
         <div class="col-md-4">
             <img src="../../images/menu_main_online.png" class="col-xs-12">
-
+            <p class="elem_list" align="center"><br>
 
             {{#if child}}
                 <!-- +++++ Each group space start! +++++ -->
@@ -182,14 +193,15 @@
                       <div id="icons"><hr>
                          This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
                          <span class="glyphicon glyphicon-home"></span>  <b>Forum:</b> {{address}}<br><br>
-                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="http://{{address}}" target="_blank" align="center">Link to Forum</button></a>
+                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="http://{{address}}" target="_blank" align="center">Link to Forum</button></a><br>
 
-                        <hr><h4 id="descr">Description</h4>{{description}}<br><br>
+                      <p class="panel body class_descrip">
+                        <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
                         <button type="button" class="col-xs-12 btn btn-info"><a href="myclass/{{id}}/removeGroup" style="color:white">Leave Group</a></button><br><br>
-
+                      </p>
                     </div> <!-- id="demo2" -->
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-
+                </p>
 
                 {{/each}}
                 <!-- +++++ Each group space End! +++++ --> 
@@ -199,18 +211,19 @@
                 {{#each mydata.group_online}}
                   <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
-                    <div class="btn-group btn-group-xs" role="group" style="float:right"><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>
+                    <div class="btn-group btn-group-xs" role="group" style="float:right"><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>  
                     <!--<button id="online" type="button" class="btn btn-info">Online</button>--><span class="fa fa-laptop"></span>  {{name}}</h4>
                       <div id="icons"><hr>
                          This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
                          <span class="glyphicon glyphicon-home"></span>  <b>Forum:</b> {{address}}<br><br>
-                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="http://{{address}}" target="_blank" align="center">Link to Forum</button></a>
+                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="http://{{address}}" target="_blank" align="center">Link to Forum</button></a><br>
 
-                        <hr><h4 id="descr">Description</h4>{{description}}<br><br>
-
+                      <p class="panel body class_descrip">
+                        <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
+                      </p>
                     </div> <!-- id="demo2" -->
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-
+                </p>
 
                 {{/each}}
                 <!-- +++++ Each group space End! +++++ -->  
@@ -223,14 +236,14 @@
       </div> 
       <!-- End of row -->
 
-    </div> 
-    <!-- End of container -->
-
+    </div> <!-- End of container -->
+    <!-- ........................................................................... -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {{> commonJS }}
 
+    <!--                        End Body                            -->
   </body>
 </html>
