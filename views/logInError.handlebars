@@ -30,8 +30,10 @@
 
     <!-- Auto redirect to main -->
     {{#if child}}
+      <p>Child is true</p>
       <meta http-equiv="refresh" content="1;url=/child">
     {{else}}
+    <p>Child is false </p>
       <meta http-equiv="refresh" content="1;url=/">
     {{/if}}
   </head>

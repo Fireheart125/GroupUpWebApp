@@ -7,6 +7,7 @@ exports.signInAction = function(req, res){
    
   console.log("sign in Action");
   console.log(res.body);
+  console.log(check);
 
   console.log("Log in view");
   var child = check.child;
@@ -47,8 +48,15 @@ exports.signInAction = function(req, res){
   /* If the user input is wrong */
   console.log("The user input is wrong!");
   console.log(child);
-    res.render('logInError',child);
+
+    //res.render('logInError',child);
     //res.render('/');
+    //
+    res.render('logInError', 
+      {
+         'child' : check.child
+      });
+    
   return;
 
   /*
