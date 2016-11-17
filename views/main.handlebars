@@ -113,8 +113,7 @@
             <!-- End of button -->
 
 
-        </div>      <!-- --> <!-- --> <!-- --> <!--    First column End    -->
-        
+        </div>
         <!--    First column End    -->
 
         <!-- +++++ Right side (1. Group inPerson) page start +++++ -->
@@ -133,13 +132,12 @@
                            <div id="group_info"><span class="glyphicon glyphicon-map-marker"></span>  <b>Place:</b> {{place}}</div>
                            <div id="group_info"><span class="glyphicon glyphicon-time"></span>  <b>Time:</b> {{time}}</div>
 
-                        <p class="panel body class_descrip">
-                          <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
+                          <hr><h4 id="descr">Description</h4>{{description}}<br><br>
                           <button type="button" class="col-xs-12 btn btn-info"><a href="myclass/{{id}}/removeGroup" style="color:white">Leave Group</a></button><br><br>
-                        </p>
-                      </div> <!-- id="demo2" -->
+                        
+                      </div> <!-- id = "" -->
                     </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-                  </p>
+
 
                   {{/each}}
                   <!-- +++++ Each group space End! +++++ --> 
@@ -156,12 +154,12 @@
                            <div id="group_info"><span class="glyphicon glyphicon-map-marker"></span>  <b>Place:</b> {{place}}</div>
                            <div id="group_info"><span class="glyphicon glyphicon-time"></span>  <b>Time:</b> {{time}}</div>
 
-                        <p class="panel body class_descrip">
-                          <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
-                        </p>
+
+                          <hr><h4 id="descr">Description</h4>{{description}}<br><br>
+
                       </div> <!-- id="demo2" -->
                     </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-                  </p>
+
 
                   {{/each}}
                   <!-- +++++ Each group space End! +++++ -->  
@@ -173,7 +171,7 @@
         <!-- +++++ Right side (2. Group Online) page start +++++ -->
         <div class="col-md-4">
             <img src="../../images/menu_main_online.png" class="col-xs-12">
-            <p class="elem_list" align="center"><br>
+
 
             {{#if child}}
                 <!-- +++++ Each group space start! +++++ -->
@@ -184,15 +182,14 @@
                       <div id="icons"><hr>
                          This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
                          <span class="glyphicon glyphicon-home"></span>  <b>Forum:</b> {{address}}<br><br>
-                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="http://{{address}}" target="_blank" align="center">Link to Forum</button></a><br>
+                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="http://{{address}}" target="_blank" align="center">Link to Forum</button></a>
 
-                      <p class="panel body class_descrip">
-                        <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
+                        <hr><h4 id="descr">Description</h4>{{description}}<br><br>
                         <button type="button" class="col-xs-12 btn btn-info"><a href="myclass/{{id}}/removeGroup" style="color:white">Leave Group</a></button><br><br>
-                      </p>
+
                     </div> <!-- id="demo2" -->
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-                </p>
+
 
                 {{/each}}
                 <!-- +++++ Each group space End! +++++ --> 
@@ -207,14 +204,13 @@
                       <div id="icons"><hr>
                          This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
                          <span class="glyphicon glyphicon-home"></span>  <b>Forum:</b> {{address}}<br><br>
-                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="http://{{address}}" target="_blank" align="center">Link to Forum</button></a><br>
+                         <button id="forumLink" type="button" class="btn btn-info" align="center"><a href="http://{{address}}" target="_blank" align="center">Link to Forum</button></a>
 
-                      <p class="panel body class_descrip">
-                        <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
-                      </p>
+                        <hr><h4 id="descr">Description</h4>{{description}}<br><br>
+
                     </div> <!-- id="demo2" -->
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-                </p>
+
 
                 {{/each}}
                 <!-- +++++ Each group space End! +++++ -->  
