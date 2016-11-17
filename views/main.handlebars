@@ -25,14 +25,9 @@
   </head>
 
   <body>
-    <!--                        Start Body                            -->
-
 
     <!-- Static Nav Bar Partial is in /views/partials/staticNacBar.handlebars -->
-    <!-- ...........................................................................
-    ............................................................................
-    This is Header & Naviagation bar & Drop Down menu!
--->
+    <!-- This is Header & Naviagation bar & Drop Down menu! -->
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -59,14 +54,11 @@
             </li>
           </ul>
         </div><!--/.nav-collapse -->
-      </div>
+      </div> <!-- container" -->
     </nav>
-    <!-- ........................................................................... -->
+    <!-- End of navbar -->
 
-    <!-- ...........................................................................
-        ............................................................................
-        Second part : logo, page menu logo
-    -->
+    <!-- Container for title part -->
     <div class="container">
       <div align="center" class="top_logo">
         <img src="../images/mygroupup.png"><br>
@@ -80,14 +72,13 @@
         {{/if}}
 
       </div>
-    </div> <!-- /container --><br>
-    <!-- ........................................................................... -->
+    </div> 
+    <!-- /container -->
+
+    <br>
 
 
-    <!-- ...........................................................................
-        ............................................................................
-        Main part : Contents
-    -->
+    <!-- main container start here -->
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
@@ -97,14 +88,14 @@
           {{> helpModal }}  <hr>               
           <h3>My Courses</h3>
           <h4>Click a class you added</h4>
-          <p class="elem_list"> 
+
             {{#each mydata.classlist}}
               <button id="allclass" type="button" class="btn btn-info">
               <a href="./myclass/{{id}}">{{class}}</a>
               <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="./myclass/{{id}}/removeClass"><span class="glyphicon glyphicon-remove"></span></a></div>
               </button>
             {{/each}}
-          </p>
+
 
             <hr><h3>Add another class!</h3>
             <!-- Single button -->
@@ -236,14 +227,14 @@
       </div> 
       <!-- End of row -->
 
-    </div> <!-- End of container -->
-    <!-- ........................................................................... -->
+    </div> 
+    <!-- End of container -->
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {{> commonJS }}
 
-    <!--                        End Body                            -->
   </body>
 </html>
