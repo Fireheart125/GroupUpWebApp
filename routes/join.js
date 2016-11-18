@@ -16,6 +16,7 @@ exports.view = function(req, res){
      var mydata;
      var user = req.params.userID;
 
+    // User checking, Find user!
     for(var i=0; i<userdata.length; i++) {
       console.log("what is the name?");
       console.log(userdata[i].id);
@@ -26,6 +27,9 @@ exports.view = function(req, res){
         addr = i;
       }
     }
+
+    console.log("Show my data! in join");
+    console.log(mydata);
 
      switch (req.params.className) {
        case "cse170":
@@ -46,16 +50,6 @@ exports.view = function(req, res){
      console.log("DEBUG ------ Show the data!");
      console.log (data);
 
-     console.log("DEBUG ------ Show my data");
-     for(var k=0; k<mydata.group_person.length; k++) {
-      //console.log(mydata.group_person[k].className);
-      //console.log(mydata.group_person[k].id);
-     }
-     console.log("DEBUG ------ Show class data");
-     for(var p=0; p<data.group_person.length; p++) {
-      //console.log(mydata.group_person[p].className);
-      //console.log(mydata.group_person[p].id);
-     }
      console.log("-------------------");
 
       if(req.params.grouptype == "person") {
@@ -111,7 +105,7 @@ exports.view = function(req, res){
                console.log("DEBUG ----- pushed!");
             }
          }
-     } // if person statement ends
+      } // if person statement ends
 
      else if(req.params.grouptype == "online") {
 
@@ -129,7 +123,7 @@ exports.view = function(req, res){
           }
         }
 
-      console.log("DEBUG ----- join for person?");
+
       console.log("DEBUG ----- from the online?");
       console.log(req.params.groupID);
       console.log(req.params.groupID);
@@ -140,10 +134,10 @@ exports.view = function(req, res){
 
       console.log(req.params.groupID == data.group_online[1].id);
         for(var i=0; i<data.group_online.length; i++) {
-         console.log("DEBUG ----- inside For");
+         console.log("DEBUG ----- inside For ONLINE adding");
             if(req.params.groupID == data.group_online[i].id) {
                console.log("DEBUG ----- groupID?");
-               console.log(data.group_person[i].id);
+
                var name = data.group_online[i].name;
                var id = data.group_online[i].id;
                var address = data.group_online[i].address;
