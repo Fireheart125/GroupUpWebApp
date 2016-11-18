@@ -35,9 +35,16 @@ exports.signInAction = function(req, res){
       if(mydata[i].password == password) {
         console.log("Check passed!");
 
-        var url = req.body.id + "/main";
-        res.redirect( url );
-        return;
+        if(check.child == true) {
+          var url = req.body.id + "/main/child";
+          res.redirect( url );
+          return;
+        }
+        else {
+          var url = req.body.id + "/main/parent";
+          res.redirect( url );
+          return;
+        }
       }
     }
   }
