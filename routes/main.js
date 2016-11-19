@@ -2,7 +2,7 @@ var userdata = require('../data/myGroups.json');
 var classes = require('../data/allClasses.json');
 var check = require('../data/check.json');
 
-exports.viewParent = function(req, res){
+exports.view = function(req, res){
    // From : app.get('/:userID/main',main.view);
    console.log("------- Function : Now in main.js");
 
@@ -15,7 +15,7 @@ exports.viewParent = function(req, res){
         mydata = userdata[i];
       }
    }
-   check.child = false;
+   // check.child = false;
 
    var resultData = {
      classes : classes,
@@ -42,7 +42,7 @@ exports.viewChild = function(req, res){
         mydata = userdata[i];
       }
    }
-   check.child = true;
+   // check.child = true;
 
    var resultData = {
      classes : classes,

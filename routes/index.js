@@ -35,6 +35,10 @@ exports.signInAction = function(req, res){
       if(mydata[i].password == password) {
         console.log("Check passed!");
 
+        var url = req.body.id + "/main";
+          res.redirect( url );
+          return;
+/*
         if(check.child == true) {
           var url = req.body.id + "/main/child";
           res.redirect( url );
@@ -44,7 +48,7 @@ exports.signInAction = function(req, res){
           var url = req.body.id + "/main";
           res.redirect( url );
           return;
-        }
+        } */
       }
     }
   }
@@ -96,6 +100,6 @@ exports.viewChild = function(req, res){
   console.log(check.child);
 
   if(id == undefined && password == undefined) {
-    res.render('index');
+    res.render('index2');
   }
 };
