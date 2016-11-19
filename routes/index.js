@@ -41,7 +41,7 @@ exports.signInAction = function(req, res){
           return;
         }
         else {
-          var url = req.body.id + "/main/parent";
+          var url = req.body.id + "/main";
           res.redirect( url );
           return;
         }
