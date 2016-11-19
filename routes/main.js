@@ -26,7 +26,7 @@ exports.viewParent = function(req, res){
 
    console.log(check.child);
    console.log("------- Finish function : Now in main.js");
-   res.render('main1',resultData);
+   res.render('main',resultData);
 };
 
 exports.viewChild = function(req, res){
