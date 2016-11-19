@@ -158,7 +158,7 @@
                   {{#each mydata.group_person}}
                     <div class="col-xs-12 container-fluid panel panel-default">
                     <h4 class="text-uppercase">
-                    <div class="btn-group btn-group-xs" role="group" style="float:right"><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>  
+                    <div class="btn-group btn-group-xs" role="group" style="float:right"><a href="myclass/{{id}}/removeGroup"><span id="x" class="glyphicon glyphicon-remove"></span></a></div>  
                       <!--<button id="in-person" type="button" class="btn btn-info">In-Person</button>-->  <span class="fa fa-users"></span>  {{name}}</h4>
                         <div id="icons"><hr> 
                            This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
@@ -212,7 +212,7 @@
                 {{#each mydata.group_online}}
                   <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
-                    <div class="btn-group btn-group-xs" role="group" style="float:right"><a href="myclass/{{id}}/removeGroup"><span class="glyphicon glyphicon-remove"></span></a></div>  
+                    <div class="btn-group btn-group-xs" role="group" style="float:right"><a href="myclass/{{id}}/removeGroup"><span id="x" class="glyphicon glyphicon-remove"></span></a></div>  
                     <!--<button id="online" type="button" class="btn btn-info">Online</button>--><span class="fa fa-laptop"></span>  {{name}}</h4>
                       <div id="icons"><hr>
                          This group for class <b><span style="text-transform: uppercase">{{className}}</span></b><br><br>
@@ -257,6 +257,7 @@
   ga('create', 'UA-87714901-1', 'auto');
   ga('send', 'pageview');
   ga('send', 'event', 'leave', 'click');
+  ga('send', 'event', 'x', 'click');
 
 </script>
   </body>
