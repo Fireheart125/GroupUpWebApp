@@ -100,8 +100,8 @@
           <h4>Click a class you added</h4>
           <p class="elem_list"> 
             {{#each mydata.classlist}}
-              <button id="allclass" type="button" class="btn btn-info">
-              <a href="./myclass/{{id}}">{{class}}</a>
+              <a href="./myclass/{{id}}">{{class}}
+              <button id="allclass" type="button" class="btn btn-info"></a>
               <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="./myclass/{{id}}/removeClass"><span class="glyphicon glyphicon-remove"></span></a></div>
               </button>
             {{/each}}
@@ -145,7 +145,7 @@
 
                         <p class="panel body class_descrip">
                           <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
-                          <button type="button" class="col-xs-12 btn btn-info" id="leave"><a href="myclass/{{id}}/removeGroup" style="color:white">Leave Group</a></button><br><br>
+                          <a href="myclass/{{id}}/removeGroup" style="color:white"><button type="button" class="col-xs-12 btn btn-info" id="leave">Leave Group</button></a><br><br>
                         </p>
                       </div> <!-- id="demo2" -->
                     </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
@@ -198,7 +198,7 @@
 
                       <p class="panel body class_descrip">
                         <h4 id="descr"><br>Description</h4><p>{{description}}</p><br>
-                        <button type="button" class="col-xs-12 btn btn-info" id="leave"><a href="myclass/{{id}}/removeGroup" style="color:white">Leave Group</a></button><br><br>
+                        <a href="myclass/{{id}}/removeGroup" style="color:white"><button type="button" class="col-xs-12 btn btn-info" id="leave">Leave Group</button></a><br><br>
                       </p>
                     </div> <!-- id="demo2" -->
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
