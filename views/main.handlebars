@@ -256,8 +256,15 @@
 
   ga('create', 'UA-87714901-1', 'auto');
   ga('send', 'pageview');
-  ga('send', 'event', 'leave', 'click2');
-  ga('send', 'event', 'x', 'click1');
+
+  $("#leave").click(function() {
+    ga('send', 'event', 'leave', 'click2');
+  });
+  $("#x").click(function() {
+    ga('send', 'event', 'x', 'click1');
+  });
+  
+  
 
 </script>
   </body>
