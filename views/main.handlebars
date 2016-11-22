@@ -100,10 +100,10 @@
           <h4>Click a class you added</h4>
           <p class="elem_list"> 
             {{#each mydata.classlist}}
-              <a href="./myclass/{{id}}">{{class}}
-              <button id="allclass" type="button" class="btn btn-info"></a>
+              <a href="./myclass/{{id}}"><button id="allclass" type="button" class="btn btn-info">
+              {{class}}
               <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="./myclass/{{id}}/removeClass"><span class="glyphicon glyphicon-remove"></span></a></div>
-              </button>
+              </button></a>
             {{/each}}
           </p>
 
