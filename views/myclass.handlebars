@@ -43,8 +43,8 @@
         <div id="navbar" class="navbar-collapse collapse">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../main">My page</a></li>
-            <li><a href="../setting">Setting<span class="sr-only">(current)</span></a></li>
+            <li><a href="../main">My Page</a></li>
+            <li><a href="../setting">Settings<span class="sr-only">(current)</span></a></li>
             <li>
               {{#if child}}
                 <a href="/child">Sign Out</a>
@@ -65,7 +65,7 @@
     <div class="container">
       <div align="center" class="top_logo">
         <h1>Groups for <span style="text-transform: uppercase">{{printName}}</span></h1>
-        <h4>If you are interested a group or want to get more information, <b>please join it!</b></h4><br>
+        <h4>If you are interested a group, <b>please join it!</b></h4><br>
       </div>
     </div>
     <!-- +++++ Container End +++++ -->
@@ -94,7 +94,7 @@
                 My Classes <span class="caret"></span>
               </button>
               <ul class="col-xs-12 dropdown-menu">
-                <li><a href="#">Choose Another Class :</a></li>
+                <li class="no-click"><a href="#"><b>Choose Another Class :</b></a></li>
                 {{#each mydata.classlist}}
                 <li><a href="./{{id}}">{{class}}</a></li>
                 {{/each}}
@@ -103,16 +103,16 @@
             <!-- End of button -->
             <br><br>
             <a href="./{{className}}/create_inperson"><button id="create_fromClass" type="button" class="col-xs-12 btn btn-info">
-            <h3 align="middle">Create a group!</h3></button></a>
-            <img src="../../images/figures/myclass.png" class="col-xs-12">
+            <h3 align="middle">Create a group!</h3></button></a><br><br>
             
         </div><br><br>
         <!-- +++++ Left side of page End +++++ -->
 
         <!-- +++++ Right side (1. Group inPerson) page start +++++ -->
         <div class="col-md-4">
-            <button id="in-person" type="button" class="col-xs-12 btn btn-info no-click">Group in Person</button> 
+            <button id="in-person" type="button" class="col-xs-12 btn btn-info no-click">Group in Person</button><br><br>
 
+                <p class="elem_list" align="center">
                 <!-- +++++ Each group space start! +++++ -->
                 {{#each data.group_person}}
                 <div class="class_elem">
@@ -133,7 +133,8 @@
 
         <!-- +++++ Right side (2. Group Online) page start +++++ -->
         <div class="col-md-4">
-            <button id="online" type="button" class="col-xs-12 btn btn-info no-click">Group Online</button>
+            <button id="online" type="button" class="col-xs-12 btn btn-info no-click">Group Online</button><br><br>
+
             <p class="elem_list" align="center">
 
                 <!-- +++++ Each group space start! +++++ -->

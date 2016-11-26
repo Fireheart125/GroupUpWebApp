@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 body {
   /* min-height: 2000px; */
   background-color: #eeeeee;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', 'Open Sans', sans-serif;
 }
 
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lato', 'Playfair Display', serif;
 }
 
 h3 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Lato', 'Oswald', sans-serif;
 }
 #body_left {
   background:white; opacity:0.6; float:left; margin-top:20px;
@@ -49,14 +51,13 @@ h3 {
 }
 
 
-
 .navbar-static-top {
   margin-bottom: 19px;
 }
 
-.indent {
+/*.indent {
   text-indent: 30px;
-}
+}*/)
 
 .form {
   width: 100%;
@@ -263,6 +264,12 @@ h2.group-name {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Help Page */
+
+.steps {
+  text-transform: uppercase;
 }
 
 

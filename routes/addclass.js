@@ -35,7 +35,7 @@ exports.view = function(req, res){
        console.log(mydata.classlist[i].id);
        if(req.params.className == mydata.classlist[i].id) {
           // The class : User already have!!!!
-          message = "You already have a class of";
+          message = "You are already in";
           console.log("Duplicated!!");
           alreadyHave = 1;
           break;
@@ -46,7 +46,7 @@ exports.view = function(req, res){
         console.log("Adding process!!!!");
         for(var i=0; i<classes.allClasses.length; i++) {
           if(req.params.className == classes.allClasses[i].id) {
-            message = "You have added a class of";
+            message = "You have added";
             var newClass = {
              'id': classes.allClasses[i].id,
              'class': classes.allClasses[i].class,

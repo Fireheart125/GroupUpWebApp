@@ -49,8 +49,8 @@
         <div id="navbar" class="navbar-collapse collapse">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">My page</a></li>
-            <li><a href="./setting">Setting</a></li>
+            <li><a href="#">My Page</a></li>
+            <li><a href="./setting">Settings</a></li>
             <li>
               {{#if child}}
                 <a href="/child">Sign Out</a>
@@ -98,8 +98,8 @@
         <!--    First column Start    -->
         <div class="col-md-4">
           {{> helpModal }}  <hr>               
-          <h3>My Courses</h3>
-          <h4>Click a class you added</h4>
+          <h3>My Classes</h3>
+          <h4>Click a class you have added</h4>
           <p class="elem_list"> 
             {{#each mydata.classlist}}
               <a href="./myclass/{{id}}"><button id="allclass" type="button" class="btn btn-info">
@@ -109,14 +109,14 @@
             {{/each}}
           </p>
 
-            <hr><h3>Add another class!</h3>
+            <hr><h3>Add another class</h3>
             <!-- Single button -->
             <div class="col-xs-12 btn-group">
               <button type="button" id="class-add-btn" class="col-xs-12 btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Click a class you want to add <span class="caret"></span>
+                Select a class to add <span class="caret"></span>
               </button>
               <ul class="col-xs-12 dropdown-menu">
-                <li><a href="#">List of classes :</a></li>
+                <li class="class_list no-click"><a href="#"><b>List of classes :</b></a></li>
                 {{#each classes.allClasses}}
                 <li><a href="myclass/{{id}}/addclass">{{class}}</a></li>
                 {{/each}}

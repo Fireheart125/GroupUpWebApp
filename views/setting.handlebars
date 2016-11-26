@@ -2,7 +2,7 @@
 
 <html>
 <head>
-   <title>Setting</title>  
+   <title>Settings</title>  
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- this is a comment in HTML -->
@@ -38,8 +38,8 @@
         <div id="navbar" class="navbar-collapse collapse">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="main">My page</a></li>
-            <li><a href="setting">Setting<span class="sr-only">(current)</span></a></li>
+            <li><a href="main">My Page</a></li>
+            <li><a href="setting">Settings<span class="sr-only">(current)</span></a></li>
             <li>
               {{#if child}}
                 <a href="/child">Sign Out</a>
@@ -60,7 +60,7 @@
     -->
     <div class="container">
       <div align="center" class="top_logo">
-        <h1>Setting</h1>
+        <h1>Settings</h1>
       </div>
     </div> <!-- /container -->
     <!-- ........................................................................... -->
@@ -77,11 +77,11 @@
           Your ID:
           <input readonly required value="{{userID}}" name="userID"><br><br>
 
-          Your name is <b>{{data.name}}</b>, <br>Edit your name: 
+          Your name is <b>{{data.name}}</b>,<br> <br>Edit your name: 
           <input type="text" name="name">
           <input type="submit" value="Submit"><br><br>
 
-          Your email address is <b>{{data.email}}</b>, <br>Change your email:
+          Your email address is <b>{{data.email}}</b>,<br> <br>Change your email:
           <input type="text" name="email">
           <input type="submit" value="Submit"><br><br>
         </fieldset><br>
@@ -100,17 +100,17 @@
         </fieldset>
       </form><br><br>
 
-      <legend>Groups You've created</legend>
+      <legend>Groups You've Created</legend>
       <div>
                 {{#each data.group_own}}
                 <div class="class_elem">
                   <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">{{name}}</h4><hr>
-                    <span class="glyphicon glyphicon-leaf"></span> Class : <span style="text-transform: uppercase">{{className}}</span><br><br>
-                    <span class="glyphicon glyphicon-star"></span> Group type : {{grouptype}}<br><br>
-                    <h4 id="descr"><span class="glyphicon glyphicon-comment"></span> Description</h4>{{description}}<br><hr>
+                    <span class="glyphicon glyphicon-book" id="group_info"></span> Class : <span style="text-transform: uppercase">{{className}}</span><br><br>
+                    <span class="glyphicon glyphicon-star" id="group_info"></span> Group type : {{grouptype}}<br><br>
+                    <h4 id="descr"> Description</h4>{{description}}<br><hr>
                     <a href="myclass/{{className}}/{{id}}/setting/remove">
-                    <button type="button" class="col-xs-12 btn btn-info" onclick="return confirmDelete()">Delete the group!</button></a><br><br><br>
+                    <button type="button" class="col-xs-12 btn btn-info" onclick="return confirmDelete()">Delete this group</button></a><br><br><br>
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
                 </div> <!-- class_elem --> 
                 {{/each}}
