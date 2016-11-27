@@ -100,14 +100,13 @@
           {{> helpModal }}  <hr>               
           <h3>My Classes</h3>
           <h4>Click a class you have added</h4>
-          <p class="elem_list"> 
+          {{#if numClass}}"You have no added any classes yet"{{else}}{{/if}}
             {{#each mydata.classlist}}
               <a href="./myclass/{{id}}"><button id="allclass" type="button" class="btn btn-info">
               {{class}}
               <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="./myclass/{{id}}/removeClass"><span class="glyphicon glyphicon-remove"></span></a></div>
               </button></a>
             {{/each}}
-          </p>
 
             <hr><h3>Add another class</h3>
             <!-- Single button -->
@@ -135,6 +134,7 @@
 
             {{#if child}}
                   <!-- +++++ Each group space start! +++++ -->
+                  {{#if numPerson}}"You have no joined groups in-person yet"{{else}}{{/if}}
                   {{#each mydata.group_person}}
                     <div class="col-xs-12 container-fluid panel panel-default">
                     <h4 class="text-uppercase">
@@ -157,6 +157,7 @@
                   <!-- +++++ Each group space End! +++++ --> 
             {{else}}
                   <!-- +++++ Each group space start! +++++ -->
+                  {{#if numPerson}}"You have no joined groups in-person yet"{{else}}{{/if}}
                   {{#each mydata.group_person}}
                     <div class="col-xs-12 container-fluid panel panel-default">
                     <h4 class="text-uppercase">
@@ -185,10 +186,10 @@
         <!-- +++++ Right side (2. Group Online) page start +++++ -->
         <div class="col-md-4">
             <img src="../../images/menu_main_online.png" class="col-xs-12">
-            <p class="elem_list" align="center"><br>
 
             {{#if child}}
                 <!-- +++++ Each group space start! +++++ -->
+                {{#if numOnline}}"You have no joined groups online yet"{{else}}{{/if}}
                 {{#each mydata.group_online}}
                   <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
@@ -211,6 +212,7 @@
 
             {{else}}
                 <!-- +++++ Each group space start! +++++ -->
+                {{#if numOnline}}"You have no joined groups online yet"{{else}}{{/if}}
                 {{#each mydata.group_online}}
                   <div class="col-xs-12 container-fluid panel panel-default">
                   <h4 class="text-uppercase">
@@ -226,7 +228,6 @@
                       </p>
                     </div> <!-- id="demo2" -->
                   </div> <!-- class: col-xs-12 container-fluid panel panel-default -->
-                </p>
 
                 {{/each}}
                 <!-- +++++ Each group space End! +++++ -->  

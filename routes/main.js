@@ -17,10 +17,20 @@ exports.view = function(req, res){
    }
    // check.child = false;
 
+   // Count number of class and user
+   var numClass = (mydata.classlist.length == 0)? true:false;
+   var numPerson = (mydata.group_person.length == 0)? true:false;
+   var numOnline = (mydata.group_online.length == 0)? true:false;
+
+   console.log("Check numClsas?");
+   console.log(numClass);
    var resultData = {
      classes : classes,
      mydata : mydata,
      groupNum : mydata.group_own.length,
+     numClass,
+     numPerson,
+     numOnline,
      child : check.child
   };
 
