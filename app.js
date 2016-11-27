@@ -56,7 +56,7 @@ app.get('/child', index.viewChild);
 app.post('/signInAction/signIn', index.signInAction);
 app.get('/:userID/main',main.view);
 //app.get('/:userID/main/child',main.viewChild);
-// app.get('/LogInError', index.view);
+//app.get('/LogInError', index.view);
 
 app.get('/help',help.view);
 app.get('/signup',signup.view);
