@@ -50,7 +50,7 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.viewParent);
+app.get('/', index.viewChild);
 app.get('/child', index.viewChild);
 
 app.post('/signInAction/signIn', index.signInAction);
