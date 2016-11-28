@@ -29,26 +29,26 @@
 			{
 				"className": "cse170",
 				"grouptype": "person",
-				"owner" : false,
+				"owner": false,
 				"id": "g1",
-				"name": "Study at Geisel Library!!",
+				"name": "Frond-end Study at Geisel Library!!",
 				"number": "5",
 				"max": "20",
 				"place": "Geisel Library Study room 235",
-				"time": "3-6pm",
-				"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"
+				"time": "Monday 3-6pm Winter 2017",
+				"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"		
 			},
-			{
+			{	
 				"className": "cse130",
 				"grouptype": "person",
-				"owner" : true,
-				"id": "e2",
-				"name": "130 Code tutorial group for Node.js/Javascript",
+				"owner": false,
+				"id": "e1",
+				"name": "Multi-Languages study group : Ocaml/Python/Prolog/etc",
 				"number": "5",
-				"max": "30",
-				"place": "CSE Basement B240",
-				"time": "5pm",
-				"description": "Our TA Alok will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
+				"max": "15",
+				"place": "Center Hall 119",
+				"time": "Every Friday 3pm ~ 5pm",
+				"description": "Let's study for as many languages as we can!"		
 			}
 		],
 
@@ -56,34 +56,34 @@
 			{
 				"className": "cse170",
 				"grouptype": "online",
-				"owner" : false,
-				"id": "h1",			
-				"name": "Study for Midterm 2",
-				"address": "www.piazza.com",
-				"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"
+				"owner": false,
+				"id": "h2",
+				"name": "Tutor online for Front-end!",
+				"address": "www.facebook.com",
+				"description": "Our TA Rob will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
 			},
 			{
 				"className": "cogs187a",
 				"grouptype": "online",
-				"owner" : false,
-				"id": "b1",			
-				"name": "187A Study for Midterm!! Online group!",
-				"address": "www.piazza.com",
-				"description": "We will study for midterm 2 for COGS 187A, Please join for collaboration!"		
+				"owner": false,
+				"id": "b2",
+				"name": "Online Talk with professor Kirsh",
+				"address": "www.facebook.com",
+				"description": "Online meeting group with professor Kirsh"	
 			}
 		],
 		"group_own": [
 			{
-				"className": "cse130",
+				"className": "cse170",
 				"grouptype": "person",
-				"owner" : true,
-				"id": "e2",
-				"name": "130 Code tutorial group for Node.js/Javascript",
+				"owner": true,
+				"id": "g1",
+				"name": "Frond-end Study at Geisel Library!!",
 				"number": "5",
-				"max": "30",
-				"place": "CSE Basement B240",
-				"time": "5pm",
-				"description": "Our TA Alok will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
+				"max": "20",
+				"place": "Geisel Library Study room 235",
+				"time": "Monday 3-6pm Winter 2017",
+				"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"		
 			}
 		]
 	},
@@ -107,41 +107,41 @@
 		],
 
 		"group_person": [
+			{	
+				"className": "cse130",
+				"grouptype": "person",
+				"owner": false,
+				"id": "e1",
+				"name": "Multi-Languages study group : Ocaml/Python/Prolog/etc",
+				"number": "5",
+				"max": "15",
+				"place": "Center Hall 119",
+				"time": "Every Friday 3pm ~ 5pm",
+				"description": "Let's study for as many languages as we can!"		
+			},
 			{
 				"className": "cse170",
 				"grouptype": "person",
-				"owner" : false,
-				"id": "g1",
-				"name": "Study at Geisel Library!!",
-				"number": "5",
-				"max": "20",
-				"place": "Geisel Library Study room 235",
-				"time": "3-6pm",
-				"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"
-			},
-			{
-				"className": "cse130",
-				"grouptype": "person",
-				"owner" : false,
-				"id": "e2",
-				"name": "130 Code tutorial group for Node.js/Javascript",
+				"owner": false,
+				"id": "g2",
+				"name": "Code tutorial group for Node.js/Javascript",
 				"number": "5",
 				"max": "30",
 				"place": "CSE Basement B240",
-				"time": "5pm",
-				"description": "Our TA Alok will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
+				"time": "TTh 9am ~ 11am, 2pm ~ 4pm",
+				"description": "Our TA Rebecca will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
 			}
 		],
 
 		"group_online": [
 			{
-				"className": "cse170",
+				"className": "cse130",
 				"grouptype": "online",
-				"owner" : false,
-				"id": "h1",			
-				"name": "Study for Midterm 2",
-				"address": "www.piazza.com",
-				"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"
+				"owner": false,
+				"id": "f2",
+				"name": "130 FINAL EXAM! STUDY! OCAML/PYTHON/PROLOG",
+				"address": "www.facebook.com",
+				"description": "Aim to get 'A' on the final!!"	
 			}
 		],
 		"group_own": [

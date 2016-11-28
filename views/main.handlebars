@@ -100,7 +100,7 @@
           {{> helpModal }}  <hr>               
           <h3>My Classes</h3>
           
-          {{#if noClass}}<h4 style="color: #7f6a93">You haven't added any classes</h4>{{else}}<h4 style="color:#7f6a93">Click a class you have added</h4>{{/if}}
+          {{#if noClass}}<h4 style="color: #7f6a93">You haven't added any classes</h4>{{else}}<h4 style="color:#7f6a93">Click a class for its groups</h4>{{/if}}
             {{#each mydata.classlist}}
               <a href="./myclass/{{id}}"><button id="allclass" type="button" class="btn btn-info">
               {{class}}
