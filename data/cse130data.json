@@ -5,24 +5,24 @@
 			"grouptype": "person",
 			"owner": false,
 			"id": "e1",
-			"name": "130 Study for Midterm #2",
-			"number": "3",
+			"name": "Multi-Languages study group : Ocaml/Python/Prolog/etc",
+			"number": "5",
 			"max": "15",
-			"place": "Geisel Library Study room 215",
-			"time": "2-4pm",
-			"description": "We will study for midterm 2 for CSE 130, Please join for collaboration!"		
+			"place": "Center Hall 119",
+			"time": "Every Friday 3pm ~ 5pm",
+			"description": "Let's study for as many languages as we can!"		
 		},
 		{
 			"className": "cse130",
 			"grouptype": "person",
 			"owner": false,
 			"id": "e2",
-			"name": "130 Code tutorial group for Node.js/Javascript",
+			"name": "Preview course of CSE 131! Let's study earlier",
 			"number": "5",
 			"max": "30",
 			"place": "CSE Basement B240",
-			"time": "5pm",
-			"description": "Our TA Alok will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
+			"time": "Winter break, MW 3:00pm",
+			"description": "We will using Ocaml/python, we will create our own compiler"	
 		}
 	],
 
@@ -32,18 +32,18 @@
 			"grouptype": "online",
 			"owner": false,
 			"id": "f1",			
-			"name": "130 Study for Midterm!! Online group!",
+			"name": "Online Functional Group Tutorial",
 			"address": "www.piazza.com",
-			"description": "We will study for midterm 2 for CSE 130, Please join for collaboration!"		
+			"description": "Let's study for functional languages!"		
 		},
 		{
 			"className": "cse130",
 			"grouptype": "online",
 			"owner": false,
 			"id": "f2",
-			"name": "130 Tutor online for Front-end!",
+			"name": "130 FINAL EXAM! STUDY! OCAML/PYTHON/PROLOG",
 			"address": "www.facebook.com",
-			"description": "Our TA Alok will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
+			"description": "Aim to get 'A' on the final!!"	
 		}
 	]
 

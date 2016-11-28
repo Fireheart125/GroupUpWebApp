@@ -5,11 +5,11 @@
 			"grouptype": "person",
 			"owner": false,
 			"id": "g1",
-			"name": "Study at Geisel Library!!",
+			"name": "Frond-end Study at Geisel Library!!",
 			"number": "5",
 			"max": "20",
 			"place": "Geisel Library Study room 235",
-			"time": "3-6pm",
+			"time": "Monday 3-6pm Winter 2017",
 			"description": "We will study for midterm 2 for CSE 170, Please join for collaboration!"		
 		},
 		{
@@ -21,7 +21,7 @@
 			"number": "5",
 			"max": "30",
 			"place": "CSE Basement B240",
-			"time": "4pm",
+			"time": "TTh 9am ~ 11am, 2pm ~ 4pm",
 			"description": "Our TA Rebecca will teach about Node.js/Javascript overall, please come and get awesome tutoring!!"	
 		}
 	],
