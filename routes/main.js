@@ -23,6 +23,7 @@ exports.view = function(req, res){
      classes : classes,
      mydata : mydata,
      groupNum : mydata.group_own.length,
+     noClass,
      child : check.child
   };
 
