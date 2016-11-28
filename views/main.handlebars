@@ -101,14 +101,12 @@
           <h3>My Classes</h3>
           <h4>Click a class you have added</h4>
           {{#if noClass}}"You've no class added yet"{{else}}{{/if}}
-          <p class="elem_list"> 
             {{#each mydata.classlist}}
               <a href="./myclass/{{id}}"><button id="allclass" type="button" class="btn btn-info">
               {{class}}
               <div class="btn-group btn-group-xs" role="group" aria-label="..."><a href="./myclass/{{id}}/removeClass"><span class="glyphicon glyphicon-remove"></span></a></div>
               </button></a>
             {{/each}}
-          </p>
 
             <hr><h3>Add another class</h3>
             <!-- Single button -->
@@ -134,7 +132,6 @@
         <div class="col-md-4">
             <img src="../../images/menu_main_person.png" class="col-xs-12">
 
-                  {{#if noPerson}}"You've no group in person joined yet"{{else}}{{/if}}
                   <!-- +++++ Each group space start! +++++ -->
                   {{#each mydata.group_person}}
                     <div class="col-xs-12 container-fluid panel panel-default">
@@ -164,7 +161,6 @@
         <div class="col-md-4">
             <img src="../../images/menu_main_online.png" class="col-xs-12">
 
-                {{#if noOnline}}"You've no group online joined yet"{{else}}{{/if}}
                 <!-- +++++ Each group space start! +++++ -->
                 {{#each mydata.group_online}}
                   <div class="col-xs-12 container-fluid panel panel-default">
