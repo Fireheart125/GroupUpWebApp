@@ -100,6 +100,7 @@
           {{> helpModal }}  <hr>               
           <h3>My Classes</h3>
           <h4>Click a class you have added</h4>
+          {{#if noClass}}"You've no class added yet"{{else}}{{/if}}
           <p class="elem_list"> 
             {{#each mydata.classlist}}
               <a href="./myclass/{{id}}"><button id="allclass" type="button" class="btn btn-info">
