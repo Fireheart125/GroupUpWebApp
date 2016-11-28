@@ -18,12 +18,16 @@ exports.view = function(req, res){
    // check.child = false;
 
    var noClass = (mydata && mydata.classlist.length == 0)? true : false;
+   var noPerson = (mydata && mydata.group_person.length == 0)? true : false;
+   var noOnline = (mydata && mydata.group_online.length == 0)? true : false;
 
    var resultData = {
      classes : classes,
      mydata : mydata,
      groupNum : mydata.group_own.length,
      noClass : noClass,
+     noPerson = noPerson,
+     noOnline = noOnline,
      child : check.child
   };
 

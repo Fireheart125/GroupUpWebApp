@@ -135,6 +135,7 @@
             <img src="../../images/menu_main_person.png" class="col-xs-12">
 
             {{#if child}}
+                  {{#if noPerson}}"You've no group in person joined yet"{{else}}{{/if}}
                   <!-- +++++ Each group space start! +++++ -->
                   {{#each mydata.group_person}}
                     <div class="col-xs-12 container-fluid panel panel-default">
@@ -189,6 +190,7 @@
             <p class="elem_list" align="center"><br>
 
             {{#if child}}
+                {{#if noOnline}}"You've no group online joined yet"{{else}}{{/if}}
                 <!-- +++++ Each group space start! +++++ -->
                 {{#each mydata.group_online}}
                   <div class="col-xs-12 container-fluid panel panel-default">
