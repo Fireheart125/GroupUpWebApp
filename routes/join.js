@@ -61,7 +61,8 @@ exports.view = function(req, res){
             var first = mydata.group_person[q].name;
             var second = " twice!"
             res.render('join', 
-              {'groupName':  first.concat(second)
+              {'groupName':  first,
+               'twice': second
             });
             return;
           }
@@ -117,7 +118,8 @@ exports.view = function(req, res){
             var first = mydata.group_online[q].name;
             var second = " twice!"
             res.render('join', {
-              'groupName':  first.concat(second)
+              'groupName':  first,
+              'twice': second
             });
             return;
           }
